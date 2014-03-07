@@ -95,7 +95,7 @@
   min-width: 400px;
   min-height: 400px;
   width: 40%;
-  margin-left: 5%;
+  margin-left: 10%;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
@@ -104,17 +104,25 @@
   min-width: 400px;
   min-height: 400px;
   width: 80%;
-  margin-left: 3%;
+  margin-left: 10%;
+  margin-top: 150px;
+  box-shadow: 2px 2px 2px @oimt-light-grey;
+}
+
+.panel-idea-to-project {
+  min-width: 400px;
+  min-height: 400px;
+  width: 80%;
+  margin-left: 10%;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
 
-.left-group {
+.right-group {
   .bubble {
-    &.share-an-idea {
-    margin-left: 30%;
-    margin-top: 100px;
+    margin-left: 10%;
+    margin-top: 150px;
     background-color: lighten(@oimt-blue, 30%);
     width: 220px;
     height: 100px;
@@ -125,15 +133,28 @@
     color: @oimt-medium-grey;
     box-shadow: 2px 2px 2px @oimt-light-grey;
     cursor: pointer;
-    &.inactive {
-      transform: scale(0.5, 0.5);
-      width: 110px;
-      line-height: 50px;
-      height: 50px;
-      opacity: 0.5;
-      cursor: auto;
-      pointer-events: none;
-      font-size: @font-size-medium;
+    &.share-an-idea {
+      &.inactive {
+        transform: scale(0.5, 0.5);
+        width: 110px;
+        line-height: 50px;
+        height: 50px;
+        opacity: 0.5;
+        cursor: auto;
+        pointer-events: none;
+        font-size: @font-size-medium;
+      }
+    }
+    &.submit-idea {
+      &.inactive {
+        transform: scale(0.5, 0.5);
+        width: 110px;
+        line-height: 50px;
+        height: 50px;
+        opacity: 0.5;
+        cursor: auto;
+        pointer-events: none;
+        font-size: @font-size-medium;
       }
     }
   }
