@@ -4,7 +4,6 @@ $(function(){
   $('.datepicker').pickadate();
   $('.share-an-idea').on('click', start_idea);
   $('.submit-idea').on('click', insert_idea_to_project);
-
 });
 
 function insert_about() {
@@ -27,6 +26,38 @@ function insert_idea_to_project() {
       $('.left-group').html(data);
   });
   insert_summary();
+  $('.submit-idea').addClass('hidden');
+
+  $('#top-bar-start').addClass('inactive');
+  $('#top-bar-idea-to-project').removeClass('inactive');
+  $('#top-bar-project-setup').addClass('inactive');
+  $('#top-bar-execution').addClass('inactive');
+}
+
+function insert_project_setup() {
+  $('.left-group').empty();
+  $.get('project_setup.html', function(data) {
+      $('.left-group').html(data);
+  });
+  insert_summary();
+
+  $('#top-bar-start').addClass('inactive');
+  $('#top-bar-idea-to-project').addClass('inactive');
+  $('#top-bar-project-setup').removeClass('inactive');
+  $('#top-bar-execution').addClass('inactive');
+}
+
+function insert_execution_phase() {
+  $('.left-group').empty();
+  $.get('execution_phase.html', function(data) {
+      $('.left-group').html(data);
+  });
+  insert_summary();
+
+  $('#top-bar-start').addClass('inactive');
+  $('#top-bar-idea-to-project').addClass('inactive');
+  $('#top-bar-project-setup').addClass('inactive');
+  $('#top-bar-execution').removeClass('inactive');
 }
 
 function insert_top_bar() {
@@ -36,9 +67,9 @@ function insert_top_bar() {
 }
 
 function insert_summary() {
-  $('.right-group').empty();
+  $('.idea-summary').empty();
   $.get('summary.html', function(data) {
-      $('.right-group').html(data);
+      $('.idea-summary').html(data);
   });
 }
 

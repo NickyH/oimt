@@ -37,55 +37,48 @@
   border-bottom: 1px solid @oimt-blue;
     .bubble {
       position: absolute;
-      top: 20px;
+      top: 25px;
       margin-right: 30px;
       background-color: @oimt-white;
-      width: 200px;
-      height: 80px;
+      width: 110px;
+      line-height: 50px;
+      height: 50px;
       border-radius: 50%;
-      line-height: 80px;
       text-align: center;
-      font-size: @font-size-large;
+      font-size: @font-size-medium;
       color: @oimt-medium-grey;
       box-shadow: inset 2px 2px 2px @oimt-light-grey;
       cursor: pointer;
       &.share-an-idea {
-        left: 30px;
+        left: 50px;
         &.inactive {
-          background-color: lighten(@oimt-blue, 10%);
-          width: 110px;
-          line-height: 50px;
-          height: 50px;
-          opacity: 0.5;
+          background-color: lighten(@top-bar-colour, 5%);
           cursor: auto;
           pointer-events: none;
-          font-size: @font-size-medium;
         }
       }
       &.idea-to-project {
-        left: 270px;
+        left: 200px;
         &.inactive {
-          margin-top: 15px;
           background-color: lighten(@top-bar-colour, 5%);
-          width: 110px;
-          line-height: 50px;
-          height: 50px;
           cursor: auto;
           pointer-events: none;
-          font-size: @font-size-medium;
         }
       }
       &.project-setup {
-        left: 400px;
+        left: 350px;
         &.inactive {
-          margin-top: 15px;
           background-color: lighten(@top-bar-colour, 5%);
-          width: 110px;
-          line-height: 50px;
-          height: 50px;
           cursor: auto;
           pointer-events: none;
-          font-size: @font-size-medium;
+        }
+      }
+      &.project-execution {
+        left: 500px;
+        &.inactive {
+          background-color: lighten(@top-bar-colour, 5%);
+          cursor: auto;
+          pointer-events: none;
         }
       }
   }
@@ -98,6 +91,28 @@
   margin-left: 10%;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
+}
+
+.panel-summary {
+  min-width: 400px;
+  min-height: 400px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  // margin-top: 150px;
+  box-shadow: 2px 2px 2px @oimt-light-grey;
+  @media @widthLarge {
+    margin-top: 150px;
+  }
+  @media @widthMediumLarge {
+    margin-top: 150px;
+  }
+  @media @widthMedium {
+    margin-top: 150px;
+  }
+  @media @widthNarrow {
+    margin-top: 20px;
+  }
 }
 
 .panel-start-idea {
@@ -121,7 +136,8 @@
 
 .right-group {
   .bubble {
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 150px;
     background-color: lighten(@oimt-blue, 30%);
     width: 220px;
@@ -157,8 +173,59 @@
         font-size: @font-size-medium;
       }
     }
+    &.submit-project {
+      &.inactive {
+        transform: scale(0.5, 0.5);
+        width: 110px;
+        line-height: 50px;
+        height: 50px;
+        opacity: 0.5;
+        cursor: auto;
+        pointer-events: none;
+        font-size: @font-size-medium;
+      }
+    }
+  }
+  .bubble:hover {
+    background-color: lighten(@oimt-blue, 20%);
+    color: @oimt-white;
   }
 }
+
+.form-group {
+  .bubble {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: lighten(@oimt-blue, 30%);
+    width: 180px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: @font-size-large;
+    color: @oimt-medium-grey;
+    box-shadow: 2px 2px 2px @oimt-light-grey;
+    cursor: pointer;
+    &.submit {
+      &.inactive {
+        transform: scale(0.5, 0.5);
+        width: 110px;
+        line-height: 50px;
+        height: 50px;
+        opacity: 0.5;
+        cursor: auto;
+        pointer-events: none;
+        font-size: @font-size-medium;
+      }
+    }
+  }
+  .bubble:hover {
+    background-color: lighten(@oimt-blue, 20%);
+    color: @oimt-white;
+  }
+}
+
 
 //forms
 
@@ -170,3 +237,30 @@
   background-color: white;
   cursor: text;
 }
+
+
+
+// Media Queries
+
+// responsive
+@widthNarrow:         ~"(max-width: 320px)";
+@widthMedium:         ~"(max-width: 600px)";
+@widthMediumLarge:    ~"(min-width: 601px) and (max-width: 768px)";
+@widthLarge:          ~"(min-width: 1024px)";
+
+@heightShort:         ~"(max-height: 479px)";
+@heightShortMedium:   ~"(min-height: 480px) and (max-height: 560px)";
+@heightMedium:        ~"(max-height: 700px)";
+@heightTall:          ~"(min-height: 768px)";
+@mediaScreen:         ~"only screen and ";
+
+// condition:  is the tablet rotated portrait or landscape?;
+@tabletLandscape:      ~"(orientation: landscape)";
+@tabletPortrait:       ~"(orientation: portrait)";
+
+// set the min-width and height
+@tabletLandscapeWidth:               ~"(min-width: 1024px) and (orientation: landscape)";
+@tabletLandscapeHeight:              ~"(min-height: 768px) and (orientation: landscape)";
+
+@tabletPortraitWidth:                ~"(min-width: 768px) and (orientation: portrait)";
+@tabletPortraitHeight:               ~"(min-height: 1024px) and (orientation: portrait)";
