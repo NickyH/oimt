@@ -1,9 +1,12 @@
 //globals
 
 @oimt-blue: #34d6d2;
+@oimt-white: #ffffff;
 
 @oimt-light-grey: #b1bab9;
 @oimt-medium-grey: #959998;
+
+@top-bar-colour: #C5F3F2;
 
 //font sizes
 @font-size-very-large: 30px;
@@ -11,14 +14,87 @@
 @font-size-medium: 14px;
 @font-size-small: 10px;
 
+#main-page {
+
+}
+
+.main-page-container {
+  background-color: white;
+}
+
 .hidden {
   display: none;
+}
+
+.top-bar {
+  background : @top-bar-colour;
+  width: 100%;
+  height: 120px;
+  padding: 03  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  border-bottom: 1px solid @oimt-blue;
+    .bubble {
+      position: absolute;
+      top: 20px;
+      margin-right: 30px;
+      background-color: @oimt-white;
+      width: 200px;
+      height: 80px;
+      border-radius: 50%;
+      line-height: 80px;
+      text-align: center;
+      font-size: @font-size-large;
+      color: @oimt-medium-grey;
+      box-shadow: inset 2px 2px 2px @oimt-light-grey;
+      cursor: pointer;
+      &.share-an-idea {
+        left: 30px;
+        &.inactive {
+          background-color: lighten(@oimt-blue, 10%);
+          width: 110px;
+          line-height: 50px;
+          height: 50px;
+          opacity: 0.5;
+          cursor: auto;
+          pointer-events: none;
+          font-size: @font-size-medium;
+        }
+      }
+      &.idea-to-project {
+        left: 270px;
+        &.inactive {
+          margin-top: 15px;
+          background-color: lighten(@top-bar-colour, 5%);
+          width: 110px;
+          line-height: 50px;
+          height: 50px;
+          cursor: auto;
+          pointer-events: none;
+          font-size: @font-size-medium;
+        }
+      }
+      &.project-setup {
+        left: 400px;
+        &.inactive {
+          margin-top: 15px;
+          background-color: lighten(@top-bar-colour, 5%);
+          width: 110px;
+          line-height: 50px;
+          height: 50px;
+          cursor: auto;
+          pointer-events: none;
+          font-size: @font-size-medium;
+        }
+      }
+  }
 }
 
 .panel-about {
   min-width: 400px;
   min-height: 400px;
-  width: 30%;
+  width: 40%;
   margin-left: 5%;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
@@ -27,24 +103,49 @@
 .panel-start-idea {
   min-width: 400px;
   min-height: 400px;
-  width: 30%;
-  margin-left: 5%;
+  width: 80%;
+  margin-left: 3%;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
 
-.share-an-idea {
-  margin-left: 30%;
-  margin-top: 100px;
-  background-color: lighten(@oimt-blue, 30%);
-  width: 220px;
-  height: 100px;
-  border-radius: 50%;
-  line-height: 100px;
-  text-align: center;
-  font-size: @font-size-very-large;
-  color: @oimt-medium-grey;
-  box-shadow: 2px 2px 2px @oimt-light-grey;
-  cursor: pointer;
+.left-group {
+  .bubble {
+    &.share-an-idea {
+    margin-left: 30%;
+    margin-top: 100px;
+    background-color: lighten(@oimt-blue, 30%);
+    width: 220px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+    font-size: @font-size-very-large;
+    color: @oimt-medium-grey;
+    box-shadow: 2px 2px 2px @oimt-light-grey;
+    cursor: pointer;
+    &.inactive {
+      transform: scale(0.5, 0.5);
+      width: 110px;
+      line-height: 50px;
+      height: 50px;
+      opacity: 0.5;
+      cursor: auto;
+      pointer-events: none;
+      font-size: @font-size-medium;
+      }
+    }
+  }
+}
+
+//forms
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control[readonly] {
+  background-color: white;
+  cursor: text;
 }
