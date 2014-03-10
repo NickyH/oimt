@@ -24,6 +24,9 @@ function insert_start() {
   $.get('start.html', function(data) {
       $('.left-group').html(data);
   });
+  remove_summary();
+  $('.submit-idea').removeClass('hidden');
+
 }
 
 function insert_idea_to_project() {
@@ -46,6 +49,7 @@ function insert_project_setup() {
       $('.left-group').html(data);
   });
   insert_summary();
+  $('.submit-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -59,6 +63,8 @@ function insert_execution_phase() {
       $('.left-group').html(data);
   });
   insert_summary();
+
+  $('.submit-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -74,6 +80,8 @@ function insert_closeout() {
       $('.left-group').html(data);
   });
   insert_summary();
+
+  $('.submit-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -105,6 +113,10 @@ function insert_summary() {
   });
 }
 
+function remove_summary() {
+  $('.idea-summary').empty();
+}
+
 function start_idea() {
   $('#main-page').parent().slideUp( 600, function() {
     $('#main-page').slideUp( 50 );
@@ -126,4 +138,13 @@ function nav_button_hover() {
 
 function nav_button_leave() {
   $(this).removeClass('nav-hover');
+}
+
+function bubble_hover() {
+  console.log('hover');
+  $(this).addClass('bubble-hover');
+}
+
+function bubble_leave() {
+  $(this).removeClass('bubble-hover');
 }

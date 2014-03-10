@@ -132,15 +132,20 @@
       font-size: @font-size-medium;
       color: black;
       box-shadow: inset 2px 2px 2px @oimt-light-grey;
-      cursor: pointer;
+      pointer-events: none;
       &.share-an-idea {
         left: 30px;
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
-          cursor: auto;
-          pointer-events: none;
           color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
         }
       }
       &.idea-to-project {
@@ -148,9 +153,14 @@
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
-          cursor: auto;
-          pointer-events: none;
           color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
         }
       }
       &.project-setup {
@@ -158,9 +168,14 @@
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
-          cursor: auto;
-          pointer-events: none;
           color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
         }
       }
       &.project-execution {
@@ -168,9 +183,14 @@
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
-          cursor: auto;
-          pointer-events: none;
           color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
         }
       }
       &.project-closeout {
@@ -178,9 +198,14 @@
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
-          cursor: auto;
-          pointer-events: none;
           color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
         }
       }
     }
@@ -254,6 +279,21 @@
   margin-left: 10%;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
+}
+
+.panel-heading {
+  .idea-status {
+    float: right;
+    &.not-started {
+      color: red;
+    }
+    &.underway {
+      color: orange;
+    }
+    &.completed {
+      color: green;
+    }
+  }
 }
 
 
