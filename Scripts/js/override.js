@@ -27,6 +27,11 @@ function insert_start() {
   remove_summary();
   $('.submit-idea').removeClass('hidden');
 
+  $('#top-bar-start').removeClass('inactive');
+  $('#top-bar-idea-to-project').addClass('inactive');
+  $('#top-bar-project-setup').addClass('inactive');
+  $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-closeout').addClass('inactive');
 }
 
 function insert_idea_to_project() {
@@ -41,6 +46,7 @@ function insert_idea_to_project() {
   $('#top-bar-idea-to-project').removeClass('inactive');
   $('#top-bar-project-setup').addClass('inactive');
   $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-closeout').addClass('inactive');
 }
 
 function insert_project_setup() {
@@ -55,6 +61,7 @@ function insert_project_setup() {
   $('#top-bar-idea-to-project').addClass('inactive');
   $('#top-bar-project-setup').removeClass('inactive');
   $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-closeout').addClass('inactive');
 }
 
 function insert_execution_phase() {
@@ -71,10 +78,10 @@ function insert_execution_phase() {
   $('#top-bar-project-setup').addClass('inactive');
   $('#top-bar-execution').removeClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
+  $('#top-bar-closeout').addClass('inactive');
 }
 
 function insert_closeout() {
-  console.log('closeout');
   $('.left-group').empty();
   $.get('closeout.html', function(data) {
       $('.left-group').html(data);
@@ -147,7 +154,6 @@ function nav_button_leave() {
 }
 
 function bubble_hover() {
-  console.log('hover');
   $(this).addClass('bubble-hover');
 }
 
