@@ -3,7 +3,6 @@ $(function(){
   insert_header();
   insert_about();
   $('.datepicker').pickadate();
-  $('.share-an-idea').on('click', start_idea);
   $('.submit-idea').on('click', insert_idea_to_project);
 });
 
@@ -84,9 +83,13 @@ function insert_closeout() {
 }
 
 function insert_top_bar() {
+  $('#insert-top').addClass('hidden');
   $.get('top_bar.html', function(data) {
       $('#insert-top').html(data);
   });
+  $('#insert-top').fadeIn(1500);
+  $('#insert-top').delay(500).removeClass('hidden');
+
 }
 
 function insert_bottom_bar() {
