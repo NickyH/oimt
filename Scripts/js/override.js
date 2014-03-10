@@ -134,10 +134,16 @@ function start_idea() {
 
 function nav_button_hover() {
   $(this).addClass('nav-hover');
+  $(this).find('.menu-icon-yellow').removeClass('hidden');
+  $(this).find('.menu-icon').addClass('hidden');
+  $(this).find('.caret').addClass('hover');
 }
 
 function nav_button_leave() {
   $(this).removeClass('nav-hover');
+  $(this).find('.menu-icon-yellow').addClass('hidden');
+  $(this).find('.menu-icon').removeClass('hidden');
+  $(this).find('.caret').removeClass('hover');
 }
 
 function bubble_hover() {

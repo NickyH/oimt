@@ -79,21 +79,28 @@
     line-height: 50px;
   }
   .btn-default {
-    a.nav-link, a.nav-link:active, a.nav-link:hover {
+    a.nav-link, a.nav-link:active {
       color: white;
       text-decoration: none;
     }
     &.nav-hover {
       background-color: darken(@top-bar-colour, 5%);
+      a.nav-link {
+        color: #EBF216;
+      }
     }
   }
   .caret {
     color: white;
     border-top-color: white;
+    &.hover {
+      color: #EBF216;
+      border-top-color: #EBF216;
+    }
   }
 }
 
-.menu-icon {
+.menu-icon, .menu-icon-yellow {
   width: 30px;
 }
 
