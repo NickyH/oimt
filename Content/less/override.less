@@ -398,21 +398,19 @@
   width: 400px;
   margin-left: auto;
   margin-right: auto;
-  // margin-top: 150px;
+  margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
-  @media @widthLarge {
-    margin-top: 150px;
-  }
-  @media @widthMediumLarge {
-    margin-top: 150px;
-  }
-  @media @widthMedium {
-    margin-top: 150px;
-  }
-  @media @widthNarrow {
-    margin-top: 20px;
-  }
 }
+
+.panel-project-summary {
+  min-width: 400px;
+  min-height: 200px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 2px @oimt-light-grey;
+}
+
 
 .panel-start-idea {
   min-width: 400px;
@@ -642,6 +640,16 @@ input[type="file"] {
   font-weight: bold;
   margin-left: 10px;
 }
+
+.dl-horizontal dt {
+  &.attached-docs {
+    font-style: italic;
+    font-weight: normal;
+    text-align: left !important;
+    margin-top: 5px;
+  }
+}
+
 
 //charts
 
