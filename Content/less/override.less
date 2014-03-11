@@ -29,6 +29,115 @@
   display: none;
 }
 
+//left bar
+
+.left-bar {
+  width: 180px;
+  background : lighten(@top-bar-colour, 15%);
+  position: fixed;
+  left: 0;
+  top: 120px;
+  bottom: 0;
+  .bubble-container {
+    position: absolute;
+    height: 30px;
+    width: 60%;
+    margin-left: 0;
+    margin-right: auto;
+    .bubble {
+      position: absolute;
+      left: 20px;
+      margin-right: 0;
+      background-color: @oimt-white;
+      border: 1px solid #f7f00d;
+      width: 140px;
+      line-height: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 16px;
+      color: black;
+      box-shadow: inset 2px 2px 2px @oimt-light-grey;
+      pointer-events: none;
+      &.business-case {
+        top: 100px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+      &.review {
+        top: 200px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+      &.approval {
+        top: 300px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+      &.project-execution {
+        left: 480px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+      &.project-closeout {
+        left: 630px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+
 //top bar right panel (utility bar)
 
 .header-bar {
@@ -123,7 +232,7 @@
     position: absolute;
     height: 30px;
     width: 60%;
-    margin-left: 0;
+    margin-left: 150px;
     margin-right: auto;
     .bubble {
       position: absolute;
@@ -248,6 +357,11 @@
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
+.panel.panel-default.panel-about {
+  padding-right: 0px !important;
+  width: 100%;
+}
+
 .panel-summary {
   min-width: 400px;
   min-height: 400px;
@@ -303,9 +417,9 @@
   }
 }
 
-
 .right-group, .panel-body {
   .bubble {
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 150px;
@@ -323,6 +437,22 @@
     &.share-an-idea {
         margin-top: 30px;
         margin-bottom: 30px;
+        margin-right: 50px;
+      &.inactive {
+        transform: scale(0.5, 0.5);
+        width: 110px;
+        line-height: 50px;
+        height: 50px;
+        opacity: 0.5;
+        cursor: auto;
+        pointer-events: none;
+        font-size: @font-size-medium;
+      }
+    }
+    &.manage-idea {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-right: 50px;
       &.inactive {
         transform: scale(0.5, 0.5);
         width: 110px;
@@ -363,6 +493,10 @@
     background-color: lighten(@oimt-blue, 15%);
     color: @oimt-white;
   }
+}
+
+.left-group {
+  margin-left: 100px;
 }
 
 .form-group {

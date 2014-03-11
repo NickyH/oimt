@@ -12,6 +12,12 @@ function insert_header() {
   });
 }
 
+function insert_left_idea_project() {
+  $.get('left_bar_idea_project.html', function(data) {
+      $('#insert-left').html(data);
+  });
+}
+
 function insert_about() {
   $('.left-group').empty();
   $.get('about.html', function(data) {
@@ -25,6 +31,7 @@ function insert_start() {
       $('.left-group').html(data);
   });
   remove_summary();
+
   $('.submit-idea').removeClass('hidden');
 
   $('#top-bar-start').removeClass('inactive');
@@ -40,6 +47,8 @@ function insert_idea_to_project() {
       $('.left-group').html(data);
   });
   insert_summary();
+  insert_left_idea_project();
+
   $('.submit-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
@@ -107,12 +116,6 @@ function insert_top_bar() {
 
 }
 
-function insert_bottom_bar() {
-  $.get('bottom_bar.html', function(data) {
-      $('#insert-bottom').html(data);
-  });
-}
-
 function insert_summary() {
   $('.idea-summary').empty();
   $.get('summary.html', function(data) {
@@ -129,7 +132,6 @@ function start_idea() {
     $('#main-page').slideUp( 50 );
     insert_start();
     insert_top_bar();
-    insert_bottom_bar();
     $('.share-an-idea').addClass('hidden');
     $('.submit-idea').removeClass('hidden');
   });
