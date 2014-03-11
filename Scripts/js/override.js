@@ -6,6 +6,14 @@ $(function(){
   $('.submit-idea').on('click', insert_idea_to_project);
 });
 
+function show_assess_panel() {
+  $('.panel-idea-assessment').removeClass('hidden');
+  var scrollAmount = ($('.panel-idea-assessment').offset().top);
+  $('html, body').animate({ scrollTop: scrollAmount });
+  $('.bubble.idea').addClass('inactive');
+  $('.bubble.idea').removeClass('inactive');
+}
+
 function insert_header() {
   $.get('header_bar.html', function(data) {
       $('#insert-header').html(data);
@@ -14,6 +22,12 @@ function insert_header() {
 
 function insert_left_idea_project() {
   $.get('left_bar_idea_project.html', function(data) {
+      $('#insert-left').html(data);
+  });
+}
+
+function insert_left_start() {
+  $.get('left_bar_start.html', function(data) {
       $('#insert-left').html(data);
   });
 }
@@ -31,8 +45,10 @@ function insert_start() {
       $('.left-group').html(data);
   });
   remove_summary();
+  insert_left_start();
 
   $('.submit-idea').removeClass('hidden');
+  $('.assess-idea').removeClass('hidden');
 
   $('#top-bar-start').removeClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -50,6 +66,7 @@ function insert_idea_to_project() {
   insert_left_idea_project();
 
   $('.submit-idea').addClass('hidden');
+  $('.assess-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').removeClass('inactive');
