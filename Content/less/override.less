@@ -134,6 +134,21 @@
           }
         }
       }
+      &.next-steps {
+        top: 300px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
       &.project-execution {
         left: 480px;
         &.inactive {
@@ -430,7 +445,7 @@
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
-.panel-idea-assessment {
+.panel-idea-assessment, .panel-execution-input, .panel-execution-steps {
   min-width: 400px;
   min-height: 400px;
   width: 80%;
@@ -439,7 +454,7 @@
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
-.panel-idea-to-project {
+.panel-idea-to-project, .panel-execution-report {
   min-width: 400px;
   min-height: 400px;
   width: 80%;

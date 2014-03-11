@@ -26,6 +26,18 @@ function insert_left_idea_project() {
   });
 }
 
+function insert_left_project_setup() {
+  $.get('left_bar_project_setup.html', function(data) {
+      $('#insert-left').html(data);
+  });
+}
+
+function insert_left_project_execution() {
+  $.get('left_bar_execution.html', function(data) {
+      $('#insert-left').html(data);
+  });
+}
+
 function insert_left_start() {
   $.get('left_bar_start.html', function(data) {
       $('#insert-left').html(data);
@@ -82,6 +94,9 @@ function insert_project_setup() {
   });
   insert_summary();
   insert_project_summary();
+
+  insert_left_project_setup();
+
   $('.submit-idea').addClass('hidden');
   $('.assess-idea').addClass('hidden');
 
@@ -98,6 +113,9 @@ function insert_execution_phase() {
       $('.left-group').html(data);
   });
   insert_summary();
+  insert_project_summary();
+
+  insert_left_project_execution()
 
   $('.submit-idea').addClass('hidden');
   $('.assess-idea').addClass('hidden');
