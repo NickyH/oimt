@@ -36,7 +36,7 @@
             <div class="col-sm-12">
               <div class="col-sm-12">
                 <div>
-                  <span class="chart-header">Percentage Complete (time/cost)</span>
+                  <span class="chart-header">Percentage Complete (time)</span>
                 </div>
               </div>
             </div>
@@ -46,7 +46,27 @@
             <div class="col-sm-12">
               <div class="col-sm-12">
                 <div class="chart-side">
-                  <div class="donut-small" id="pie-totalbudgetvariance"></div>
+                  <div class="donut-small" id="pie-percentcompletetime"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-sm-12">
+                <div>
+                  <span class="chart-header">Percentage Complete (cost)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="chart-side">
+                  <div class="donut-small" id="pie-percentcompletecost"></div>
                 </div>
               </div>
             </div>
@@ -188,7 +208,7 @@
           </div>
 
            <div class="form-group">
-            <label class="col-sm-4 control-label">Date of Submission</label>
+            <label class="col-sm-4 control-label">Date Next Step Due</label>
             <div class="col-sm-4">
               <div class="input-group merged">
                 <input type="text" class="form-control date datepicker" />
@@ -199,6 +219,100 @@
             </div>
             <div class="col-sm-4">
               <span class="btn btn-info form-control close-form email">Add Step</span>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <!-- end panel-->
+
+  <!-- start panel-->
+  <div class="panel panel-default panel-execution-risks">
+    <div class="panel-heading">
+      <h3 class="panel-title">Project Risks
+        <div class="idea-status underway">Status: Underway</div>
+      </h3>
+    </div>
+    <div class="panel-body">
+
+      <form class="form-horizontal container" role="form">
+
+        <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+          <div class="form-group">
+            <table class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th>Risk</th>
+                  <th>Issues</th>
+                  <th>Solution</th>
+                  <th>Mitigation</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>Timeframe</td>
+                <td>Project may run overtime</td>
+                <td>Weekly updates</td>
+                <td>May require additional team member during critical phase</td>
+              </tr>
+              <tr>
+                <td>Cost</td>
+                <td>Project may run overcost</td>
+                <td>Weekly budget updates</td>
+                <td>May require smaller team between project phases</td>
+              </tr>
+              <tr>
+                <td>Timeframe</td>
+                <td>Project may run overtime</td>
+                <td>Weekly updates</td>
+                <td>May require additional team member during critical phase</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Add Risk</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" data-required="true">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Risk Issues</label>
+            <div class="col-sm-8">
+              <textarea type="text" class="form-control" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Risk Solution</label>
+            <div class="col-sm-8">
+              <textarea type="text" class="form-control" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Risk Mitigation</label>
+            <div class="col-sm-8">
+              <textarea type="text" class="form-control" rows="2"></textarea>
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label class="col-sm-4 control-label">Date Added</label>
+            <div class="col-sm-4">
+              <div class="input-group merged">
+                <input type="text" class="form-control date datepicker" />
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <span class="btn btn-info form-control close-form email">Add Risk</span>
             </div>
           </div>
 
@@ -237,15 +351,23 @@ $('#complete').on('click', insert_closeout);
   });
 
   new Morris.Donut({
-    element: 'pie-totalbudgetvariance',
+    element: 'pie-percentcompletetime',
     data: [
-    {label: 'Nov \'13', value: 10 },
-    {label: 'Dec \'14', value: 12 },
-    {label: 'Jan \'14', value: 23 },
-    {label: 'Feb \'14', value: 28 }
+    {label: 'complete', value: 80 },
+    {label: 'incomplete', value: 20 }
     ],
     colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
   });
+
+  new Morris.Donut({
+    element: 'pie-percentcompletecost',
+    data: [
+    {label: 'complete', value: 64 },
+    {label: 'incomplete', value: 36 }
+    ],
+    colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
+  });
+
 
   new Morris.Line({
     element: 'labourbudgetvariance',

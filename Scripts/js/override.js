@@ -66,6 +66,7 @@ function insert_start() {
   $('#top-bar-idea-to-project').addClass('inactive');
   $('#top-bar-project-setup').addClass('inactive');
   $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
 }
 
@@ -84,6 +85,7 @@ function insert_idea_to_project() {
   $('#top-bar-idea-to-project').removeClass('inactive');
   $('#top-bar-project-setup').addClass('inactive');
   $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
 }
 
@@ -104,6 +106,7 @@ function insert_project_setup() {
   $('#top-bar-idea-to-project').addClass('inactive');
   $('#top-bar-project-setup').removeClass('inactive');
   $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
 }
 
@@ -124,7 +127,26 @@ function insert_execution_phase() {
   $('#top-bar-idea-to-project').addClass('inactive');
   $('#top-bar-project-setup').addClass('inactive');
   $('#top-bar-execution').removeClass('inactive');
+  $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
+}
+
+function insert_completion() {
+  $('.left-group').empty();
+  $.get('completion.html', function(data) {
+      $('.left-group').html(data);
+  });
+  insert_summary();
+  insert_project_summary();
+
+  $('.submit-idea').addClass('hidden');
+  $('.assess-idea').addClass('hidden');
+
+  $('#top-bar-start').addClass('inactive');
+  $('#top-bar-idea-to-project').addClass('inactive');
+  $('#top-bar-project-setup').addClass('inactive');
+  $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-completion').removeClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
 }
 
@@ -134,6 +156,7 @@ function insert_closeout() {
       $('.left-group').html(data);
   });
   insert_summary();
+  insert_project_summary();
 
   $('.submit-idea').addClass('hidden');
   $('.assess-idea').addClass('hidden');
@@ -142,6 +165,7 @@ function insert_closeout() {
   $('#top-bar-idea-to-project').addClass('inactive');
   $('#top-bar-project-setup').addClass('inactive');
   $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').removeClass('inactive');
 }
 

@@ -149,23 +149,8 @@
           }
         }
       }
-      &.project-execution {
-        left: 480px;
-        &.inactive {
-          background-color: @oimt-very-light-grey;
-          border: 1px solid darken(@top-bar-colour, 5%);
-          color: @oimt-medium-dark-grey;
-          cursor: pointer;
-          pointer-events: auto;
-          &.bubble-hover {
-            background-color: lighten(@top-bar-colour, 40%);
-            color: black;
-            border: 1px solid lighten(@top-bar-colour, 20%);
-          }
-        }
-      }
-      &.project-closeout {
-        left: 630px;
+      &.risks {
+        top: 400px;
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
@@ -354,8 +339,23 @@
           }
         }
       }
-      &.project-closeout {
+      &.project-completion {
         left: 630px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+      &.project-closeout {
+        left: 780px;
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
@@ -389,6 +389,9 @@
   }
   &.project-execution {
     left: 600px;
+  }
+  &.project-completion {
+    left: 750px;
   }
 }
 
@@ -445,7 +448,10 @@
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
-.panel-idea-assessment, .panel-execution-input, .panel-execution-steps {
+.panel-idea-assessment,
+.panel-execution-input,
+.panel-execution-steps,
+.panel-execution-risks, {
   min-width: 400px;
   min-height: 400px;
   width: 80%;
