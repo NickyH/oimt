@@ -3,7 +3,6 @@ $(function(){
   insert_header();
   insert_about();
   $('.datepicker').pickadate();
-  $('.submit-idea').on('click', insert_thank_you);
 });
 
 function icon_downer_click() {
@@ -125,9 +124,9 @@ function insert_idea_list() {
 }
 
 function insert_idea_to_project() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('idea_to_project.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
   insert_summary();
   insert_left_idea_project();
@@ -144,9 +143,9 @@ function insert_idea_to_project() {
 }
 
 function insert_project_setup() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('project_setup.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
   insert_summary();
   insert_project_summary();
@@ -165,9 +164,9 @@ function insert_project_setup() {
 }
 
 function insert_execution_phase() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('execution_phase.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
   insert_summary();
   insert_project_summary();
@@ -186,9 +185,9 @@ function insert_execution_phase() {
 }
 
 function insert_completion() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('completion.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
   insert_summary();
   insert_project_summary();
@@ -207,9 +206,9 @@ function insert_completion() {
 }
 
 function insert_closeout() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('closeout.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
   insert_summary();
   insert_project_summary();
@@ -257,11 +256,6 @@ function insert_project_summary() {
 
 function remove_summary() {
   $('.idea-summary').empty();
-}
-
-function start_idea() {
-    insert_start();
-    remove_top_bar();
 }
 
 function nav_button_hover() {
