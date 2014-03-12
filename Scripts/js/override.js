@@ -3,8 +3,12 @@ $(function(){
   insert_header();
   insert_about();
   $('.datepicker').pickadate();
-  $('.submit-idea').on('click', insert_idea_to_project);
+  $('.submit-idea').on('click', insert_thank_you);
 });
+
+function icon_downer_click() {
+  window.location = '/';
+}
 
 function show_assess_panel() {
   $('.panel-idea-assessment').removeClass('hidden');
@@ -56,23 +60,33 @@ function insert_left_start() {
   });
 }
 
+function remove_left() {
+  $('#insert-left').empty();
+}
+
 function insert_about() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('about.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
 }
 
+function insert_thank_you() {
+  $('#main-page').empty();
+  $.get('thankyou.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.submit-idea').addClass('hidden');
+}
+
 function insert_start() {
-  $('.left-group').empty();
+  $('#main-page').empty();
   $.get('start.html', function(data) {
-      $('.left-group').html(data);
+      $('#main-page').html(data);
   });
   remove_summary();
-  insert_left_start();
-
-  $('.submit-idea').removeClass('hidden');
-  $('.assess-idea').removeClass('hidden');
+  remove_left();
+  remove_top_bar();
 
   $('#top-bar-start').removeClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -80,6 +94,34 @@ function insert_start() {
   $('#top-bar-execution').addClass('inactive');
   $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
+}
+
+function insert_assess_start() {
+  $('#main-page').empty();
+  $.get('assess_start.html', function(data) {
+      $('#main-page').html(data);
+  });
+  remove_summary();
+  insert_left_start();
+  insert_top_bar();
+
+  $('.submit-idea').addClass('hidden');
+
+  $('#top-bar-start').removeClass('inactive');
+  $('#top-bar-idea-to-project').addClass('inactive');
+  $('#top-bar-project-setup').addClass('inactive');
+  $('#top-bar-execution').addClass('inactive');
+  $('#top-bar-completion').addClass('inactive');
+  $('#top-bar-closeout').addClass('inactive');
+}
+
+function insert_idea_list() {
+  $('#main-page').empty();
+  $.get('idea_list.html', function(data) {
+      $('#main-page').html(data);
+  });
+  remove_summary();
+  $('.submit-idea').addClass('hidden');
 }
 
 function insert_idea_to_project() {
@@ -195,6 +237,10 @@ function insert_top_bar() {
 
 }
 
+function remove_top_bar() {
+  $('#insert-top').empty();
+}
+
 function insert_summary() {
   $('.idea-summary').empty();
   $.get('summary.html', function(data) {
@@ -214,17 +260,8 @@ function remove_summary() {
 }
 
 function start_idea() {
-  $('#main-page').parent().slideUp( 600, function() {
-    $('#main-page').slideUp( 50 );
     insert_start();
-    insert_top_bar();
-    $('.share-an-idea').addClass('hidden');
-    $('.submit-idea').removeClass('hidden');
-  });
-
-  $('#main-page').parent().slideDown( 50, function() {
-    $('#main-page').slideDown( 600 );
-  });
+    remove_top_bar();
 }
 
 function nav_button_hover() {
@@ -247,4 +284,23 @@ function bubble_hover() {
 
 function bubble_leave() {
   $(this).removeClass('bubble-hover');
+}
+
+function get_val_table_ID () {
+  var thisObj = $(this).children('input');
+  var tableID = $(this).parents('form').children('table').attr('id');
+  table_search(thisObj, tableID);
+}
+
+function table_search(thisObj, tableID) {
+  var $rows = $("#"+tableID+" tr");
+  var val = '^(?=.*\\b' + $.trim($(thisObj).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+      reg = RegExp(val, 'i'),
+      text;
+
+  $rows.show().filter(function() {
+      text = $(this).text().replace(/\s+/g, ' ');
+      return !reg.test(text);
+  }).hide();
+  $('thead tr').show();
 }

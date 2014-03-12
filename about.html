@@ -1,26 +1,42 @@
-<div><div class="panel panel-default panel-about">
-  <div class="panel-heading">
-    <h3 class="panel-title">Initiative Management Tool</h3>
-  </div>
-  <div class="panel-body">
-    The initiative management tool provides a central portal for capturing, assessing and implementing new business initiatives within Downer. New initiatives can be raised by Downer employees, suppliers or contractors. Once an initiative is captured in the system it will go into the ideas register where it will undergo a process of assessment. Any ideas that are raised as part of an approved business plan will bypass the decision-making process and progress directly to the project setup phase.
-    <br><br>
-    Once you have entered the required details for a new initiative, you will receive an email confirming that your idea has been submitted. This email will provide a summary of your idea, as well as details about the assigned idea assessment contact. If and when any change to the initiative status occurs you will receive updates by email to keep you informed of the progress of your initiative.
-    <br><br>
-    Nominated authorised users can log in to the site in order to manage ideas and generate reports.
-    <br><br>
-    To begin the process now, click the 'Start An Idea' button below.
-    <br><br>
+<!-- forms content container -->
+<div class="container-fluid form-container">
 
-    <div class="bubble share-an-idea">
-      Share An Idea
-    </div>
-    <div class="bubble manage-idea">
-      Manage Ideas
+  <!-- form row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-10 col-md-10 col-sm-10">
+
+          <div><div class="panel panel-default panel-about">
+            <div class="panel-heading">
+              <h3 class="panel-title">Initiative Management Tool</h3>
+            </div>
+            <div class="panel-body">
+              The initiative management tool provides a central portal for capturing, assessing and implementing new business initiatives within Downer. New initiatives can be raised by Downer employees, suppliers or contractors. Once an initiative is captured in the system it will go into the ideas register where it will undergo a process of assessment. Any ideas that are raised as part of an approved business plan will bypass the decision-making process and progress directly to the project setup phase.
+              <br><br>
+              Nominated authorised users can log in to the site in order to manage ideas and generate reports.
+              <br><br>
+              To begin the process now, click the 'Start An Idea' button below.
+              <br><br>
+
+              <div class="bubble share-an-idea">
+                Share An Idea
+              </div>
+              <div class="bubble manage-idea">
+                Manage Ideas
+              </div>
+            </div>
+          </div></div>
+
+        </div>
+      </div>
     </div>
   </div>
-</div></div>
+</div>
 
 <script>
   $('.share-an-idea').on('click', start_idea);
+  $('.manage-idea').on('click', insert_idea_list);
 </script>
