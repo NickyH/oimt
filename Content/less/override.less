@@ -318,7 +318,7 @@
       color: black;
       box-shadow: inset 2px 2px 2px @oimt-light-grey;
       pointer-events: none;
-      &.idea-to-project {
+      &.share-an-idea {
         left: 30px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -333,7 +333,7 @@
           }
         }
       }
-      &.project-setup {
+      &.idea-to-project {
         left: 180px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -348,7 +348,7 @@
           }
         }
       }
-      &.project-execution {
+      &.project-setup {
         left: 330px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -363,7 +363,7 @@
           }
         }
       }
-      &.project-completion {
+      &.project-execution {
         left: 480px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -378,8 +378,23 @@
           }
         }
       }
-      &.project-closeout {
+      &.project-completion {
         left: 630px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
+      &.project-closeout {
+        left: 780px;
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
@@ -402,17 +417,20 @@
   position: absolute;
   width: 20px;
   top: 16px;
-  &.idea-to-project {
+  &.share-an-idea {
     left: 150px;
   }
-  &.project-setup {
+  &.idea-to-project {
     left: 300px;
   }
-  &.project-execution {
+  &.project-setup {
     left: 450px;
   }
-  &.project-completion {
+  &.project-execution {
     left: 600px;
+  }
+  &.project-completion {
+    left: 750px;
   }
 }
 
@@ -421,7 +439,8 @@
   min-height: 200px;
   height: fit-content;
   width: 50%;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 130px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
