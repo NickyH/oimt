@@ -206,6 +206,7 @@ function insert_completion() {
 }
 
 function insert_closeout() {
+  console.log('hello');
   $('#main-page').empty();
   $.get('closeout.html', function(data) {
       $('#main-page').html(data);
@@ -214,9 +215,6 @@ function insert_closeout() {
   insert_project_summary();
 
   insert_left_closeout()
-
-  $('.submit-idea').addClass('hidden');
-  $('.assess-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -297,4 +295,47 @@ function table_search(thisObj, tableID) {
       return !reg.test(text);
   }).hide();
   $('thead tr').show();
+}
+
+function toggle_rw_select(pill) {
+  $(pill).toggleClass('inactive');
+  $(pill).parents('.col-sm-4').siblings().children('ul').children('li').children('.pill-select').addClass('inactive');
+
+  if($(pill).hasClass('inactive')) {
+    $(pill).children('.pull-right').html('&#10008');
+  }
+
+  else {
+    $(pill).children('.pull-right').html('&#10004');
+  }
+}
+
+function show_share_idea_inputs() {
+  $('#form-share-idea').removeClass('hidden');
+  $('#form-progress-idea').addClass('hidden');
+  $('#form-end-idea').addClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
+}
+
+function show_progress_idea_inputs() {
+  $('#form-progress-idea').removeClass('hidden');
+  $('#form-share-idea').addClass('hidden');
+  $('#form-end-idea').addClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
+}
+
+function show_end_idea_inputs() {
+  $('#form-end-idea').removeClass('hidden');
+  $('#form-progress-idea').addClass('hidden');
+  $('#form-share-idea').addClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
 }

@@ -40,7 +40,7 @@
 }
 
 .form-container {
-  margin-left: 120px;
+  margin-left: 150px;
 }
 
 //left bar
@@ -318,7 +318,7 @@
       color: black;
       box-shadow: inset 2px 2px 2px @oimt-light-grey;
       pointer-events: none;
-      &.share-an-idea {
+      &.idea-to-project {
         left: 30px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -333,7 +333,7 @@
           }
         }
       }
-      &.idea-to-project {
+      &.project-setup {
         left: 180px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -348,7 +348,7 @@
           }
         }
       }
-      &.project-setup {
+      &.project-execution {
         left: 330px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -363,7 +363,7 @@
           }
         }
       }
-      &.project-execution {
+      &.project-completion {
         left: 480px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -378,23 +378,8 @@
           }
         }
       }
-      &.project-completion {
-        left: 630px;
-        &.inactive {
-          background-color: @oimt-very-light-grey;
-          border: 1px solid darken(@top-bar-colour, 5%);
-          color: @oimt-medium-dark-grey;
-          cursor: pointer;
-          pointer-events: auto;
-          &.bubble-hover {
-            background-color: lighten(@top-bar-colour, 40%);
-            color: black;
-            border: 1px solid lighten(@top-bar-colour, 20%);
-          }
-        }
-      }
       &.project-closeout {
-        left: 780px;
+        left: 630px;
         &.inactive {
           background-color: @oimt-very-light-grey;
           border: 1px solid darken(@top-bar-colour, 5%);
@@ -417,20 +402,17 @@
   position: absolute;
   width: 20px;
   top: 16px;
-  &.share-an-idea {
+  &.idea-to-project {
     left: 150px;
   }
-  &.idea-to-project {
+  &.project-setup {
     left: 300px;
   }
-  &.project-setup {
+  &.project-execution {
     left: 450px;
   }
-  &.project-execution {
-    left: 600px;
-  }
   &.project-completion {
-    left: 750px;
+    left: 600px;
   }
 }
 
@@ -450,24 +432,19 @@
 }
 
 .panel-summary {
-  min-width: 400px;
   min-height: 400px;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
 .panel-project-summary {
-  min-width: 400px;
-  min-height: 200px;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
-
 
 .panel-start-idea {
   min-width: 400px;
@@ -502,8 +479,8 @@
 .panel-idea-to-project, .panel-execution-report {
   min-width: 400px;
   min-height: 400px;
-  width: 80%;
-  margin-left: 10%;
+  width: 95%;
+  margin-left: 30px;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
@@ -634,7 +611,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    background-color: lighten(@oimt-blue, 10%);
+    background-color: @oimt-blue;
     width: 180px;
     height: 50px;
     border-radius: 50%;
@@ -642,7 +619,7 @@
     text-align: center;
     font-size: @font-size-large;
     color: @oimt-very-light-grey;
-    box-shadow: 2px 2px 2px @oimt-light-grey;
+    box-shadow: 3px 3px 3px @oimt-light-grey;
     cursor: pointer;
     &.submit {
       &.inactive {
@@ -858,6 +835,19 @@ input[type="file"] {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+}
+
+
+//pill nav styling
+
+li.active {
+  a.pill-select {
+    &.inactive {
+      background-color: @oimt-white;
+      color: black;
+      border: 1px solid @grey-medium;
+    }
+  }
 }
 
 // Media Queries

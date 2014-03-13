@@ -6,7 +6,7 @@
     <div class="col-12">
       <div class="row-fluid">
 
-        <!-- form panel 1 -->
+        <!-- col 1 -->
         <div class="col-lg-10 col-md-10 col-sm-10">
 
           <!-- start panel-->
@@ -34,7 +34,7 @@
                     <label class="col-sm-4 control-label">Date of Submission</label>
                     <div class="col-sm-8">
                       <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" value="12/03/2014"/>
+                        <input type="text" class="form-control date datepicker" value="12/03/2014" disabled/>
                         <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -45,28 +45,28 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Your Name</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="Jo Wilkins" disabled />
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Your Position</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="Accountant" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Your Email</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="jwilkins@downergroup.com" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Business Unit</label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                      <select class="selectpicker show-tick form-control" data-required="true" title='Internal Audit' disabled>
                         <option data-hidden="true"></option>
                         <option>1</option>
                         <option>2</option>
@@ -78,14 +78,14 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Location</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="Melbourne" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Direct Manager</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="Jan Kane" disabled/>
                     </div>
                   </div>
 
@@ -100,9 +100,7 @@
           <!-- start panel-->
           <div class="panel panel-default panel-idea-details">
             <div class="panel-heading">
-              <h3 class="panel-title">Idea Details
-                <!-- <div class="idea-status not-started">Status: Not Started</div> -->
-              </h3>
+              <h3 class="panel-title">Idea Details</h3>
             </div>
 
             <div class="panel-body">
@@ -114,28 +112,28 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Estimate of Benefits $</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="$100,00 - $150,000" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Idea Title</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
+                      <input type="text" class="form-control" data-required="true" value="New Accounting Software" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Idea Description</label>
                     <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
+                      <textarea type="text" class="form-control" rows="4" disabled>Request to investigate and purchase new accounting software Downer-wide for all accounting groups</textarea>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Benefits</label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title='Costs, Efficiency' disabled>
                         <option data-hidden="true"></option>
                         <option>1</option>
                         <option>2</option>
@@ -147,7 +145,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Types Of Benefits</label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title='Efficiency' disabled>
                         <option data-hidden="true"></option>
                         <option>Plant</option>
                         <option>Labour</option>
@@ -161,10 +159,7 @@
                     <label class="col-sm-4 control-label">Supporting Documents</label>
                     <div class="col-sm-8">
                       <input type="file" class="form-control">
-                      <span class='btn btn-info file-select'>Select File</span>
-                      <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
-                      <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
-                      <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
+                      <span class='btn btn-default file-select'>Select File</span>
                     </div>
                   </div>
 
@@ -177,11 +172,9 @@
           <!-- end panel-->
 
           <!-- start panel-->
-          <div class="panel panel-default panel-idea-assessment hidden">
+          <div class="panel panel-default panel-idea-assessment">
             <div class="panel-heading">
-              <h3 class="panel-title">Idea Assessment
-                <!-- <div class="idea-status not-started">Status: Not Started</div> -->
-              </h3>
+              <h3 class="panel-title">Idea Assessment</h3>
             </div>
 
             <div class="panel-body">
@@ -191,27 +184,149 @@
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Assessment</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>Idea for sharing</option>
-                        <option>Idea to take forward</option>
-                        <option>Not to be progressed</option>
-                      </select>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-form-share-idea">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Share Idea
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-form-progress-idea">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Progress Idea
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-form-end-idea">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            End Idea
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Supporting Documents</label>
-                    <div class="col-sm-8">
-                      <input type="file" class="form-control">
-                      <span class='btn btn-info file-select'>Select File</span>
-                      <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
-                      <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
-                      <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
+                  <!-- form share idea inputs-->
+                  <div id="form-share-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
                     </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Notify</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Amy Aarons</option>
+                          <option>Ben Albany</option>
+                          <option>Cameron Bopp</option>
+                          <option>Nathan Craig</option>
+                          <option>Sarah Craig</option>
+                          <option>Andrew Dempsey</option>
+                          <option>Mark Ethel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select'id="share-and-close">Share and Go To Close-Out</span>
+                      </div>
+                    </div>
+
                   </div>
+                  <!-- form share idea inputs-->
+
+                  <!-- form progress idea inputs-->
+                  <div id="form-progress-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Supporting Documents</label>
+                      <div class="col-sm-8">
+                        <input type="file" class="form-control">
+                        <span class='btn btn-info file-select'>Select File</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select'>Place Idea On Hold</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select'id="progress-idea">Progress Idea To Project</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form progress idea inputs-->
+
+                  <!-- form end idea inputs-->
+                  <div id="form-end-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Notify</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Amy Aarons</option>
+                          <option>Ben Albany</option>
+                          <option>Cameron Bopp</option>
+                          <option>Nathan Craig</option>
+                          <option>Sarah Craig</option>
+                          <option>Andrew Dempsey</option>
+                          <option>Mark Ethel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Reasons</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select' id="end-idea">End Idea</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form end idea inputs-->
+
 
                 </div>
               </form>
@@ -233,4 +348,9 @@ $('.selectpicker').selectpicker({
   });
 $('.datepicker').pickadate();
 $('.assess-idea').on('click', show_assess_panel);
+$('#share-and-close').on('click', insert_closeout);
+$('#end-idea').on('click', insert_closeout);
+$('#unhide-form-share-idea').on('click', show_share_idea_inputs);
+$('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
+$('#unhide-form-end-idea').on('click', show_end_idea_inputs);
 </script>
