@@ -4,11 +4,11 @@
 
   <div class="bubble-container">
 
-    <div class="bubble idea">
-      Idea
+    <div class="bubble idea" id="left-bar-assess-idea-idea">
+      Review Idea
     </div>
 
-    <div class="bubble assess inactive">
+    <div class="bubble assess inactive" id="left-bar-assess-idea-assess">
       Assess
     </div>
 
@@ -18,5 +18,6 @@
 
 
 <script>
-
+$('#left-bar-assess-idea-idea').on('click', insert_assess_start);
+$('#left-bar-assess-idea-assess').on('click', insert_assess_assess);
 </script>

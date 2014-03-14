@@ -114,6 +114,16 @@ function insert_assess_start() {
   $('#top-bar-closeout').addClass('inactive');
 }
 
+function insert_assess_assess() {
+  $('#main-page').empty();
+  $.get('assess_assess.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-assess-idea-idea').addClass('inactive');
+  $('#left-bar-assess-idea-assess').removeClass('inactive');
+}
+
 function insert_idea_list() {
   $('#main-page').empty();
   $.get('idea_list.html', function(data) {
@@ -190,13 +200,8 @@ function insert_execution_phase() {
   $.get('execution_phase.html', function(data) {
       $('#main-page').html(data);
   });
-  insert_summary();
-  insert_project_summary();
 
   insert_left_project_execution()
-
-  $('.submit-idea').addClass('hidden');
-  $('.assess-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').addClass('inactive');
@@ -204,6 +209,47 @@ function insert_execution_phase() {
   $('#top-bar-execution').removeClass('inactive');
   $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
+
+  $('#left-bar-exec-update').removeClass('inactive');
+  $('#left-bar-exec-steps').addClass('inactive');
+  $('#left-bar-exec-risks').addClass('inactive');
+  $('#left-bar-exec-reports').addClass('inactive');
+}
+
+function insert_execution_steps() {
+  $('#main-page').empty();
+  $.get('execution_steps.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-exec-update').addClass('inactive');
+  $('#left-bar-exec-steps').removeClass('inactive');
+  $('#left-bar-exec-risks').addClass('inactive');
+  $('#left-bar-exec-reports').addClass('inactive');
+}
+
+function insert_execution_risks() {
+  $('#main-page').empty();
+  $.get('execution_risks.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-exec-update').addClass('inactive');
+  $('#left-bar-exec-steps').addClass('inactive');
+  $('#left-bar-exec-risks').removeClass('inactive');
+  $('#left-bar-exec-reports').addClass('inactive');
+}
+
+function insert_execution_reports() {
+  $('#main-page').empty();
+  $.get('execution_reports.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-exec-update').addClass('inactive');
+  $('#left-bar-exec-steps').addClass('inactive');
+  $('#left-bar-exec-risks').addClass('inactive');
+  $('#left-bar-exec-reports').removeClass('inactive');
 }
 
 function insert_completion() {

@@ -4,20 +4,20 @@
 
   <div class="bubble-container">
 
-    <div class="bubble business-case">
-      Reports
-    </div>
-
-    <div class="bubble review inactive">
+    <div class="bubble business-case" id="left-bar-exec-update">
       Update
     </div>
 
-    <div class="bubble next-steps inactive">
+    <div class="bubble review inactive" id="left-bar-exec-steps">
       Next Steps
     </div>
 
-    <div class="bubble risks inactive">
+    <div class="bubble approval inactive" id="left-bar-exec-risks">
       Risks
+    </div>
+
+    <div class="bubble risks inactive" id="left-bar-exec-reports">
+      Reports
     </div>
 
   </div>
@@ -26,5 +26,8 @@
 
 
 <script>
-
+$('#left-bar-exec-update').on('click', insert_execution_phase);
+$('#left-bar-exec-steps').on('click', insert_execution_steps);
+$('#left-bar-exec-risks').on('click', insert_execution_risks);
+$('#left-bar-exec-reports').on('click', insert_execution_reports);
 </script>

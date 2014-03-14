@@ -1,0 +1,194 @@
+<!-- forms content container -->
+<div class="container-fluid form-container">
+
+  <!-- form row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-10 col-md-10 col-sm-10">
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-execution-report top">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Data</h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div>
+                          <span class="chart-header">Assessment Against Milestones</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div class="chart menu-orange">
+                          <div id="totalbudgetvariance"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div>
+                          <span class="chart-header">Percentage Complete (time)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div class="chart-side">
+                          <div class="donut-small" id="pie-percentcompletetime"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div>
+                          <span class="chart-header">Percentage Complete (cost)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div class="chart-side">
+                          <div class="donut-small" id="pie-percentcompletecost"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div>
+                          <span class="chart-header">Next Steps</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div class="chart-side">
+                          <dl class="dl-horizontal">
+                            <dt>April 2014</dt>
+                            <dd>Implement project phase 1, gather team members, organise central project meeting for all team members to meet</dd>
+                            <dt>June 2014</dt>
+                            <dd>Begin project phase 2, gather feedback from client including any potential changes in project timeline and project phases</dd>
+                            <dt>September 2014</dt>
+                            <dd>Project conclusion, review project implementation and preprare for project close-out</dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+</script>
+
+ <script>
+  new Morris.Line({
+    element: 'totalbudgetvariance',
+    data: [
+    {month: '2013-11', value: 10 },
+    {month: '2013-12', value: 12 },
+    {month: '2014-01', value: 5 },
+    {month: '2014-02', value: 22 },
+    {month: '2014-03', value: 28 }
+    ],
+    goals: [45],
+    goalLineColors: ['green'],
+    xkey: 'month',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+
+  new Morris.Donut({
+    element: 'pie-percentcompletetime',
+    data: [
+    {label: 'complete', value: 80 },
+    {label: 'incomplete', value: 20 }
+    ],
+    colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
+  });
+
+  new Morris.Donut({
+    element: 'pie-percentcompletecost',
+    data: [
+    {label: 'complete', value: 64 },
+    {label: 'incomplete', value: 36 }
+    ],
+    colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
+  });
+
+
+  new Morris.Line({
+    element: 'labourbudgetvariance',
+    data: [
+    {month: '2013-11', value: 12 },
+    {month: '2013-12', value: 15 },
+    {month: '2014-01', value: 20 },
+    {month: '2014-02', value: 14 },
+    {month: '2014-03', value: 10 }
+    ],
+    goals: [45],
+    goalLineColors: ['green'],
+    xkey: 'month',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+
+  new Morris.Donut({
+    element: 'pie-labourbudgetvariance',
+    data: [
+    {label: 'Nov \'13', value: 15 },
+    {label: 'Dec \'14', value: 10 },
+    {label: 'Jan \'14', value: 19 },
+    {label: 'Feb \'14', value: 2 }
+    ],
+    colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
+  });
+  </script>

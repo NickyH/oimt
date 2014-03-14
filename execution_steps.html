@@ -1,0 +1,72 @@
+<!-- forms content container -->
+<div class="container-fluid form-container">
+
+  <!-- form row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-10 col-md-10 col-sm-10">
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-execution-steps top">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Next Steps</h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step Description</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Next Step Due</label>
+                    <div class="col-sm-4">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email">Add Step</span>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+</script>
