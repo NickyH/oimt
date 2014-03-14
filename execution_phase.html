@@ -10,11 +10,323 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
           <!-- start panel-->
+          <div class="panel panel-default panel-execution-input top">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Data Input</h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Project Status</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Red</option>
+                        <option>Amber</option>
+                        <option>Green</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Project Status Description</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Benefits Reassessment</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Capex Reassessment</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Opex Reassessment</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">% Complete (time)</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>0%</option>
+                        <option>10%</option>
+                        <option>20%</option>
+                        <option>30%</option>
+                        <option>40%</option>
+                        <option>50%</option>
+                        <option>60%</option>
+                        <option>70%</option>
+                        <option>80%</option>
+                        <option>90%</option>
+                        <option>100%</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">% Complete (cost)</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>0%</option>
+                        <option>10%</option>
+                        <option>20%</option>
+                        <option>30%</option>
+                        <option>40%</option>
+                        <option>50%</option>
+                        <option>60%</option>
+                        <option>70%</option>
+                        <option>80%</option>
+                        <option>90%</option>
+                        <option>100%</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step 1</label>
+                    <div class="col-sm-5">
+                      Next step description here
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Done</option>
+                        <option>Not Done</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step 2</label>
+                    <div class="col-sm-5">
+                      Next step description here
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Done</option>
+                        <option>Not Done</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step 3</label>
+                    <div class="col-sm-5">
+                      Next step description here
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Done</option>
+                        <option>Not Done</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Assessment Date</label>
+                    <div class="col-sm-4">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email">Add Assessment</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Key Achievements</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-execution-steps">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Next Steps</h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Next Step Description</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Next Step Due</label>
+                    <div class="col-sm-4">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email">Add Step</span>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-execution-risks">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Risks
+                <!-- <div class="idea-status underway">Status: Underway</div> -->
+              </h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <table class="table table-condensed table-striped">
+                      <thead>
+                        <tr>
+                          <th>Risks/Issues</th>
+                          <th>Solution</th>
+                          <th>Category</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td>Project may run overtime</td>
+                        <td>Weekly updates</td>
+                        <td>Time</td>
+                      </tr>
+                      <tr>
+                        <td>Project may run overtime</td>
+                        <td>Weekly updates</td>
+                        <td>Time</td>
+                      </tr>
+                      <tr>
+                        <td>Project may run overtime</td>
+                        <td>Weekly updates</td>
+                        <td>Time</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Add Risk</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Risk Issues</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Risk Solution</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Risk Mitigation</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Added</label>
+                    <div class="col-sm-4">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email">Add Risk</span>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
           <div class="panel panel-default panel-execution-report">
             <div class="panel-heading">
-              <h3 class="panel-title">Project Data
-                <div class="idea-status underway">Status: Underway</div>
-              </h3>
+              <h3 class="panel-title">Project Data</h3>
             </div>
             <div class="panel-body">
 
@@ -106,223 +418,6 @@
                           </dl>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-          <!-- end panel-->
-
-          <!-- start panel-->
-          <div class="panel panel-default panel-execution-input">
-            <div class="panel-heading">
-              <h3 class="panel-title">Project Data Input
-                <!-- <div class="idea-status underway">Status: Underway</div> -->
-              </h3>
-            </div>
-            <div class="panel-body">
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-column col-lg-12 col-md-12 col-sm-12">
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Assessment Against Milestones</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Benefits Reassessment</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Capex Reassessment</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Opex Reassessment</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">% Complete (time)</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">% Complete (cost)</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Project Status</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>On Time</option>
-                        <option>On Hold</option>
-                        <option>Delayed</option>
-                      </select>
-                    </div>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-          <!-- end panel-->
-
-          <!-- start panel-->
-          <div class="panel panel-default panel-execution-steps">
-            <div class="panel-heading">
-              <h3 class="panel-title">Project Next Steps
-                <!-- <div class="idea-status underway">Status: Underway</div> -->
-              </h3>
-            </div>
-            <div class="panel-body">
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-column col-lg-12 col-md-12 col-sm-12">
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Next Step</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Next Step Description</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Date Next Step Due</label>
-                    <div class="col-sm-4">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" />
-                        <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <span class="btn btn-info form-control close-form email">Add Step</span>
-                    </div>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-          <!-- end panel-->
-
-          <!-- start panel-->
-          <div class="panel panel-default panel-execution-risks">
-            <div class="panel-heading">
-              <h3 class="panel-title">Project Risks
-                <!-- <div class="idea-status underway">Status: Underway</div> -->
-              </h3>
-            </div>
-            <div class="panel-body">
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-column col-lg-12 col-md-12 col-sm-12">
-
-                  <div class="form-group">
-                    <table class="table table-condensed table-striped">
-                      <thead>
-                        <tr>
-                          <th>Risk</th>
-                          <th>Issues</th>
-                          <th>Solution</th>
-                          <th>Mitigation</th>
-                        </tr>
-                      </thead>
-                      <tr>
-                        <td>Timeframe</td>
-                        <td>Project may run overtime</td>
-                        <td>Weekly updates</td>
-                        <td>May require additional team member during critical phase</td>
-                      </tr>
-                      <tr>
-                        <td>Cost</td>
-                        <td>Project may run overcost</td>
-                        <td>Weekly budget updates</td>
-                        <td>May require smaller team between project phases</td>
-                      </tr>
-                      <tr>
-                        <td>Timeframe</td>
-                        <td>Project may run overtime</td>
-                        <td>Weekly updates</td>
-                        <td>May require additional team member during critical phase</td>
-                      </tr>
-                    </table>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Add Risk</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Risk Issues</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="2"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Risk Solution</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="2"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Risk Mitigation</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="2"></textarea>
-                    </div>
-                  </div>
-
-                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Date Added</label>
-                    <div class="col-sm-4">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" />
-                        <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <span class="btn btn-info form-control close-form email">Add Risk</span>
                     </div>
                   </div>
 

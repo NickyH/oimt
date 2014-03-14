@@ -250,7 +250,7 @@ function insert_top_bar() {
   $.get('top_bar.html', function(data) {
       $('#insert-top').html(data);
   });
-  $('#insert-top').fadeIn(1500);
+  $('#insert-top').fadeIn(500);
   $('#insert-top').delay(500).removeClass('hidden');
 
 }

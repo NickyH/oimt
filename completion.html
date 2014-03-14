@@ -51,12 +51,14 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Lessons Learned</label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <span class="btn btn-info form-control close-form email">Add</span>
                     </div>
                   </div>
 
@@ -75,44 +77,18 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Business Unit</label>
+                    <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
+                      <span class="btn btn-info form-control close-form email">Add</span>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Location</label>
+                    <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Type of Benefit</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="bubble submit">
-                      Complete
+                      <div class="bubble submit" id="submit-completion">
+                        Complete
+                      </div>
                     </div>
                   </div>
 
@@ -128,11 +104,10 @@
   </div>
 </div>
 
-
-
 <script>
 $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
+$('#submit-completion').on('click', insert_closeout);
 </script>
