@@ -162,7 +162,8 @@
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
-                        <span class='btn btn-success file-select approval'>Place Idea On Hold</span>
+                        <span class='btn btn-success file-select approval' id="place-idea-on-hold">Place Idea On Hold</span>
+                        <span class='btn btn-warning file-select approval hidden' id="resume-assess">On Hold - Resume Assessment</span>
                       </div>
                     </div>
 
@@ -322,4 +323,6 @@ $('#progress-idea').on('click', insert_project_setup);
 $('#unhide-form-share-idea').on('click', show_share_idea_inputs);
 $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);
+$('#place-idea-on-hold').on('click', show_hide_resume_assess_button);
+$('#resume-assess').on('click', show_hide_resume_assess_button);
 </script>

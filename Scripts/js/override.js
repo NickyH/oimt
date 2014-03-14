@@ -443,3 +443,9 @@ function show_approve() {
   toggle_rw_select(pill);
   return false;
 }
+
+function show_hide_resume_assess_button () {
+  $('#resume-assess').toggleClass('hidden');
+  $('#place-idea-on-hold').toggleClass('hidden');
+  $('#progress-idea').toggleClass('btn-success').toggleClass('btn-default');
+}
