@@ -128,11 +128,7 @@ function insert_idea_to_project() {
   $.get('idea_to_project.html', function(data) {
       $('#main-page').html(data);
   });
-  insert_summary();
   insert_left_idea_project();
-
-  $('.submit-idea').addClass('hidden');
-  $('.assess-idea').addClass('hidden');
 
   $('#top-bar-start').addClass('inactive');
   $('#top-bar-idea-to-project').removeClass('inactive');
@@ -140,6 +136,32 @@ function insert_idea_to_project() {
   $('#top-bar-execution').addClass('inactive');
   $('#top-bar-completion').addClass('inactive');
   $('#top-bar-closeout').addClass('inactive');
+
+  $('#left-bar-itp-business').removeClass('inactive');
+  $('#left-bar-itp-review').addClass('inactive');
+  $('#left-bar-itp-approve').addClass('inactive');
+}
+
+function insert_idea_to_project_review() {
+  $('#main-page').empty();
+  $.get('idea_to_project_review.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-itp-business').addClass('inactive');
+  $('#left-bar-itp-review').removeClass('inactive');
+  $('#left-bar-itp-approve').addClass('inactive');
+}
+
+function insert_idea_to_project_approve() {
+  $('#main-page').empty();
+  $.get('idea_to_project_approve.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-itp-business').addClass('inactive');
+  $('#left-bar-itp-review').addClass('inactive');
+  $('#left-bar-itp-approve').removeClass('inactive');
 }
 
 function insert_project_setup() {
@@ -206,7 +228,6 @@ function insert_completion() {
 }
 
 function insert_closeout() {
-  console.log('hello');
   $('#main-page').empty();
   $.get('closeout.html', function(data) {
       $('#main-page').html(data);
@@ -300,6 +321,7 @@ function table_search(thisObj, tableID) {
 function toggle_rw_select(pill) {
   $(pill).toggleClass('inactive');
   $(pill).parents('.col-sm-4').siblings().children('ul').children('li').children('.pill-select').addClass('inactive');
+  $(pill).parents('.col-sm-4').siblings().children('ul').children('li').children('.pill-select').children('.pull-right').html('&#10008');
 
   if($(pill).hasClass('inactive')) {
     $(pill).children('.pull-right').html('&#10008');
@@ -334,6 +356,42 @@ function show_end_idea_inputs() {
   $('#form-end-idea').removeClass('hidden');
   $('#form-progress-idea').addClass('hidden');
   $('#form-share-idea').addClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
+}
+
+function show_recommend() {
+  $('#form-recommend').removeClass('hidden');
+  $('#form-not-recommend').addClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
+}
+
+function show_not_recommend() {
+  $('#form-recommend').addClass('hidden');
+  $('#form-not-recommend').removeClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
+}
+
+function show_not_approve() {
+  $('#form-approve').addClass('hidden');
+  $('#form-not-approve').removeClass('hidden');
+
+  var pill = $(this).children('li').children('.pill-select');
+  toggle_rw_select(pill);
+  return false;
+}
+
+function show_approve() {
+  $('#form-approve').removeClass('hidden');
+  $('#form-not-approve').addClass('hidden');
 
   var pill = $(this).children('li').children('.pill-select');
   toggle_rw_select(pill);

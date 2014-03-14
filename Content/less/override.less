@@ -488,7 +488,7 @@
 .panel-execution-steps,
 .panel-execution-risks, {
   min-width: 400px;
-  min-height: 400px;
+  min-height: 200px;
   width: 80%;
   margin-left: 10%;
   margin-top: 30px;
@@ -621,8 +621,9 @@
   }
 }
 
-.left-group {
-  margin-left: 120px;
+.form-group.underline {
+  border-bottom: 1px solid @grey-medium;
+  padding-bottom: 20px;
 }
 
 .form-group {
@@ -642,14 +643,9 @@
     cursor: pointer;
     &.submit {
       &.inactive {
-        transform: scale(0.5, 0.5);
-        width: 110px;
-        line-height: 50px;
-        height: 50px;
         opacity: 0.5;
         cursor: auto;
         pointer-events: none;
-        font-size: @font-size-medium;
       }
     }
   }
@@ -688,6 +684,9 @@ input[type="file"] {
   margin-left: 15px;
   margin-right: 15px;
   font-weight: bold;
+  &.approval {
+    height: 33px;
+  }
 }
 
 .btn.attachment {
@@ -821,29 +820,60 @@ input[type="file"] {
 }
 
 // table column widths
-.tbl-edit {
-  width: 2%;
+.activity-data-table {
+  .tbl-ID {
+  width: 5%;
+  }
+  .tbl-title {
+    width: 20%;
+  }
+  .tbl-date {
+    width: 10%;
+  }
+  .tbl-status {
+    width: 10%;
+  }
+  .tbl-owner {
+    width: 15%;
+  }
+  .tbl-sponsor {
+    width: 15%;
+  }
+  .tbl-comment {
+    width: 20%;
+  }
+  .tbl-edit {
+    width: 5%;
+  }
 }
-.tbl-activity {
-  width: 20%;
+
+.contact-history-table {
+  .tbl-date {
+    width: 10%;
+  }
+  .tbl-request {
+    width: 10%;
+  }
+  .tbl-response {
+    width: 15%;
+  }
+  .tbl-respondant {
+    width: 15%;
+  }
+  .tbl-responsedate {
+    width: 20%;
+  }
+  .tbl-edit {
+    width: 5%;
+  }
 }
-.tbl-invoice {
-  width: 15%;
-}
-.tbl-estimate {
-  width: 10%;
-}
-.tbl-measure {
-  width: 10%;
-}
-.tbl-unit {
-  width: 2%;
-}
-.tbl-total {
-  width: 3%;
-}
-.tbl-comments {
-  // width:20%;
+
+.show-closed {
+  float: right;
+  font-size: 14px;
+  color: @oimt-blue;
+  margin-right: 20px;
+  margin-top: 10px;
 }
 
 .time-header {
@@ -854,6 +884,32 @@ input[type="file"] {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+}
+
+.contact-history-data-table {
+  .form-control {
+    height: 28px !important;
+    margin-top: 5px;
+  }
+  .text {
+    margin-top: 10px;
+    cursor: pointer;
+    &.red {
+      color: red;
+    }
+    &.orange {
+      color: orange;
+    }
+    &.green {
+      color: green;
+    }
+  }
+  .text.status:hover {
+    opacity: 0.6;
+  }
+  tr{
+    height: 35px;
+  }
 }
 
 

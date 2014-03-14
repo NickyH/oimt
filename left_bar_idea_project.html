@@ -4,15 +4,15 @@
 
   <div class="bubble-container">
 
-    <div class="bubble business-case" id="top-bar-start">
+    <div class="bubble business-case" id="left-bar-itp-business">
       Business Case
     </div>
 
-    <div class="bubble review inactive" id="top-bar-idea-to-project">
+    <div class="bubble review inactive" id="left-bar-itp-review">
       Review
     </div>
 
-    <div class="bubble approval inactive" id="top-bar-project-setup">
+    <div class="bubble approval inactive" id="left-bar-itp-approve">
       Approval
     </div>
 
@@ -22,5 +22,7 @@
 
 
 <script>
-
+$('#left-bar-itp-business').on('click', insert_idea_to_project);
+$('#left-bar-itp-review').on('click', insert_idea_to_project_review);
+$('#left-bar-itp-approve').on('click', insert_idea_to_project_approve);
 </script>

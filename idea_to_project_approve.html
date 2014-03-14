@@ -1,0 +1,212 @@
+<!-- forms content container -->
+<div class="container-fluid form-container">
+
+  <!-- form row 2 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- column 1 -->
+        <div class="col-lg-8 col-md-8 col-sm-8">
+
+          <!-- panel start-->
+          <div class="panel panel-default panel-idea-to-project">
+            <div class="panel-heading">
+              <h3 class="panel-title">Review Business Case
+                <div class="idea-status underway"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Request Further Information</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Send To:</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title='' disabled>
+                        <option data-hidden="true"></option>
+                        <option>Employee Name</option>
+                        <option>Employee Name</option>
+                        <option>Employee Name</option>
+                        <option>Employee Name</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group underline">
+                    <div class="col-sm-4">
+                      <label class="col-sm-4 control-label">Recommend Business Case?</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-project-not-approve">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Not Recommended
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-project-approve">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Recommended
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- form not approve inputs-->
+                  <div id="form-not-approve" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Reasons for Not Approving Project</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval'id="file-bc-closeout">File Business Case & Close-Out</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form not approve inputs-->
+
+                  <!-- form approve inputs-->
+                  <div id="form-approve" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Reasons for Approving Project</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval' id="submit-approval">Approve Project</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form approve inputs-->
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+        <!-- end column 1-->
+
+        <!-- column 2 -->
+        <div class="col-lg-4 col-md-4 col-sm-4">
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-summary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Idea Summary</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="list-group">
+                <a href="#" class="list-group-item active">
+                  <h4 class="list-group-item-heading">Idea Title</h4>
+                  <p class="list-group-item-text">This is the description of the idea here...</p>
+                </a>
+              </div>
+
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">Idea Benefits</h4>
+                  <p class="list-group-item-text">Energy, Efficiency, Cost Savings</p>
+                </a>
+              </div>
+
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">Idea Owner</h4>
+                  <p class="list-group-item-text">Jan Kane, 9885 1234, jkane@downergroup.com</p>
+                </a>
+              </div>
+
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">Cost Estimate</h4>
+                  <p class="list-group-item-text">$100,000 - $150,000</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <!--end panel-->
+
+          <!-- panel start-->
+          <div class="panel panel-default panel-project-summary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Summary</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="list-group">
+                <a href="#" class="list-group-item active">
+                  <h4 class="list-group-item-heading">Project Manager</h4>
+                  <p class="list-group-item-text">Harriet Hanley</p>
+                </a>
+              </div>
+
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">Team Members</h4>
+                  <p class="list-group-item-text">Greg Whelan, Sara Russell, Geirge Xi, Paul McVee</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+        <!--end col 2-->
+
+      </div>
+    </div>
+  </div>
+  <!-- end form row 2-->
+
+</div>
+
+
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+$('#submit-approval').on('click', insert_project_setup);
+$('#unhide-project-approve').on('click', show_approve);
+$('#unhide-project-not-approve').on('click', show_not_approve);
+$('#file-bc-closeout').on('click', insert_closeout);
+</script>

@@ -64,6 +64,13 @@
                   </div>
 
                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Phone No.</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true" disabled>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
                     <label class="col-sm-4 control-label">Business Unit</label>
                     <div class="col-sm-8">
                       <select class="selectpicker show-tick form-control" data-required="true" title='Internal Audit' disabled>
@@ -184,6 +191,32 @@
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Request Further Information</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Send To:</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" multiple data-required="true" title='' disabled>
+                        <option data-hidden="true"></option>
+                        <option>Employee Name</option>
+                        <option>Employee Name</option>
+                        <option>Employee Name</option>
+                        <option>Employee Name</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Select an Assessment Option:</label>
+                    <div class="col-sm-8">
+                    </div>
+                  </div>
+
+                  <div class="form-group underline">
                     <div class="col-sm-4">
                       <ul class="nav nav-pills nav-stacked" id="unhide-form-share-idea">
                         <li class="active">
@@ -209,7 +242,7 @@
                         <li class="active">
                           <a href="#" class="pill-select inactive">
                             <span class="badge pull-right">&#10008</span>
-                            End Idea
+                            File Idea
                           </a>
                         </li>
                       </ul>
@@ -220,7 +253,30 @@
                   <div id="form-share-idea" class="hidden">
 
                     <div class="form-group">
-                      <label class="col-sm-4 control-label">Comments</label>
+                      <label class="col-sm-4 control-label">Comments To Owner</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Notify</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Amy Aarons</option>
+                          <option>Ben Albany</option>
+                          <option>Cameron Bopp</option>
+                          <option>Nathan Craig</option>
+                          <option>Sarah Craig</option>
+                          <option>Andrew Dempsey</option>
+                          <option>Mark Ethel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments To Others</label>
                       <div class="col-sm-8">
                         <textarea type="text" class="form-control" rows="4"></textarea>
                       </div>
@@ -246,7 +302,7 @@
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
-                        <span class='btn btn-success file-select'id="share-and-close">Share and Go To Close-Out</span>
+                        <span class='btn btn-success file-select approval'id="share-and-close">Share and Go To Close-Out</span>
                       </div>
                     </div>
 
@@ -275,7 +331,7 @@
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
-                        <span class='btn btn-success file-select'>Place Idea On Hold</span>
+                        <span class='btn btn-success file-select approval'>Place Idea On Hold</span>
                       </div>
                     </div>
 
@@ -283,7 +339,7 @@
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
-                        <span class='btn btn-success file-select'id="progress-idea">Progress Idea To Project</span>
+                        <span class='btn btn-success file-select approval'id="progress-idea">Progress Idea To Project</span>
                       </div>
                     </div>
 
@@ -320,12 +376,93 @@
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
-                        <span class='btn btn-success file-select' id="end-idea">End Idea</span>
+                        <span class='btn btn-success file-select approval' id="end-idea">File Idea</span>
                       </div>
                     </div>
 
                   </div>
                   <!-- form end idea inputs-->
+
+
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-idea-assessment">
+            <div class="panel-heading">
+              <h3 class="panel-title">Idea Assessment History</h3>
+            </div>
+
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <!-- contact history table start-->
+
+                  <!-- each searchable table needs unique ID "table-filter-*" -->
+                  <table id="table-filter-contact-history" class="table table-condensed table-striped contact-history-table">
+                    <thead>
+                      <tr>
+                        <th class="tbl-date">Date Requested</th>
+                        <th class="tbl-request">Request</th>
+                        <th class="tbl-response">Response</th>
+                        <th class="tbl-respondant">Respondant</th>
+                        <th class="tbl-responsedate">Response Date</th>
+                        <th class="tbl-edit">Edit</th>
+                      </tr>
+                    </thead>
+
+                    <tr>
+                      <td><div class="text">15/03/2014</div></td>
+                      <td><div class="text">Need further info about cost</div></td>
+                      <td><div class="text">The cost is being assessed by my team and will respond shortly</div></td>
+                      <td><div class="text">Greg Jolly</div></td>
+                      <td><div class="text">15/03/2014</div></td>
+                      <td>
+                        <div class="text">
+                          <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><div class="text">15/03/2014</div></td>
+                      <td><div class="text">Need further info about cost</div></td>
+                      <td><div class="text">The cost is being assessed by my team and will respond shortly</div></td>
+                      <td><div class="text">Greg Jolly</div></td>
+                      <td><div class="text">15/03/2014</div></td>
+                      <td>
+                        <div class="text">
+                          <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><div class="text">15/03/2014</div></td>
+                      <td><div class="text">Need further info about cost</div></td>
+                      <td><div class="text">The cost is being assessed by my team and will respond shortly</div></td>
+                      <td><div class="text">Greg Jolly</div></td>
+                      <td><div class="text">15/03/2014</div></td>
+                      <td>
+                        <div class="text">
+                          <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                        </div>
+                      </td>
+                    </tr>
+
+
+
+                  </table>
+                  <!-- category table end-->
+
 
 
                 </div>
