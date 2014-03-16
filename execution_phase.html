@@ -40,7 +40,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Benefits Reassessment</label>
+                    <label class="col-sm-4 control-label">Benefits Reassessment $</label>
                     <div class="col-sm-8">
                       <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
                         <option data-hidden="true"></option>
@@ -52,7 +52,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Capex Reassessment</label>
+                    <label class="col-sm-4 control-label">Capex Reassessment $</label>
                     <div class="col-sm-8">
                       <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
                         <option data-hidden="true"></option>
@@ -64,7 +64,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Opex Reassessment</label>
+                    <label class="col-sm-4 control-label">Opex Reassessment %</label>
                     <div class="col-sm-8">
                       <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
                         <option data-hidden="true"></option>
@@ -116,44 +116,76 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Next Step 1</label>
-                    <div class="col-sm-5">
-                      Next step description here
-                    </div>
-                    <div class="col-sm-3">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>Done</option>
-                        <option>Not Done</option>
-                      </select>
-                    </div>
-                  </div>
+                    <label class="col-sm-4 control-label">Milestones checklist</label>
+                    <div class="col-sm-8">
+                      <!-- each searchable table needs unique ID "table-filter-*" -->
+                      <table id="table-filter-next-steps" class="table table-condensed table-striped contact-history-table">
+                        <thead>
+                          <tr>
+                            <th class="tbl-date">Next Step</th>
+                            <th class="tbl-request">Date Due</th>
+                            <th class="tbl-response">Description</th>
+                            <th class="tbl-edit">Completed?</th>
+                            <th class="tbl-edit">Edit</th>
+                          </tr>
+                        </thead>
 
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Next Step 2</label>
-                    <div class="col-sm-5">
-                      Next step description here
-                    </div>
-                    <div class="col-sm-3">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>Done</option>
-                        <option>Not Done</option>
-                      </select>
-                    </div>
-                  </div>
+                        <tr>
+                          <td><div class="text">Select team members</div></td>
+                          <td><div class="text">15/03/2014</div></td>
+                          <td><div class="text">Need further info about cost</div></td>
+                          <td>
+                            <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                              <option data-hidden="true"></option>
+                              <option>Done</option>
+                              <option>Not Done</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                            </div>
+                          </td>
+                        </tr>
 
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Next Step 3</label>
-                    <div class="col-sm-5">
-                      Next step description here
-                    </div>
-                    <div class="col-sm-3">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>Done</option>
-                        <option>Not Done</option>
-                      </select>
+                        <tr>
+                          <td><div class="text">Select team members</div></td>
+                          <td><div class="text">15/03/2014</div></td>
+                          <td><div class="text">Need further info about cost</div></td>
+                          <td>
+                            <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                              <option data-hidden="true"></option>
+                              <option>Done</option>
+                              <option>Not Done</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Select team members</div></td>
+                          <td><div class="text">15/03/2014</div></td>
+                          <td><div class="text">Need further info about cost</div></td>
+                          <td>
+                            <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                              <option data-hidden="true"></option>
+                              <option>Done</option>
+                              <option>Not Done</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </table>
+                      <!-- category table end-->
                     </div>
                   </div>
 

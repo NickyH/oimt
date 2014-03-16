@@ -449,3 +449,27 @@ function show_hide_resume_assess_button () {
   $('#place-idea-on-hold').toggleClass('hidden');
   $('#progress-idea').toggleClass('btn-success').toggleClass('btn-default');
 }
+
+function check_category_value () {
+    if ($(this).val() === 'A - Proceed') {
+        $('#group-proj-del-plan').addClass('hidden');
+        $('#task-matrix').removeClass('hidden');
+    }
+    else if ($(this).val() === 'B - Major Project' || 'C - Large & Complex') {
+        $('#group-proj-del-plan').removeClass('hidden');
+        $('#task-matrix').addClass('hidden');
+    }
+    else {
+        $('#group-proj-del-plan').removeClass('hidden');
+        $('#task-matrix').addClass('hidden');
+    }
+}
+
+function toggle_approve_completion () {
+  if ($(this).prop('checked')===true) {
+    $('#top-bar-completion').removeClass('no-click');
+  }
+  if ($(this).prop('checked')===false) {
+    $('#top-bar-completion').addClass('no-click');
+  }
+}

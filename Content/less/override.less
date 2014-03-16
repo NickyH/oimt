@@ -172,6 +172,21 @@
           }
         }
       }
+      &.risks {
+        top: 200px;
+        &.inactive {
+          background-color: @oimt-very-light-grey;
+          border: 1px solid darken(@top-bar-colour, 5%);
+          color: @oimt-medium-dark-grey;
+          cursor: pointer;
+          pointer-events: auto;
+          &.bubble-hover {
+            background-color: lighten(@top-bar-colour, 40%);
+            color: black;
+            border: 1px solid lighten(@top-bar-colour, 20%);
+          }
+        }
+      }
       &.next-steps {
         top: 300px;
         &.inactive {
@@ -187,7 +202,7 @@
           }
         }
       }
-      &.risks {
+      &.summary {
         top: 400px;
         &.inactive {
           background-color: @oimt-very-light-grey;
@@ -386,6 +401,11 @@
           color: @oimt-medium-dark-grey;
           cursor: pointer;
           pointer-events: auto;
+          &.no-click {
+            pointer-events: none;
+            background-color: lightgray;
+            border: 1px solid lightgray;
+          }
           &.bubble-hover {
             background-color: lighten(@top-bar-colour, 40%);
             color: black;
@@ -658,7 +678,7 @@
 
 .form-group {
   margin-bottom: 20px;
-  .btn.btn-default {
+  .btn.file-select.btn-default {
     pointer-events: none;
     cursor: inherit;
     background-color: @oimt-very-light-grey;
