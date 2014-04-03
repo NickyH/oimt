@@ -12,7 +12,9 @@
           <!-- start panel-->
           <div class="panel panel-default panel-idea-assessment top">
             <div class="panel-heading">
-              <h3 class="panel-title">Idea Assessment</h3>
+              <h3 class="panel-title">Idea Communication
+                <div class="idea-status underway">Status: Being Assessed</div>
+              </h3>
             </div>
 
             <div class="panel-body">
@@ -42,179 +44,10 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Select an Assessment Option:</label>
-                    <div class="col-sm-8">
+                    <div class="bubble commence">
+                      Send & Save To History
                     </div>
                   </div>
-
-                  <div class="form-group underline">
-                    <div class="col-sm-4">
-                      <ul class="nav nav-pills nav-stacked" id="unhide-form-share-idea">
-                        <li class="active">
-                          <a href="#" class="pill-select inactive">
-                            <span class="badge pull-right">&#10008</span>
-                            Share Idea
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-sm-4">
-                      <ul class="nav nav-pills nav-stacked" id="unhide-form-progress-idea">
-                        <li class="active">
-                          <a href="#" class="pill-select inactive">
-                            <span class="badge pull-right">&#10008</span>
-                            Progress Idea
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-sm-4">
-                      <ul class="nav nav-pills nav-stacked" id="unhide-form-end-idea">
-                        <li class="active">
-                          <a href="#" class="pill-select inactive">
-                            <span class="badge pull-right">&#10008</span>
-                            File Idea
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <!-- form share idea inputs-->
-                  <div id="form-share-idea" class="hidden">
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Comments To Owner</label>
-                      <div class="col-sm-8">
-                        <textarea type="text" class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Notify</label>
-                      <div class="col-sm-8">
-                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                          <option data-hidden="true"></option>
-                          <option>Amy Aarons</option>
-                          <option>Ben Albany</option>
-                          <option>Cameron Bopp</option>
-                          <option>Nathan Craig</option>
-                          <option>Sarah Craig</option>
-                          <option>Andrew Dempsey</option>
-                          <option>Mark Ethel</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Comments To Others</label>
-                      <div class="col-sm-8">
-                        <textarea type="text" class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Notify</label>
-                      <div class="col-sm-8">
-                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                          <option data-hidden="true"></option>
-                          <option>Amy Aarons</option>
-                          <option>Ben Albany</option>
-                          <option>Cameron Bopp</option>
-                          <option>Nathan Craig</option>
-                          <option>Sarah Craig</option>
-                          <option>Andrew Dempsey</option>
-                          <option>Mark Ethel</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label"></label>
-                      <div class="col-sm-8">
-                        <input type="button" class="form-control">
-                        <span class='btn btn-success file-select approval'id="share-and-close">Share and Go To Close-Out</span>
-                      </div>
-                    </div>
-
-                  </div>
-                  <!-- form share idea inputs-->
-
-                  <!-- form progress idea inputs-->
-                  <div id="form-progress-idea" class="hidden">
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Supporting Documents</label>
-                      <div class="col-sm-8">
-                        <input type="file" class="form-control">
-                        <span class='btn btn-info file-select'>Select File</span>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Comments</label>
-                      <div class="col-sm-8">
-                        <textarea type="text" class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label"></label>
-                      <div class="col-sm-8">
-                        <input type="button" class="form-control">
-                        <span class='btn btn-success file-select approval' id="place-idea-on-hold">Place Idea On Hold</span>
-                        <span class='btn btn-warning file-select approval hidden' id="resume-assess">On Hold - Resume Assessment</span>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label"></label>
-                      <div class="col-sm-8">
-                        <input type="button" class="form-control">
-                        <span class='btn btn-success file-select approval'id="progress-idea">Progress Idea To Project</span>
-                      </div>
-                    </div>
-
-                  </div>
-                  <!-- form progress idea inputs-->
-
-                  <!-- form end idea inputs-->
-                  <div id="form-end-idea" class="hidden">
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Notify</label>
-                      <div class="col-sm-8">
-                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                          <option data-hidden="true"></option>
-                          <option>Amy Aarons</option>
-                          <option>Ben Albany</option>
-                          <option>Cameron Bopp</option>
-                          <option>Nathan Craig</option>
-                          <option>Sarah Craig</option>
-                          <option>Andrew Dempsey</option>
-                          <option>Mark Ethel</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Reasons</label>
-                      <div class="col-sm-8">
-                        <textarea type="text" class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label"></label>
-                      <div class="col-sm-8">
-                        <input type="button" class="form-control">
-                        <span class='btn btn-success file-select approval' id="end-idea">File Idea</span>
-                      </div>
-                    </div>
-
-                  </div>
-                  <!-- form end idea inputs-->
-
 
                 </div>
               </form>
@@ -305,6 +138,215 @@
           </div>
           <!-- end panel-->
 
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-idea-assessment">
+            <div class="panel-heading">
+              <h3 class="panel-title">Idea Assessment Options
+
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-8 control-label">Assessment Complete - Select An Option:</label>
+                    <div class="col-sm-4">
+                    </div>
+                  </div>
+
+                  <div class="form-group underline">
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-form-share-idea">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Share Idea
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-form-progress-idea">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Progress Idea
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked" id="unhide-form-end-idea">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Archive Idea
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- form share idea inputs-->
+                  <div id="form-share-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments To Owner</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Notify</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Amy Aarons</option>
+                          <option>Ben Albany</option>
+                          <option>Cameron Bopp</option>
+                          <option>Nathan Craig</option>
+                          <option>Sarah Craig</option>
+                          <option>Andrew Dempsey</option>
+                          <option>Mark Ethel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments To Others</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Notify</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Amy Aarons</option>
+                          <option>Ben Albany</option>
+                          <option>Cameron Bopp</option>
+                          <option>Nathan Craig</option>
+                          <option>Sarah Craig</option>
+                          <option>Andrew Dempsey</option>
+                          <option>Mark Ethel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval'id="share-and-close">Share and Go To Close-Out</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form share idea inputs-->
+
+                  <!-- form progress idea inputs-->
+                  <div id="form-progress-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Supporting Documents</label>
+                      <div class="col-sm-8">
+                        <input type="file" class="form-control">
+                        <span class='btn btn-info file-select'>Select File</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Categorisation</label>
+                      <div class="col-sm-8">
+                        <select id="setup-category" class="selectpicker show-tick form-control" data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>A - Proceed</option>
+                          <option>B - Major Project</option>
+                          <option>C - Large & Complex</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval' id="place-idea-on-hold">Place Idea On Hold</span>
+                        <span class='btn btn-warning file-select approval hidden' id="resume-assess">On Hold - Resume Assessment</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval'id="progress-idea">Progress To Project Setup</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form progress idea inputs-->
+
+                  <!-- form end idea inputs-->
+                  <div id="form-end-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Notify</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Amy Aarons</option>
+                          <option>Ben Albany</option>
+                          <option>Cameron Bopp</option>
+                          <option>Nathan Craig</option>
+                          <option>Sarah Craig</option>
+                          <option>Andrew Dempsey</option>
+                          <option>Mark Ethel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Reasons</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval' id="end-idea">File Idea</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- form end idea inputs-->
+
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+          <!-- end panel-->
+
         </div>
       </div>
     </div>
@@ -319,7 +361,7 @@ $('.datepicker').pickadate();
 $('.assess-idea').on('click', show_assess_panel);
 $('#share-and-close').on('click', insert_closeout);
 $('#end-idea').on('click', insert_closeout);
-$('#progress-idea').on('click', insert_project_setup);
+$('#progress-idea').on('click', insert_idea_to_project);
 $('#unhide-form-share-idea').on('click', show_share_idea_inputs);
 $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);

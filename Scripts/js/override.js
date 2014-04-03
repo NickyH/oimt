@@ -2,11 +2,23 @@
 $(function(){
   insert_header();
   insert_about();
+  insert_bottom();
   $('.datepicker').pickadate();
 });
 
 function icon_downer_click() {
   window.location = '/';
+}
+
+function insert_bottom() {
+  $('#insert-bottom').empty();
+  $.get('bottom_bar.html', function(data) {
+      $('#insert-bottom').html(data);
+  });
+}
+
+function remove_bottom() {
+  $('#insert-bottom').empty();
 }
 
 function show_assess_panel() {
@@ -101,6 +113,7 @@ function insert_assess_start() {
       $('#main-page').html(data);
   });
   remove_summary();
+  remove_bottom();
   insert_left_start();
   insert_top_bar();
 
@@ -150,6 +163,7 @@ function insert_idea_to_project() {
   $('#left-bar-itp-business').removeClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
   $('#left-bar-itp-approve').addClass('inactive');
+  $('#left-bar-itp-approve').addClass('inactive');
 }
 
 function insert_idea_to_project_review() {
@@ -160,6 +174,7 @@ function insert_idea_to_project_review() {
 
   $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').removeClass('inactive');
+  $('#left-bar-itp-case').addClass('inactive');
   $('#left-bar-itp-approve').addClass('inactive');
 }
 
@@ -172,6 +187,19 @@ function insert_idea_to_project_approve() {
   $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
   $('#left-bar-itp-approve').removeClass('inactive');
+  $('#left-bar-itp-case').addClass('inactive');
+}
+
+function insert_idea_to_project_businesscase() {
+  $('#main-page').empty();
+  $.get('project_setup.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-itp-business').addClass('inactive');
+  $('#left-bar-itp-review').addClass('inactive');
+  $('#left-bar-itp-approve').addClass('inactive');
+  $('#left-bar-itp-case').removeClass('inactive');
 }
 
 function insert_project_setup() {
@@ -466,10 +494,7 @@ function check_category_value () {
 }
 
 function toggle_approve_completion () {
-  if ($(this).prop('checked')===true) {
-    $('#top-bar-completion').removeClass('no-click');
-  }
-  if ($(this).prop('checked')===false) {
-    $('#top-bar-completion').addClass('no-click');
-  }
+  $('#top-bar-completion').removeClass('no-click');
+  insert_completion();
+
 }

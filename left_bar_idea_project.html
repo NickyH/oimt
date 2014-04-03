@@ -1,7 +1,5 @@
 <div class="left-bar">
 
-  <div class="status underway">Underway</div>
-
   <div class="bubble-container">
 
     <div class="bubble business-case" id="left-bar-itp-business">
@@ -16,6 +14,10 @@
       Approval
     </div>
 
+    <div class="bubble project-plan inactive" id="left-bar-itp-case">
+      Project Plan
+    </div>
+
   </div>
 
 </div>
@@ -25,4 +27,5 @@
 $('#left-bar-itp-business').on('click', insert_idea_to_project);
 $('#left-bar-itp-review').on('click', insert_idea_to_project_review);
 $('#left-bar-itp-approve').on('click', insert_idea_to_project_approve);
+$('#left-bar-itp-case').on('click', insert_idea_to_project_businesscase);
 </script>

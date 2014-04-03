@@ -12,7 +12,9 @@
           <!-- start panel-->
           <div class="panel panel-default panel-execution-input top">
             <div class="panel-heading">
-              <h3 class="panel-title">Project Data Input</h3>
+              <h3 class="panel-title">Project Data Input
+                <div class="idea-status underway">Status: Business Case Approved</div>
+              </h3>
             </div>
             <div class="panel-body">
 
@@ -41,9 +43,11 @@
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Benefits Reassessment $</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
+                    <div class="col-sm-4">
+                      <input type="decimal" class="form-control" placeholder="$">
+                    </div>
+                    <div class="col-sm-4">
+                      <select class="selectpicker form-control show-tick" title="" multiple>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -122,7 +126,7 @@
                       <table id="table-filter-next-steps" class="table table-condensed table-striped contact-history-table">
                         <thead>
                           <tr>
-                            <th class="tbl-date">Next Step</th>
+                            <th class="tbl-date">Step</th>
                             <th class="tbl-request">Date Due</th>
                             <th class="tbl-response">Description</th>
                             <th class="tbl-edit">Completed?</th>

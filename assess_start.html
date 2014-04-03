@@ -13,7 +13,8 @@
           <div class="panel panel-default panel-start-idea top">
             <div class="panel-heading">
               <h3 class="panel-title">Idea Owner Details
-                <div class="idea-status underway">Status: Underway</div>
+                <div class="idea-status underway">Status: Submitted</div>
+                <div class="idea-status flagged">Assessment Overdue</div>
               </h3>
             </div>
 
@@ -43,28 +44,35 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Your Name</label>
+                    <label class="col-sm-4 control-label">Name</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" data-required="true" value="Jo Wilkins" disabled />
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Your Position</label>
+                    <label class="col-sm-4 control-label">Position</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" data-required="true" value="Accountant" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Your Email</label>
+                    <label class="col-sm-4 control-label">Email</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" data-required="true" value="jwilkins@downergroup.com" disabled/>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Your Phone No.</label>
+                    <label class="col-sm-4 control-label">Email Other</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true" disabled>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Phone</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" data-required="true" disabled>
                     </div>
@@ -90,7 +98,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Direct Manager</label>
+                    <label class="col-sm-4 control-label">Manager</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" data-required="true" value="Jan Kane" disabled/>
                     </div>
@@ -170,6 +178,12 @@
                     </div>
                   </div>
 
+                  <div class="form-group">
+                    <div class="bubble commence" id="commence-assess">
+                      Commence Assessment
+                    </div>
+                  </div>
+
                 </div>
               </form>
 
@@ -190,6 +204,7 @@ $('.selectpicker').selectpicker({
   });
 $('.datepicker').pickadate();
 $('.assess-idea').on('click', show_assess_panel);
+$('#commence-assess').on('click', insert_assess_assess);
 $('#share-and-close').on('click', insert_closeout);
 $('#end-idea').on('click', insert_closeout);
 $('#progress-idea').on('click', insert_project_setup);
