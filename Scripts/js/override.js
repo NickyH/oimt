@@ -25,8 +25,8 @@ function show_assess_panel() {
   $('.panel-idea-assessment').removeClass('hidden');
   var scrollAmount = ($('.panel-idea-assessment').offset().top);
   $('html, body').animate({ scrollTop: scrollAmount });
-  $('.bubble.idea').addClass('inactive');
-  $('.bubble.idea').removeClass('inactive');
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#top-bar-assess').removeClass('inactive');
 }
 
 function insert_header() {
@@ -153,12 +153,8 @@ function insert_idea_to_project() {
   });
   insert_left_idea_project();
 
-  $('#top-bar-start').addClass('inactive');
-  $('#top-bar-idea-to-project').removeClass('inactive');
-  $('#top-bar-project-setup').addClass('inactive');
-  $('#top-bar-execution').addClass('inactive');
-  $('#top-bar-completion').addClass('inactive');
-  $('#top-bar-closeout').addClass('inactive');
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#top-bar-project-setup').removeClass('inactive');
 
   $('#left-bar-itp-business').removeClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
@@ -215,12 +211,9 @@ function insert_project_setup() {
   $('.submit-idea').addClass('hidden');
   $('.assess-idea').addClass('hidden');
 
-  $('#top-bar-start').addClass('inactive');
-  $('#top-bar-idea-to-project').addClass('inactive');
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+
   $('#top-bar-project-setup').removeClass('inactive');
-  $('#top-bar-execution').addClass('inactive');
-  $('#top-bar-completion').addClass('inactive');
-  $('#top-bar-closeout').addClass('inactive');
 }
 
 function insert_execution_phase() {
@@ -231,17 +224,11 @@ function insert_execution_phase() {
 
   insert_left_project_execution()
 
-  $('#top-bar-start').addClass('inactive');
-  $('#top-bar-idea-to-project').addClass('inactive');
-  $('#top-bar-project-setup').addClass('inactive');
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#top-bar-execution').removeClass('inactive');
-  $('#top-bar-completion').addClass('inactive');
-  $('#top-bar-closeout').addClass('inactive');
 
+  $('.left-bar .bubble-container .bubble').addClass('inactive');
   $('#left-bar-exec-update').removeClass('inactive');
-  $('#left-bar-exec-steps').addClass('inactive');
-  $('#left-bar-exec-risks').addClass('inactive');
-  $('#left-bar-exec-reports').addClass('inactive');
 }
 
 function insert_execution_steps() {
@@ -250,10 +237,8 @@ function insert_execution_steps() {
       $('#main-page').html(data);
   });
 
-  $('#left-bar-exec-update').addClass('inactive');
+  $('.left-bar .bubble-container .bubble').addClass('inactive');
   $('#left-bar-exec-steps').removeClass('inactive');
-  $('#left-bar-exec-risks').addClass('inactive');
-  $('#left-bar-exec-reports').addClass('inactive');
 }
 
 function insert_execution_risks() {
@@ -262,10 +247,8 @@ function insert_execution_risks() {
       $('#main-page').html(data);
   });
 
-  $('#left-bar-exec-update').addClass('inactive');
-  $('#left-bar-exec-steps').addClass('inactive');
+  $('.left-bar .bubble-container .bubble').addClass('inactive');
   $('#left-bar-exec-risks').removeClass('inactive');
-  $('#left-bar-exec-reports').addClass('inactive');
 }
 
 function insert_execution_reports() {
@@ -274,9 +257,7 @@ function insert_execution_reports() {
       $('#main-page').html(data);
   });
 
-  $('#left-bar-exec-update').addClass('inactive');
-  $('#left-bar-exec-steps').addClass('inactive');
-  $('#left-bar-exec-risks').addClass('inactive');
+  $('.left-bar .bubble-container .bubble').addClass('inactive');
   $('#left-bar-exec-reports').removeClass('inactive');
 }
 
@@ -293,12 +274,8 @@ function insert_completion() {
   $('.submit-idea').addClass('hidden');
   $('.assess-idea').addClass('hidden');
 
-  $('#top-bar-start').addClass('inactive');
-  $('#top-bar-idea-to-project').addClass('inactive');
-  $('#top-bar-project-setup').addClass('inactive');
-  $('#top-bar-execution').addClass('inactive');
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#top-bar-completion').removeClass('inactive');
-  $('#top-bar-closeout').addClass('inactive');
 }
 
 function insert_closeout() {
@@ -311,22 +288,14 @@ function insert_closeout() {
 
   insert_left_closeout()
 
-  $('#top-bar-start').addClass('inactive');
-  $('#top-bar-idea-to-project').addClass('inactive');
-  $('#top-bar-project-setup').addClass('inactive');
-  $('#top-bar-execution').addClass('inactive');
-  $('#top-bar-completion').addClass('inactive');
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#top-bar-closeout').removeClass('inactive');
 }
 
 function insert_top_bar() {
-  $('#insert-top').addClass('hidden');
   $.get('top_bar.html', function(data) {
       $('#insert-top').html(data);
   });
-  $('#insert-top').fadeIn(500);
-  $('#insert-top').delay(500).removeClass('hidden');
-
 }
 
 function remove_top_bar() {

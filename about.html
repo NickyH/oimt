@@ -26,47 +26,18 @@
               <div class="col-12">
                 <div class="row-fluid">
 
-                  <!-- inset panel 1 -->
-                  <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="bubble share-an-idea">
-                      Share My Idea
-                    </div>
+                  <div class="bubble main" id="share">
+                    Share My Idea
                   </div>
-                  <!-- end form panel-->
 
-                  <!-- inset panel 2 -->
-                  <div class="col-lg-4 col-md-4 col-sm-4">
-
-                    <div class="bubble manage-idea">
-                      Manage Ideas
-                    </div>
-
+                  <div class="bubble main" id="manage">
+                    Manage Ideas
                   </div>
-                  <!-- end form panel-->
-
-                  <!-- inset panel 3 -->
-                 <!--  <div class="col-lg-2 col-md-2 col-sm-2">
-
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h3 class="panel-title">Login</h3>
-                      </div>
-                      <div class="panel-body">
-                        login
-                      </div>
-                    </div>
-
-                  </div> -->
-                  <!-- end form panel-->
 
                 </div>
               </div>
             </div>
             <!-- end inset row 1-->
-
-
-
-
 
           </div>
         </div>
@@ -78,6 +49,6 @@
 </div>
 
 <script>
-  $('.share-an-idea').on('click', insert_start);
-  $('.manage-idea').on('click', insert_idea_list);
+  $('#share').on('click', insert_start);
+  $('#manage').on('click', insert_idea_list);
 </script>

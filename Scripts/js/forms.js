@@ -22,6 +22,29 @@ $('.input-group-addon .glyphicon-time').on('click', clock_icon_click); //activat
 $('.history-button .button').on('click', toggle_history_button);
 $('.icon-raise').on('click', show_raise_qtip);
 
+function insert_filename(e){
+  $in=$(this);
+  var filename = $in.val().split('\\').pop();
+  if (filename === "No files added" || filename === "" ) {
+    filename = recentfile;
+  }
+  $in.parents('.form-group').next('.filename').children().find('.filename-text').html(filename);
+  $in.parents('.form-group').next('.filename').children().find('.filename-delete').html('x');
+  var recentfile = filename
+}
+
+function delete_selected_file() {
+  $(this).parent('div').children('.filename-text').html("No files added");
+  $(this).parent('div').children('.filename-delete').html("");
+}
+
+function slide_filename_details() {
+  $(this).parents('thead').next('tbody').children('tr').children('td').slideToggle( 100, toggle_filename_details );
+}
+
+function toggle_filename_details() {
+  $(this).toggleClass('show');
+}
 
 function calendar_icon_click() {
   // $('.date.datepicker').trigger('focus');
