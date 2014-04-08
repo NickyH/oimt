@@ -58,7 +58,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <span class="btn btn-info form-control close-form email">Add Another Lesson</span>
+                      <span class="btn btn-info form-control close-form email add-another">Add Another Lesson</span>
                     </div>
                   </div>
 
@@ -72,7 +72,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <span class="btn btn-info form-control close-form email">Add Another Leverage</span>
+                      <span class="btn btn-info form-control close-form email add-another">Add Another Leverage</span>
                     </div>
                   </div>
 
@@ -86,7 +86,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <span class="btn btn-info form-control close-form email">Add Another Opportunity</span>
+                      <span class="btn btn-info form-control close-form email add-another">Add Another Opportunity</span>
                     </div>
                   </div>
 
@@ -117,4 +117,7 @@ $('.selectpicker').selectpicker({
   });
 $('.datepicker').pickadate();
 $('#submit-completion').on('click', insert_closeout);
+
+$('.add-another').on('click', insert_repeat_field);
+$('.row-fluid').on('click', '.remove-field', remove_repeat_field);
 </script>

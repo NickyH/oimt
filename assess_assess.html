@@ -368,4 +368,11 @@ $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);
 $('#place-idea-on-hold').on('click', show_hide_resume_assess_button);
 $('#resume-assess').on('click', show_hide_resume_assess_button);
+
+//attachment functions
+$('input[type=file]').on('change', add_document_row);
+$('.file-table').on('click', '.filename-link', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
+$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
 </script>

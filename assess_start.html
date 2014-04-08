@@ -205,24 +205,7 @@
                               <label class="col-sm-4 control-label">File Description</label>
                               <div class="col-sm-7">
                                 <textarea class="form-control" rows="3" disabled>This is a description of the attached file, cannot be edited here</textarea>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <thead>
-                          <tr>
-                            <th class="filename-link">businessplan.pdf</th>
-                            <th><span class="glyphicon glyphicon-pencil disabled" title="Edit Details"></span></th>
-                            <th><span class="glyphicon glyphicon-eye-open" title="Open File"></span></th>
-                            <th><span class="glyphicon glyphicon-remove disabled" title="Delete File"></span></th>
-                          </tr>
-                        </thead>
-                        <tr>
-                          <td colspan='4'>
-                            <div class="form-group">
-                              <label class="col-sm-4 control-label">File Description</label>
-                              <div class="col-sm-7">
-                                <textarea class="form-control" rows="3" disabled>This is a description of the attached file, cannot be edited here</textarea>
+                                <input class="btn btn-primary form-control hidden" value="Save Details" />
                               </div>
                             </div>
                           </td>
@@ -266,7 +249,11 @@ $('#unhide-form-share-idea').on('click', show_share_idea_inputs);
 $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);
 
-$('.filename-link').on('click', slide_filename_details);
-$('th span.glyphicon-pencil').on('click', slide_filename_details);
+//attachment functions
+$('input[type=file]').on('change', add_document_row);
+$('.file-table').on('click', '.filename-link', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
+$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
 
 </script>

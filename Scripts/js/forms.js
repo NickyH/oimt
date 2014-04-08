@@ -22,6 +22,16 @@ $('.input-group-addon .glyphicon-time').on('click', clock_icon_click); //activat
 $('.history-button .button').on('click', toggle_history_button);
 $('.icon-raise').on('click', show_raise_qtip);
 
+function insert_repeat_field() {
+  var field = $(this).parents('.form-group').prev('.form-group').clone();
+  $(field).children('label').html('<span class="glyphicon glyphicon-remove remove-field" title="Delete Field"></span>');
+  $(this).parents('.form-group').before(field);
+}
+
+function remove_repeat_field() {
+  $(this).parents('.form-group').remove();
+}
+
 function add_document_row(e) {
   $in=$(this);
   var filename = $in.val().split('\\').pop();
@@ -29,6 +39,8 @@ function add_document_row(e) {
   var first_header = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table').children('thead:first');
   var new_header = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table').children('thead:first').clone();
   var new_row = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table').children('thead:first').next('tbody:first').clone();
+  $(new_header).children('tr.hidden').removeClass('hidden');
+  $(new_row).children('tr.hidden').removeClass('hidden');
   $(new_header).children('tr').children('th.filename-link').text(filename);
   $(first_header).before(new_header).before(new_row);
 }
@@ -48,7 +60,6 @@ function delete_document_row() {
       return;
     }
   });
-
 }
 
 function mimic_add_file_click() {
