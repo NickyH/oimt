@@ -22,23 +22,57 @@ $('.input-group-addon .glyphicon-time').on('click', clock_icon_click); //activat
 $('.history-button .button').on('click', toggle_history_button);
 $('.icon-raise').on('click', show_raise_qtip);
 
-function insert_filename(e){
+function add_document_row(e) {
   $in=$(this);
   var filename = $in.val().split('\\').pop();
-  if (filename === "No files added" || filename === "" ) {
-    filename = recentfile;
-  }
-  $in.parents('.form-group').next('.filename').children().find('.filename-text').html(filename);
-  $in.parents('.form-group').next('.filename').children().find('.filename-delete').html('x');
-  var recentfile = filename
+  var table = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table');
+  var first_header = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table').children('thead:first');
+  var new_header = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table').children('thead:first').clone();
+  var new_row = $(this).parents('.form-group').next('.form-group').children('div').children('.file-table').children('thead:first').next('tbody:first').clone();
+  $(new_header).children('tr').children('th.filename-link').text(filename);
+  $(first_header).before(new_header).before(new_row);
 }
 
-function delete_selected_file() {
-  $(this).parent('div').children('.filename-text').html("No files added");
-  $(this).parent('div').children('.filename-delete').html("");
+function delete_document_row() {
+  var table = $(this).parents('.file-table');
+  var this_header = $(this).parents('thead');
+  var this_row = $(this).parents('thead').next('tbody');
+  var filename = $(this).parent('th').siblings('th.filename-link').text();
+
+  bootbox.confirm('The file ' + filename + ' will be removed', function (response) {
+    if(response) {
+      $(this_header).remove();
+      $(this_row).remove();
+    }
+    else {
+      return;
+    }
+  });
+
 }
+
+function mimic_add_file_click() {
+  $(this).parents('.form-group').prev('.form-group').children('div').children('input').trigger('click');
+}
+
+// function insert_filename(e){
+//   $in=$(this);
+//   var filename = $in.val().split('\\').pop();
+//   if (filename === "No files added" || filename === "" ) {
+//     filename = recentfile;
+//   }
+//   $in.parents('.form-group').next('.filename').children().find('.filename-text').html(filename);
+//   $in.parents('.form-group').next('.filename').children().find('.filename-delete').html('x');
+//   var recentfile = filename
+// }
+
+// function delete_selected_file() {
+//   $(this).parent('div').children('.filename-text').html("No files added");
+//   $(this).parent('div').children('.filename-delete').html("");
+// }
 
 function slide_filename_details() {
+  console.log($(this).parents('thead'));
   $(this).parents('thead').next('tbody').children('tr').children('td').slideToggle( 100, toggle_filename_details );
 }
 

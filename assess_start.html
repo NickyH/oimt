@@ -179,6 +179,59 @@
                   </div>
 
                   <div class="form-group">
+                    <div class="col-sm-12">
+
+                      <table class="table table-condensed add-file-table">
+                        <thead>
+                          <tr>
+                            <th>Attached Documents</th>
+                            <th><span class="glyphicon glyphicon-plus disabled" title="Add Another File"></span></th>
+                          </tr>
+                        </thead>
+                      </table>
+
+                      <table class="table table-condensed file-table">
+                        <thead>
+                          <tr>
+                            <th class="filename-link">businessplan.pdf</th>
+                            <th><span class="glyphicon glyphicon-pencil disabled" title="Edit Details"></span></th>
+                            <th><span class="glyphicon glyphicon-eye-open" title="Open File"></span></th>
+                            <th><span class="glyphicon glyphicon-remove disabled" title="Delete File"></span></th>
+                          </tr>
+                        </thead>
+                        <tr>
+                          <td colspan='4'>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">File Description</label>
+                              <div class="col-sm-7">
+                                <textarea class="form-control" rows="3" disabled>This is a description of the attached file, cannot be edited here</textarea>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <thead>
+                          <tr>
+                            <th class="filename-link">businessplan.pdf</th>
+                            <th><span class="glyphicon glyphicon-pencil disabled" title="Edit Details"></span></th>
+                            <th><span class="glyphicon glyphicon-eye-open" title="Open File"></span></th>
+                            <th><span class="glyphicon glyphicon-remove disabled" title="Delete File"></span></th>
+                          </tr>
+                        </thead>
+                        <tr>
+                          <td colspan='4'>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">File Description</label>
+                              <div class="col-sm-7">
+                                <textarea class="form-control" rows="3" disabled>This is a description of the attached file, cannot be edited here</textarea>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8 bubble commence" id="commence-assess">
                       Commence Assessment
@@ -212,4 +265,8 @@ $('#progress-idea').on('click', insert_project_setup);
 $('#unhide-form-share-idea').on('click', show_share_idea_inputs);
 $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);
+
+$('.filename-link').on('click', slide_filename_details);
+$('th span.glyphicon-pencil').on('click', slide_filename_details);
+
 </script>
