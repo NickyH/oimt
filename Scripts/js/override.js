@@ -465,5 +465,4 @@ function check_category_value () {
 function toggle_approve_completion () {
   $('#top-bar-completion').removeClass('no-click');
   insert_completion();
-
 }

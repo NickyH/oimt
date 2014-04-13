@@ -188,7 +188,7 @@
                           <td><div class="text">15/03/2014</div></td>
                           <td><div class="text">Need further info about cost</div></td>
                           <td>
-                            <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                            <select class="selectpicker show-tick form-control" data-required="true" title=''>
                               <option data-hidden="true"></option>
                               <option>Done</option>
                               <option>Not Done</option>
@@ -206,7 +206,7 @@
                           <td><div class="text">15/03/2014</div></td>
                           <td><div class="text">Need further info about cost</div></td>
                           <td>
-                            <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                            <select class="selectpicker show-tick form-control" data-required="true" title=''>
                               <option data-hidden="true"></option>
                               <option>Done</option>
                               <option>Not Done</option>
@@ -224,7 +224,7 @@
                           <td><div class="text">15/03/2014</div></td>
                           <td><div class="text">Need further info about cost</div></td>
                           <td>
-                            <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
+                            <select class="selectpicker show-tick form-control" data-required="true" title=''>
                               <option data-hidden="true"></option>
                               <option>Done</option>
                               <option>Not Done</option>
@@ -251,7 +251,7 @@
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Assessment Date</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-8">
                       <div class="input-group merged">
                         <input type="text" class="form-control date datepicker" />
                         <span class="input-group-addon">
@@ -259,15 +259,19 @@
                         </span>
                       </div>
                     </div>
-                    <div class="col-sm-4">
-                      <span class="btn btn-info form-control close-form email">Add Assessment</span>
-                    </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Key Achievements</label>
                     <div class="col-sm-8">
                       <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <span class="btn btn-info form-control close-form email">Add Assessment</span>
                     </div>
                   </div>
 
@@ -279,6 +283,95 @@
           <!-- end panel-->
 
           <!-- start panel-->
+          <div class="panel panel-default panel-execution-risks">
+            <div class="panel-heading">
+              <h3 class="panel-title">Project Risks
+                <!-- <div class="idea-status underway">Status: Underway</div> -->
+              </h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <table class="table table-condensed table-striped">
+                      <thead>
+                        <tr>
+                          <th>Risks/Issues</th>
+                          <th>Solution</th>
+                          <th>Category</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td>Project may run overtime</td>
+                        <td>Weekly updates</td>
+                        <td>Time</td>
+                      </tr>
+                      <tr>
+                        <td>Project may run overtime</td>
+                        <td>Weekly updates</td>
+                        <td>Time</td>
+                      </tr>
+                      <tr>
+                        <td>Project may run overtime</td>
+                        <td>Weekly updates</td>
+                        <td>Time</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Risk</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Solution</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Category</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>category 1</option>
+                        <option>category 2</option>
+                        <option>category 3</option>
+                        <option>category 4</option>
+                      </select>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Added</label>
+                    <div class="col-sm-4">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email">Add Risk</span>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+                    <!-- start panel-->
           <div class="panel panel-default panel-execution-history">
             <div class="panel-heading">
               <h3 class="panel-title">Project Update History</h3>
@@ -333,8 +426,6 @@
     </div>
   </div>
 </div>
-
-
 
 <script>
 $('.selectpicker').selectpicker({
