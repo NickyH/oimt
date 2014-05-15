@@ -281,15 +281,25 @@
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Energy Savings (if applicable)</label>
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" placeholder="Description">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" placeholder="Amount">
+                    </div>
+                    <div class="col-sm-2">
                       <select class="selectpicker form-control show-tick" title="">
-                        <option>kW</option>
-                        <option>ML</option>
-                        <option>Tonnes</option>
+                        <option>GJ</option>
+                        <option>kWh</option>
+                        <option>L</option>
                       </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <span class="btn btn-info form-control close-form email add-another">Add Another Energy Saving</span>
                     </div>
                   </div>
 
@@ -435,6 +445,35 @@
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8 bubble save-send" id="commence-assess">
                       Save Responses To History
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Milestone</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Milestone Description</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Milestone Due</label>
+                    <div class="col-sm-4">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email">Add Milestone</span>
                     </div>
                   </div>
 
@@ -620,6 +659,8 @@ $('#submit-bc').on('click', insert_idea_to_project_review);
 $('#unhide-business-case-not-recommend').on('click', show_not_recommend);
 $('#unhide-business-case-recommend').on('click', show_recommend);
 $('#file-bc-closeout').on('click', insert_closeout);
+$('.add-another').on('click', insert_repeat_field);
+$('.row-fluid').on('click', '.remove-field', remove_repeat_field);
 
 //attachment functions
 $('input[type=file]').on('change', add_document_row);

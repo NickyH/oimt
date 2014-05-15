@@ -10,56 +10,7 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
           <!-- start panel-->
-          <div class="panel panel-default panel-execution-steps top">
-            <div class="panel-heading">
-              <h3 class="panel-title">Milestone Setup
-                <div class="idea-status underway">Status: Business Case Approved</div>
-              </h3>
-            </div>
-            <div class="panel-body">
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-column col-lg-12 col-md-12 col-sm-12">
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Milestone</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Milestone Description</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Date Milestone Due</label>
-                    <div class="col-sm-4">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" />
-                        <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <span class="btn btn-info form-control close-form email">Add Milestone</span>
-                    </div>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-          <!-- end panel-->
-
-          <!-- start panel-->
-          <div class="panel panel-default panel-execution-input">
+          <div class="panel panel-default panel-execution-input top">
             <div class="panel-heading">
               <h3 class="panel-title">Project Data Input
                 <div class="idea-status underway">Status: Business Case Approved</div>
@@ -87,20 +38,6 @@
                     <label class="col-sm-4 control-label">Project Status Description</label>
                     <div class="col-sm-8">
                       <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Benefits Reassessment $</label>
-                    <div class="col-sm-4">
-                      <input type="decimal" class="form-control" placeholder="$">
-                    </div>
-                    <div class="col-sm-4">
-                      <select class="selectpicker form-control show-tick" title="" multiple>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
                     </div>
                   </div>
 
@@ -327,14 +264,75 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Assessment Date</label>
+                    <label class="col-sm-4 control-label">Corrective Actions</label>
                     <div class="col-sm-8">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" />
-                        <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                      </div>
+                      <table id="table-filter-next-steps" class="table table-condensed table-striped contact-history-table">
+                        <thead>
+                          <tr>
+                            <th class="tbl-date">Action</th>
+                            <th class="tbl-request">Date Due</th>
+                            <th class="tbl-response">Description</th>
+                            <th class="tbl-edit">Completed?</th>
+                            <th class="tbl-edit">Edit</th>
+                          </tr>
+                        </thead>
+
+                        <tr>
+                          <td><div class="text">Review budget</div></td>
+                          <td><div class="text">15/03/2014</div></td>
+                          <td><div class="text">Need further info about cost</div></td>
+                          <td>
+                            <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                              <option data-hidden="true"></option>
+                              <option>Done</option>
+                              <option>Not Done</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Review budget</div></td>
+                          <td><div class="text">15/03/2014</div></td>
+                          <td><div class="text">Need further info about cost</div></td>
+                          <td>
+                            <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                              <option data-hidden="true"></option>
+                              <option>Done</option>
+                              <option>Not Done</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Review budget</div></td>
+                          <td><div class="text">15/03/2014</div></td>
+                          <td><div class="text">Need further info about cost</div></td>
+                          <td>
+                            <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                              <option data-hidden="true"></option>
+                              <option>Done</option>
+                              <option>Not Done</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </table>
+                      <!-- category table end-->
                     </div>
                   </div>
 
@@ -348,7 +346,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <span class="btn btn-info form-control close-form email">Add Assessment</span>
+                      <span class="btn btn-info form-control close-form email add-another">Add Another Key Achievement</span>
                     </div>
                   </div>
 
@@ -362,7 +360,7 @@
           <!-- start panel-->
           <div class="panel panel-default panel-execution-risks">
             <div class="panel-heading">
-              <h3 class="panel-title">Project Risks
+              <h3 class="panel-title">Project Issues
                 <!-- <div class="idea-status underway">Status: Underway</div> -->
               </h3>
             </div>
@@ -416,12 +414,12 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Category</label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                      <select class="selectpicker show-tick form-control" data-required="true" title='' multiple>
                         <option data-hidden="true"></option>
-                        <option>category 1</option>
-                        <option>category 2</option>
-                        <option>category 3</option>
-                        <option>category 4</option>
+                        <option>Overall</option>
+                        <option>Benefits Realisation</option>
+                        <option>Schedule Attainment</option>
+                        <option>Budget Payments</option>
                       </select>
                     </div>
                   </div>
@@ -488,6 +486,45 @@
                         <td></td>
                       </tr>
                     </table>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-execution-history">
+            <div class="panel-heading">
+              <h3 class="panel-title">Submit this month's asessment</h3>
+            </div>
+            <div class="panel-body">
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Assessment Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <div class="bubble submit" id="add-assessment">
+                        Assessment Complete
+                      </div>
+                    </div>
                   </div>
 
                 </div>
