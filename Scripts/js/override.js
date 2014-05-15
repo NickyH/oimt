@@ -466,3 +466,13 @@ function toggle_approve_completion () {
   $('#top-bar-completion').removeClass('no-click');
   insert_completion();
 }
+
+function select_all_in_table(e) {
+  var table= $(e.target).closest('table');
+  $('td input:checkbox',table).prop('checked', this.checked);
+}
+
+function select_all_in_row(e) {
+  var row= $(e.target).closest('tr');
+  $('td input:checkbox',row).prop('checked', this.checked);
+}

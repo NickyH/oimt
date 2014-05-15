@@ -105,26 +105,96 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Capex Reassessment $</label>
+                    <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-                  </div>
+                      <!-- each searchable table needs unique ID "table-filter-*" -->
+                      <table class="table table-condensed table-striped contact-history-table">
+                        <thead>
+                          <tr>
+                            <th class="tbl-edit"></th>
+                            <th class="tbl-date">Year 1</th>
+                            <th class="tbl-request">Year 2</th>
+                            <th class="tbl-response">Year 3</th>
+                          </tr>
+                        </thead>
 
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Opex Reassessment %</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
+                        <tr>
+                          <td><div class="text">Opex</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Capex</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Benefits</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </table>
+                      <!-- category table end-->
                     </div>
                   </div>
 
@@ -250,6 +320,13 @@
                   </div>
 
                   <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <span class="btn btn-info form-control close-form email add-another">Add Another Corrective Action</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
                     <label class="col-sm-4 control-label">Assessment Date</label>
                     <div class="col-sm-8">
                       <div class="input-group merged">
@@ -299,8 +376,8 @@
                     <table class="table table-condensed table-striped">
                       <thead>
                         <tr>
-                          <th>Risks/Issues</th>
-                          <th>Solution</th>
+                          <th>Issues</th>
+                          <th>Mitigation</th>
                           <th>Category</th>
                         </tr>
                       </thead>
@@ -323,14 +400,14 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Risk</label>
+                    <label class="col-sm-4 control-label">Issue</label>
                     <div class="col-sm-8">
                       <textarea type="text" class="form-control" rows="2"></textarea>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Solution</label>
+                    <label class="col-sm-4 control-label">Mitigation</label>
                     <div class="col-sm-8">
                       <textarea type="text" class="form-control" rows="2"></textarea>
                     </div>
@@ -360,7 +437,7 @@
                       </div>
                     </div>
                     <div class="col-sm-4">
-                      <span class="btn btn-info form-control close-form email">Add Risk</span>
+                      <span class="btn btn-info form-control close-form email">Add Issue</span>
                     </div>
                   </div>
 
@@ -371,7 +448,7 @@
           </div>
           <!-- end panel-->
 
-                    <!-- start panel-->
+          <!-- start panel-->
           <div class="panel panel-default panel-execution-history">
             <div class="panel-heading">
               <h3 class="panel-title">Project Update History</h3>
@@ -410,7 +487,6 @@
                         <td>Targets not achieved due to...</td>
                         <td></td>
                       </tr>
-
                     </table>
                   </div>
 
@@ -432,4 +508,7 @@ $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
+
+$('.add-another').on('click', insert_repeat_field);
+$('.row-fluid').on('click', '.remove-field', remove_repeat_field);
 </script>
