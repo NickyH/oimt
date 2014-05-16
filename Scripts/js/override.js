@@ -21,6 +21,15 @@ function remove_bottom() {
   $('#insert-bottom').empty();
 }
 
+function insert_reports() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('summary_dashboard.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
 function show_assess_panel() {
   $('.panel-idea-assessment').removeClass('hidden');
   var scrollAmount = ($('.panel-idea-assessment').offset().top);
