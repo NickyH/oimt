@@ -33,31 +33,17 @@
                     </div>
                   </div>
 
+                  <div class="col-12 dashboard">
+                    <div class="row">
 
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="col-sm-12">
-                        <div>
-                          <span class="chart-header">Next Steps</span>
-                        </div>
+                      <div class="col-md-5">
+                        <div id="initiativesBusinessUnit" class="chart small"></div>
                       </div>
-                    </div>
-                  </div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-5">
+                        <div id="benefitsBusinessUnit" class="chart small"></div>
+                      </div>
 
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="col-sm-12">
-                        <div class="chart-side">
-                          <dl class="dl-horizontal">
-                            <dt>April 2014</dt>
-                            <dd>Implement project phase 1, gather team members, organise central project meeting for all team members to meet</dd>
-                            <dt>June 2014</dt>
-                            <dd>Begin project phase 2, gather feedback from client including any potential changes in project timeline and project phases</dd>
-                            <dt>September 2014</dt>
-                            <dd>Project conclusion, review project implementation and preprare for project close-out</dd>
-                          </dl>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
@@ -148,4 +134,70 @@ $('.datepicker').pickadate();
     backgroundColor: "white"
   });
   chartBenefitsStatus.render();
-  </script>
+
+ // initiatives by next level down Business Unit chart
+  var chartInitiativesBusinessUnit = new CanvasJS.Chart("initiativesBusinessUnit", {
+      data: [
+        {
+          showInLegend: false,
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          startAngle: 150,
+          indexLabelPlacement: "inside",
+          toolTipContent: "{name}: {y} initiatives",
+          type: "pie",
+          dataPoints: [
+            { y: 34,indexLabel: 'DI East & West', name: 'Downer Infrastructure East & West' },
+            { y: 28, indexLabel: 'Specialist Services', name: 'Specialist Services' },
+            { y: 10, indexLabel: 'Infrastructure Services', name: 'Infrastructure Services' },
+            { y: 6, indexLabel: 'Corporate', name: 'Corporate' },
+            { y: 22, indexLabel: 'Shared Services', name: 'Shared Services' }
+          ]
+        }
+      ],
+      title:{
+            text: "Initiatives By Business Unit",
+            fontSize: "22"
+          },
+      legend: {
+        fontFamily: "Arial",
+        fontSize: 14
+      },
+    creditHref: "",
+    backgroundColor: "white"
+  });
+  chartInitiativesBusinessUnit.render();
+
+   // initiatives by next level down Business Unit chart
+  var chartBenefitsBusinessUnit = new CanvasJS.Chart("benefitsBusinessUnit", {
+      data: [
+        {
+          showInLegend: false,
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          startAngle: 150,
+          indexLabelPlacement: "inside",
+          toolTipContent: "{name}: ${y}",
+          type: "pie",
+          dataPoints: [
+            { y: 453000,indexLabel: 'DI East & West', name: 'Downer Infrastructure East & West' },
+            { y: 324565, indexLabel: 'Specialist Services', name: 'Specialist Services' },
+            { y: 69443, indexLabel: 'Infrastructure Services', name: 'Infrastructure Services' },
+            { y: 34500, indexLabel: 'Corporate', name: 'Corporate' },
+            { y: 345000, indexLabel: 'Shared Services', name: 'Shared Services' }
+          ]
+        }
+      ],
+      title:{
+            text: "Benefits ($) By Business Unit",
+            fontSize: "22"
+          },
+      legend: {
+        fontFamily: "Arial",
+        fontSize: 14
+      },
+    creditHref: "",
+    backgroundColor: "white"
+  });
+  chartBenefitsBusinessUnit.render();
+</script>
