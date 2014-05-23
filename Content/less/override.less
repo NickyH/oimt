@@ -135,6 +135,26 @@ body, html {
   }
 }
 
+//left bar bubble arrows
+.left-bar .bubble:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 49px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #f7f00d;
+  border-right: 24px solid transparent;
+  border-left: 24px solid transparent;
+}
+.left-bar .bubble.inactive:after {
+  border-top: 30px solid darken(@top-bar-colour, 5%);
+}
+
+.bubble-container .bubble:last-child:after {
+  display: none;
+}
+
 //top bar right panel (utility bar)
 .header-bar {
   background : @top-bar-colour;
