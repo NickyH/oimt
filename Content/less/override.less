@@ -238,10 +238,10 @@ body, html {
   margin-top: 30px;
   span {
     float: right;
-    margin-right: 20%;
+    margin-right: 30px;
     cursor: pointer;
     line-height: 30px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -334,6 +334,9 @@ body, html {
   margin-right: 30px;
   margin-top: 150px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
+  &.shared {
+    margin-top: 100px;
+  }
 }
 
 .panel-project-summary {
@@ -353,6 +356,7 @@ body, html {
 }
 
 .panel-start-idea,
+.panel-admin,
 .panel-start-idea-assess,
 .panel-idea-details,
 .panel-idea-assessment,
@@ -369,6 +373,21 @@ body, html {
   box-shadow: 2px 2px 2px @oimt-light-grey;
   &.top {
     margin-top: 150px;
+    &.no-bar {
+      margin-top: 100px;
+    }
+  }
+}
+
+.panel-admin {
+  min-width: 400px;
+  min-height: 200px;
+  width: 95%;
+  margin-left: 30px;
+  margin-top: 30px;
+  box-shadow: 2px 2px 2px @oimt-light-grey;
+  &.top {
+    margin-top: 120px;
     &.no-bar {
       margin-top: 100px;
     }
@@ -642,6 +661,9 @@ th span.glyphicon.disabled {
     }
     &.green {
       color: green;
+    }
+    &.blue {
+      color: @oimt-blue;
     }
     &.flagged {
       color: red;

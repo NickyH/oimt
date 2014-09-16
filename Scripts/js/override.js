@@ -30,6 +30,26 @@ function insert_reports() {
   });
 }
 
+function insert_admin() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('admin.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
+function insert_shared_idea() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('shared_idea.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function show_assess_panel() {
   $('.panel-idea-assessment').removeClass('hidden');
   var scrollAmount = ($('.panel-idea-assessment').offset().top);

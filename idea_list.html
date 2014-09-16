@@ -43,7 +43,7 @@
             <td><div class="text">To be fast-tracked for safety reasons</div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -58,7 +58,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -66,14 +66,14 @@
           <tr>
             <td><div class="text">4674</div></td>
             <td><div class="text title">Accounting Software</div></td>
-            <td><div class="text flagged">05/03/2014</div></td>
-            <td><div class="text status red">Submitted</div></td>
+            <td><div class="text">05/03/2014</div></td>
+            <td><div class="text status blue">Shared</div></td>
             <td><div class="text">Dave Adam</div></td>
             <td><div class="text">Genevieve Smith</div></td>
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="View Idea" id="view-idea"><div class="glyphicon glyphicon-eye-open"></div></a>
               </div>
             </td>
           </tr>
@@ -88,7 +88,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -103,7 +103,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -118,7 +118,7 @@
             <td><div class="text">Closed due to lack of interest</div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -133,7 +133,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -148,7 +148,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -163,7 +163,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -178,7 +178,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -193,7 +193,7 @@
             <td><div class="text">Closed due to repeat idea</div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -208,7 +208,7 @@
             <td><div class="text"></div></td>
             <td>
               <div class="text">
-                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a>
               </div>
             </td>
           </tr>
@@ -231,4 +231,6 @@ $('.selectpicker').selectpicker({
 $('.datepicker').pickadate();
 $('.text.title').on('click', insert_assess_start);
 $('.activity-table-search').on('keyup', get_val_table_ID);
+
+$('#view-idea').on('click', insert_shared_idea );
 </script>
