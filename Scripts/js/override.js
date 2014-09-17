@@ -30,6 +30,33 @@ function insert_reports() {
   });
 }
 
+function insert_login() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('login.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
+function insert_registration() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('registration.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
+function insert_forgot() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('forgot.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
 function insert_admin() {
   $('#insert-left').empty();
   remove_top_bar();
@@ -38,6 +65,13 @@ function insert_admin() {
       $('#main-page').html(data);
   });
   $('html, body').animate({ scrollTop: 0 });
+}
+
+function register_login_proceed() {
+  //do this after user has registered an account, or logged in, log user in
+  //return to previous action such as 'share an idea' page or
+  //go to home page
+  window.location = '/';
 }
 
 function insert_shared_idea() {
@@ -168,7 +202,7 @@ function insert_assess_assess() {
 
 function insert_idea_list() {
   $('#main-page').empty();
-  $.get('idea_list.html', function(data) {
+  $.get('idea_list2.html', function(data) {
       $('#main-page').html(data);
   });
   remove_summary();

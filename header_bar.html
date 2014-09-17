@@ -6,29 +6,9 @@
       <img class="icon-downer" src="../Content/images/oimt-downer-logo.png">
 
       <button type="button" class="btn btn-default">
-        <div class="dropdown">
-          <div class="dropdown-toggle" data-toggle="dropdown">
-            <a class="nav-link" href="#">
-              <img class="menu-icon" src="../Content/images/icons-padlock.png">
-              <img class="menu-icon-yellow hidden" src="../Content/images/icons-padlock-yellow.png"> Login
-              <b class="caret"></b>
-            </a>
-          </div>
-            <ul class="dropdown-menu">
-              <!-- <li><a href="#">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Logout</a></li> -->
-              <form>
-              <input type="text" placeholder="Username" />
-              <input type="password" placeholder="Password" />
-              <input type="checkbox">
-              <label>Remember Me</label>
-              <input class="btn btn-primary" type="submit" value="Log In" />
-            </form>
-            </ul>
-          </a>
-        </div>
+        <a class="nav-link" href="#" id="goto-login"><img class="menu-icon" src="../Content/images/icons-padlock.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-padlock-yellow.png"> Login </a>
       </button>
+
       <button type="button" class="btn btn-default">
         <a class="nav-link" href="#" id="goto-reports"><img class="menu-icon" src="../Content/images/icons-manage.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-manage-yellow.png"> Reports </a>
       </button>
@@ -46,6 +26,7 @@
 $('.btn-group.oimt button').on('mouseover', nav_button_hover);
 $('.btn-group.oimt button').on('mouseleave', nav_button_leave);
 $('.icon-downer').on('click', icon_downer_click);
+$('#goto-login').on('click', insert_login);
 $('#goto-reports').on('click', insert_reports);
 $('#goto-ideas').on('click', insert_idea_list);
 </script>
