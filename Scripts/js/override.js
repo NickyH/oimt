@@ -217,6 +217,13 @@ function insert_idea_list() {
   $('.submit-idea').addClass('hidden');
 }
 
+function insert_project_list() {
+  $('#main-page').empty();
+  $.get('project_list.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
 function insert_idea_to_project() {
   $('#main-page').empty();
   $.get('idea_to_project.html', function(data) {
