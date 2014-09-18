@@ -1,7 +1,8 @@
 //dom ready functions
 $(function(){
   insert_header();
-  insert_about();
+  // insert_about();
+  insert_home();
   insert_bottom();
   $('.datepicker').pickadate();
 });
@@ -141,6 +142,13 @@ function remove_left() {
 function insert_about() {
   $('#main-page').empty();
   $.get('about.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
+function insert_home() {
+  $('#main-page').empty();
+  $.get('home.html', function(data) {
       $('#main-page').html(data);
   });
 }
