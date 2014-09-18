@@ -11,19 +11,18 @@
 
           <div class="col-lg-6 col-md-6 col-sm-6">
             <img class="oimt-logo" src="../Content/images/oimt-logo-and-text.png">
-            <button type="button" class="btn btn-default btn-lg tell-us">
+            <button id="tell-us1" type="button" class="btn btn-default btn-lg tell-us">
                <span>Tell us your idea</span>
                <span class="glyphicon glyphicon-play"></span>
             </button>
-            <div id="register-now" class="tell-us-text">First time sharing an idea? Register now.</div>
+            <div id="register-now1" class="tell-us-text">First time sharing an idea? Register now.</div>
           </div>
 
           <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="about-text">
               <span>
-                The Initiative Management Tool provides a central portal for capturing, assessing and implementing new business initiatives within Downer. To submit an idea simply<a href="#"> register</a> with your Downer email address, then<a href="#"> login</a> and<a
-                href="#"> tell us your idea</a>. Once an initiative is captured in the system it will go into the ideas register where it will undergo a process of assessment by the initiatives team.
-                You can<a href="#"> track your ideas</a> and view all current and past<a href="#"> ideas</a> that have been submitted.
+                The Initiative Management Tool provides a central portal for capturing, assessing and implementing new business initiatives within Downer. To submit an idea simply<span class="home-page-links register"> register</span> with your Downer email address, then<span class="home-page-links login"> login</span> and<span class="home-page-links start"> tell us your idea</span>. Once an initiative is captured in the system it will go into the ideas register where it will undergo a process of assessment by the initiatives team.
+                You can<span class="home-page-links ideas"> track your ideas</span> and view all current and past<span class="home-page-links ideas"> ideas</span> that have been submitted.
               </span>
             </div>
           </div>
@@ -47,14 +46,11 @@
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="panel panel-default panel-tiny">
               <div class="panel-heading">
-                <h3 class="panel-title">Track My Submitted Ideas</h3>
+                <h3 class="panel-title" id="track-my-ideas">Track My Submitted Ideas</h3>
               </div>
               <div class="panel-body">
                 If you've already submitted an idea you can track the
-                progress of<a href="#"> your idea</a>. If your idea
-                hasn't already been assessed you can<a href="#"> edit your
-                idea</a>. To submit a new idea you need to first login and
-                then you can<a href="#"> tell us your idea</a>.
+                progress of<span class="home-page-links ideas"> your idea</span>. If your idea hasn't already been assessed you can<span class="home-page-links ideas"> edit your idea</span>. To submit a new idea you need to first <span class="home-page-links login"> login</span> and then you can<span class="home-page-links start"> tell us your idea</span>.
               </div>
             </div>
           </div>
@@ -62,14 +58,11 @@
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="panel panel-default panel-tiny">
               <div class="panel-heading">
-                <h3 class="panel-title">Browse All Ideas</h3>
+                <h3 class="panel-title" id="browse-ideas">Browse All Ideas</h3>
               </div>
               <div class="panel-body">
                 If you just want to browse new ideas that have been
-                submitted you can view the<a href="#"> ideas list</a>. You can
-                see which ideas have been submitted or approved, and which ideas
-                have become real Downer projects. If you want to search past ideas
-                you can view all<a href="#"> closed or archived</a>. if you get inspired and want to submit your own idea, you need to<a href="#"> login</a> first, then you can<a href="#"> tell us your idea</a>.
+                submitted you can view the<span class="home-page-links ideas"> ideas list</span>. You can see which ideas have been submitted or approved, and which ideas have become real Downer projects. If you want to search past ideas you can view all<span class="home-page-links ideas"> closed or archived</span>. if you get inspired and want to submit your own idea, you need to<span class="home-page-links login"> login</span> first, then you can<span class="home-page-links start"> tell us your idea</span>.
               </div>
             </div>
           </div>
@@ -77,11 +70,11 @@
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="panel panel-default panel-tiny">
               <div class="panel-heading">
-                <h3 class="panel-title">Manage My Projects</h3>
+                <h3 class="panel-title" id="manage-my-projects">Manage My Projects</h3>
               </div>
               <div class="panel-body">
                 Are you a project manager and have been assigned a project in IMT?
-                First you just need to <a href="#"> login</a>, and then you can<a href="#"> manage your projects</a>.
+                First you just need to <span class="home-page-links login"> login</span>, and then you can<span class="home-page-links projects"> manage your projects</span>.
               </div>
             </div>
           </div>
@@ -97,5 +90,18 @@
 </div>
 
 <script>
-  $('#register-now').on('click', insert_registration );
+  $('#register-now1').on('click', insert_registration );
+  $('#tell-us1').on('click', insert_start );
+  $('#track-my-ideas').on('click', insert_idea_list);
+  $('#manage-my-projects').on('click', insert_project_list);
+  $('#browse-ideas').on('click', insert_idea_list);
+
+
+  $('.home-page-links.register').on('click', insert_registration );
+  $('.home-page-links.login').on('click', insert_login );
+  $('.home-page-links.start').on('click', insert_start );
+  $('.home-page-links.projects').on('click', insert_project_list );
+  $('.home-page-links.ideas').on('click', insert_ideas_list );
+
+
 </script>

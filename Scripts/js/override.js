@@ -210,15 +210,19 @@ function insert_assess_assess() {
 
 function insert_idea_list() {
   $('#main-page').empty();
-  $.get('idea_list2.html', function(data) {
+  $.get('idea_list.html', function(data) {
       $('#main-page').html(data);
   });
   remove_summary();
+  remove_top_bar();
+  remove_left();
   $('.submit-idea').addClass('hidden');
 }
 
 function insert_project_list() {
   $('#main-page').empty();
+  remove_top_bar();
+  remove_left();
   $.get('project_list.html', function(data) {
       $('#main-page').html(data);
   });
