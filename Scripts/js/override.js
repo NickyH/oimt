@@ -68,6 +68,16 @@ function insert_admin() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_change_password() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('change_password.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function register_login_proceed() {
   //do this after user has registered an account, or logged in, log user in
   //return to previous action such as 'share an idea' page or

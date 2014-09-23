@@ -472,8 +472,11 @@ body, html {
 
 .home-page-links {
   cursor: pointer;
-  color: blue;
+  color: @oimt-blue;
   text-decoration: none;
+  &:hover {
+    color: saturate(@oimt-blue, 80%);
+  }
 }
 
 .about-text {
@@ -539,9 +542,9 @@ body, html {
 .panel-idea-list {
   min-width: 400px;
   min-height: 400px;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 120px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 110px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
 }
 
@@ -892,7 +895,7 @@ th span.glyphicon.disabled {
     height: 20px;
     font-weight: bold;
   }
-  .activity-table-search {
+  .idea-table-search {
     width: auto;
     display: inline-block;
     position: absolute;
@@ -1215,26 +1218,26 @@ tr.highlight {
   border-right: 1px solid #eae8e8;
 }
 
-// Media Queries
-// responsive
-@widthNarrow:         ~"(max-width: 320px)";
-@widthMedium:         ~"(max-width: 600px)";
-@widthMediumLarge:    ~"(min-width: 601px) and (max-width: 768px)";
-@widthLarge:          ~"(min-width: 1024px)";
 
-@heightShort:         ~"(max-height: 479px)";
-@heightShortMedium:   ~"(min-height: 480px) and (max-height: 560px)";
-@heightMedium:        ~"(max-height: 700px)";
-@heightTall:          ~"(min-height: 768px)";
-@mediaScreen:         ~"only screen and ";
+//datatables styling
 
-// condition:  is the tablet rotated portrait or landscape?;
-@tabletLandscape:      ~"(orientation: landscape)";
-@tabletPortrait:       ~"(orientation: portrait)";
+#table-ideas-list_filter,
+#table-projects-list_filter {
+  position: absolute;
+  top: -47px;
+  right: 6%;
+  width: 400px;
+  label {
+    color: white;
+  }
+  input {
+    border-radius: 30px;
+    width: 240px;
+  }
+}
 
-// set the min-width and height
-@tabletLandscapeWidth:               ~"(min-width: 1024px) and (orientation: landscape)";
-@tabletLandscapeHeight:              ~"(min-height: 768px) and (orientation: landscape)";
+#table-ideas-list_wrapper,
+#table-projects-list_wrapper {
+  top: -20px;
+}
 
-@tabletPortraitWidth:                ~"(min-width: 768px) and (orientation: portrait)";
-@tabletPortraitHeight:               ~"(min-height: 1024px) and (orientation: portrait)";

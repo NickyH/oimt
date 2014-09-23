@@ -6,7 +6,21 @@
       <img class="icon-downer" src="../Content/images/oimt-downer-logo.png">
 
       <button type="button" class="btn btn-default">
-        <a class="nav-link" href="#" id="goto-login"><img class="menu-icon" src="../Content/images/icons-padlock.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-padlock-yellow.png"> Login </a>
+        <div class="dropdown">
+          <div class="dropdown-toggle" data-toggle="dropdown">
+            <a class="nav-link" href="#">
+              <img class="menu-icon" src="../Content/images/icons-padlock.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-padlock-yellow.png"><span class="nav-text"> Login </span><b class="caret"></b></div>
+            <ul class="dropdown-menu">
+              <li><a id="goto-login" href="#">Login</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Logout</a></li>
+              <li class="divider"></li>
+              <li><a id="goto-change-password" href="#">Change Password</a></li>
+              <li class="divider"></li>
+              <li><a id="goto-admin" href="#">Admin</a></li>
+            </ul>
+          </a>
+        </div>
       </button>
 
       <button type="button" class="btn btn-default">
@@ -24,7 +38,6 @@
   </div>
 </div>
 
-
 <script>
 $('.btn-group.oimt button').on('mouseover', nav_button_hover);
 $('.btn-group.oimt button').on('mouseleave', nav_button_leave);
@@ -33,4 +46,6 @@ $('#goto-login').on('click', insert_login);
 $('#goto-reports').on('click', insert_reports);
 $('#goto-ideas').on('click', insert_idea_list);
 $('#goto-projects').on('click', insert_project_list);
+$('#goto-admin').on('click', insert_admin );
+$('#goto-change-password').on('click', insert_change_password );
 </script>
