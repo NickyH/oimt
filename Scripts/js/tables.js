@@ -8,7 +8,10 @@ $('#table-ideas-list').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
-    { "class": "text" }
+    {
+      "class": "remove-sort",
+      "orderable": false
+    }
   ]
 });
 
@@ -19,6 +22,10 @@ $('#table-projects-list').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
-    { "class": "text" }
+    {
+      "class": "remove-sort",
+      "orderable": false
+    }
   ]
 });
+

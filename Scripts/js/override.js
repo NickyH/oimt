@@ -169,6 +169,7 @@ function insert_thank_you() {
       $('#main-page').html(data);
   });
   $('.submit-idea').addClass('hidden');
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_start() {
@@ -227,6 +228,7 @@ function insert_idea_list() {
   remove_top_bar();
   remove_left();
   $('.submit-idea').addClass('hidden');
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_project_list() {
@@ -465,16 +467,6 @@ function toggle_rw_select(pill) {
   else {
     $(pill).children('.pull-right').html('&#10004');
   }
-}
-
-function show_share_idea_inputs() {
-  $('#form-share-idea').removeClass('hidden');
-  $('#form-progress-idea').addClass('hidden');
-  $('#form-end-idea').addClass('hidden');
-
-  var pill = $(this).children('li').children('.pill-select');
-  toggle_rw_select(pill);
-  return false;
 }
 
 function show_progress_idea_inputs() {

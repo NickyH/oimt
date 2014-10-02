@@ -20,7 +20,7 @@
 
             <div class="panel-body">
 
-              <form class="form-horizontal container" role="form">
+              <div class="form-horizontal container">
 
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
@@ -106,7 +106,7 @@
 
                 </div>
 
-              </form>
+              </div>
 
             </div>
           </div>
@@ -120,7 +120,7 @@
 
             <div class="panel-body">
 
-              <form class="form-horizontal container" role="form">
+              <div class="form-horizontal container">
 
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
@@ -206,7 +206,7 @@
                   </div>
 
                 </div>
-              </form>
+              </div>
 
             </div>
 
@@ -229,7 +229,6 @@ $('#commence-assess').on('click', insert_assess_assess);
 $('#share-and-close').on('click', insert_closeout);
 $('#end-idea').on('click', insert_closeout);
 $('#progress-idea').on('click', insert_project_setup);
-$('#unhide-form-share-idea').on('click', show_share_idea_inputs);
 $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);
 
@@ -239,5 +238,4 @@ $('.file-table').on('click', '.filename-link', slide_filename_details);
 $('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
 $('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
 $('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
-
 </script>

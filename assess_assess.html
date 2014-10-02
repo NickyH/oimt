@@ -19,7 +19,7 @@
 
             <div class="panel-body">
 
-              <form class="form-horizontal container" role="form">
+              <form class="form-horizontal container">
 
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
@@ -209,33 +209,20 @@
           <!-- start panel-->
           <div class="panel panel-default panel-idea-assessment">
             <div class="panel-heading">
-              <h3 class="panel-title">Idea Assessment Options
+              <h3 class="panel-title">Idea Assessment Completion
 
               </h3>
             </div>
 
             <div class="panel-body">
 
-              <form class="form-horizontal container" role="form">
+              <div class="form-horizontal container">
 
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
-                  <div class="form-group">
-                    <label class="col-sm-8 control-label">Assessment Complete - Select An Option:</label>
-                    <div class="col-sm-4">
-                    </div>
-                  </div>
-
                   <div class="form-group underline">
                     <div class="col-sm-4">
-                      <ul class="nav nav-pills nav-stacked" id="unhide-form-share-idea">
-                        <li class="active">
-                          <a href="#" class="pill-select inactive">
-                            <span class="badge pull-right">&#10008</span>
-                            Share Idea
-                          </a>
-                        </li>
-                      </ul>
+                      <label class="control-label">Should this idea be progressed?</label>
                     </div>
                     <div class="col-sm-4">
                       <ul class="nav nav-pills nav-stacked" id="unhide-form-progress-idea">
@@ -252,72 +239,12 @@
                         <li class="active">
                           <a href="#" class="pill-select inactive">
                             <span class="badge pull-right">&#10008</span>
-                            Archive Idea
+                            Don't Progress Idea
                           </a>
                         </li>
                       </ul>
                     </div>
                   </div>
-
-                  <!-- form share idea inputs-->
-                  <div id="form-share-idea" class="hidden">
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Comments To Owner</label>
-                      <div class="col-sm-8">
-                        <textarea type="text" class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Notify</label>
-                      <div class="col-sm-8">
-                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                          <option data-hidden="true"></option>
-                          <option>Amy Aarons</option>
-                          <option>Ben Albany</option>
-                          <option>Cameron Bopp</option>
-                          <option>Nathan Craig</option>
-                          <option>Sarah Craig</option>
-                          <option>Andrew Dempsey</option>
-                          <option>Mark Ethel</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Comments To Others</label>
-                      <div class="col-sm-8">
-                        <textarea type="text" class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label">Notify</label>
-                      <div class="col-sm-8">
-                        <select class="selectpicker show-tick form-control" multiple data-required="true" title=''>
-                          <option data-hidden="true"></option>
-                          <option>Amy Aarons</option>
-                          <option>Ben Albany</option>
-                          <option>Cameron Bopp</option>
-                          <option>Nathan Craig</option>
-                          <option>Sarah Craig</option>
-                          <option>Andrew Dempsey</option>
-                          <option>Mark Ethel</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label"></label>
-                      <div class="col-sm-8">
-                        <input type="button" class="form-control">
-                        <span class='btn btn-success file-select approval'id="share-and-close">Share and Go To Close-Out</span>
-                      </div>
-                    </div>
-
-                  </div>
-                  <!-- form share idea inputs-->
 
                   <!-- form progress idea inputs-->
                   <div id="form-progress-idea" class="hidden">
@@ -386,6 +313,17 @@
                     </div>
 
                     <div class="form-group">
+                      <label class="col-sm-4 control-label">Share Idea?</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Share this idea Downer-wide</option>
+                          <option>Only IMT managers and the idea owner can see this idea</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
@@ -432,6 +370,17 @@
                     </div>
 
                     <div class="form-group">
+                      <label class="col-sm-4 control-label">Share Idea?</label>
+                      <div class="col-sm-8">
+                        <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                          <option data-hidden="true"></option>
+                          <option>Share this idea Downer-wide</option>
+                          <option>Only IMT managers and the idea owner can see this idea</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
                       <label class="col-sm-4 control-label"></label>
                       <div class="col-sm-8">
                         <input type="button" class="form-control">
@@ -443,7 +392,7 @@
                   <!-- form end idea inputs-->
 
                 </div>
-              </form>
+              </div>
 
             </div>
 
@@ -465,7 +414,6 @@ $('.assess-idea').on('click', show_assess_panel);
 $('#share-and-close').on('click', insert_closeout);
 $('#end-idea').on('click', insert_closeout);
 $('#progress-idea').on('click', insert_idea_to_project);
-$('#unhide-form-share-idea').on('click', show_share_idea_inputs);
 $('#unhide-form-progress-idea').on('click', show_progress_idea_inputs);
 $('#unhide-form-end-idea').on('click', show_end_idea_inputs);
 $('#place-idea-on-hold').on('click', show_hide_resume_assess_button);
