@@ -282,6 +282,31 @@ body, html {
     color: darken(@oimt-blue, 10%);
     box-shadow: 2px 2px 2px darken(@oimt-blue, 10%);
   }
+  &.view-idea {
+    background-color: @oimt-blue;
+    border-color: @oimt-blue;
+    color: white;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-top: 20px;
+    &.btn:hover {
+      background-color: darken(@oimt-blue, 5%);
+      color: white;
+      box-shadow: 2px 3px 3px darken(@oimt-blue, 20%);
+    }
+    &.btn:visited {
+      background-color: darken(@oimt-blue, 5%);
+      border-color: @oimt-blue;
+      color: white;
+      box-shadow: 2px 3px 3px darken(@oimt-blue, 20%);
+    }
+    &.btn:active {
+      background-color: darken(@oimt-blue, 5%);
+      border-color: @oimt-blue;
+      color: white;
+      box-shadow: 2px 3px 3px darken(@oimt-blue, 20%);
+    }
+  }
 }
 
 .tell-us-text {
@@ -1242,3 +1267,24 @@ tr.highlight {
   top: -20px;
 }
 
+.dataTables_length {
+  select {
+    width: 70px;
+    margin-right: 10px;
+  }
+  label {
+    font-weight: normal;
+  }
+}
+
+table.dataTable thead {
+  .sorting_asc {
+    background: url("../images/sort_asc.png") no-repeat center left !important;
+  }
+  .sorting_desc {
+    background: url("../images/sort_desc.png") no-repeat center left !important;
+  }
+  .sorting {
+    background: url("../images/sort_both.png") no-repeat center left !important;
+  }
+}

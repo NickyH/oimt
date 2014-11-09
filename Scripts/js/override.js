@@ -68,6 +68,16 @@ function insert_admin() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_forgot_confirmation() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('forgot_confirmation.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function insert_change_password() {
   $('#insert-left').empty();
   remove_top_bar();
@@ -82,7 +92,12 @@ function register_login_proceed() {
   //do this after user has registered an account, or logged in, log user in
   //return to previous action such as 'share an idea' page or
   //go to home page
-  window.location = '/';
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('registration_confirmation.html', function(data) {
+      $('#main-page').html(data);
+  });
 }
 
 function insert_shared_idea() {
