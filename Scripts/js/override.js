@@ -68,6 +68,16 @@ function insert_admin() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_add_pm() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('add_project_manager.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function insert_forgot_confirmation() {
   $('#insert-left').empty();
   remove_top_bar();
@@ -78,11 +88,41 @@ function insert_forgot_confirmation() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_admin_confirmation() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('admin_confirmation.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
+function insert_add_pm_confirmation() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('add_pm_confirmation.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function insert_change_password() {
   $('#insert-left').empty();
   remove_top_bar();
   $('#main-page').empty();
   $.get('change_password.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
+function insert_change_password_confirmation() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('change_password_confirmation.html', function(data) {
       $('#main-page').html(data);
   });
   $('html, body').animate({ scrollTop: 0 });
