@@ -297,7 +297,7 @@ function insert_project_list() {
 
 function insert_idea_to_project() {
   $('#main-page').empty();
-  $.get('idea_to_project.html', function(data) {
+  $.get('idea_to_project_communication.html', function(data) {
       $('#main-page').html(data);
   });
   insert_left_idea_project();
@@ -305,32 +305,46 @@ function insert_idea_to_project() {
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#top-bar-project-setup').removeClass('inactive');
 
-  $('#left-bar-itp-business').removeClass('inactive');
+  $('#left-bar-itp-comm').removeClass('inactive');
+  $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
-  $('#left-bar-itp-approve').addClass('inactive');
-  $('#left-bar-itp-approve').addClass('inactive');
+  $('#left-bar-itp-plan').addClass('inactive');
 }
 
-function insert_idea_to_project_approve() {
+function insert_idea_to_project_business() {
+  $('#main-page').empty();
+  $.get('idea_to_project.html', function(data) {
+      $('#main-page').html(data);
+  });
+
+  $('#left-bar-itp-comm').addClass('inactive');
+  $('#left-bar-itp-business').removeClass('inactive');
+  $('#left-bar-itp-review').addClass('inactive');
+  $('#left-bar-itp-plan').addClass('inactive');
+}
+
+function insert_idea_to_project_review() {
   $('#main-page').empty();
   $.get('idea_to_project_approve.html', function(data) {
       $('#main-page').html(data);
   });
 
+  $('#left-bar-itp-comm').addClass('inactive');
   $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').removeClass('inactive');
-  $('#left-bar-itp-case').addClass('inactive');
+  $('#left-bar-itp-plan').addClass('inactive');
 }
 
-function insert_idea_to_project_businesscase() {
+function insert_idea_to_project_plan() {
   $('#main-page').empty();
   $.get('project_setup.html', function(data) {
       $('#main-page').html(data);
   });
 
+  $('#left-bar-itp-comm').addClass('inactive');
   $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
-  $('#left-bar-itp-case').removeClass('inactive');
+  $('#left-bar-itp-plan').removeClass('inactive');
 }
 
 function insert_project_setup() {

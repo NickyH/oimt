@@ -2,7 +2,11 @@
 
   <div class="bubble-container">
 
-    <div class="bubble" id="left-bar-itp-business">
+    <div class="bubble" id="left-bar-itp-comm">
+      Information
+    </div>
+
+    <div class="bubble inactive" id="left-bar-itp-business">
       Business Case
     </div>
 
@@ -10,7 +14,7 @@
       Review
     </div>
 
-    <div class="bubble inactive" id="left-bar-itp-case">
+    <div class="bubble inactive" id="left-bar-itp-plan">
       Project Plan
     </div>
 
@@ -20,8 +24,8 @@
 
 
 <script>
-$('#left-bar-itp-business').on('click', insert_idea_to_project);
-$('#left-bar-itp-review').on('click', insert_idea_to_project_approve);
-$('#left-bar-itp-approve').on('click', insert_idea_to_project_approve);
-$('#left-bar-itp-case').on('click', insert_idea_to_project_businesscase);
+$('#left-bar-itp-comm').on('click', insert_idea_to_project);
+$('#left-bar-itp-business').on('click', insert_idea_to_project_business);
+$('#left-bar-itp-review').on('click', insert_idea_to_project_review);
+$('#left-bar-itp-plan').on('click', insert_idea_to_project_plan);
 </script>
