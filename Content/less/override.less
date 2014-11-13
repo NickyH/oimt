@@ -419,11 +419,19 @@ body, html {
           color: black;
           border: 1px solid lighten(@top-bar-colour, 20%);
         }
+        &.disabled {
+          background-color: @oimt-light-grey !important;
+          border: 1px solid @oimt-medium-grey !important;
+          color: @oimt-medium-dark-grey !important;
+          cursor: default !important;
+          pointer-events: none !important;
+        }
       }
     }
   }
 }
 
+//top bar bubbles after
 .top-bar .bubble:after {
   content: '';
   position: absolute;
@@ -437,6 +445,11 @@ body, html {
 }
 .top-bar .bubble.inactive:after {
   border-left: 40px solid darken(@top-bar-colour, 5%);
+}
+
+//top bar bubbles after disabled
+.top-bar .bubble.inactive.disabled:after {
+  border-left: 40px solid grey;
 }
 
 #top-bar-closeout:after {
