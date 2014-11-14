@@ -918,9 +918,17 @@ tr.underline {
     &.title {
       cursor: pointer;
       color: blue;
+      &.read-only {
+        cursor: default;
+        color: black;
+      }
     }
     &.title:hover {
       color: darken(blue, 10%);
+    }
+    &.read-only:hover {
+      cursor: default;
+      color: black;
     }
   }
   tr{
