@@ -42,21 +42,29 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label"></label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                       <!-- each searchable table needs unique ID "table-filter-*" -->
-                      <table class="table table-condensed table-striped contact-history-table">
+                      <table class="table table-condensed table-striped benefits-matrix-table2">
                         <thead>
                           <tr>
-                            <th class="tbl-edit"></th>
-                            <th class="tbl-date">Year 1</th>
-                            <th class="tbl-request">Year 2</th>
-                            <th class="tbl-response">Year 3</th>
+                            <th class="tbl-name"></th>
+                            <th class="tbl-year1">Year 1</th>
+                            <th class="tbl-year2">Year 2</th>
+                            <th class="tbl-year3">Year 3</th>
+                            <th class="tbl-status">Status</th>
                           </tr>
                         </thead>
 
                         <tr>
-                          <td><div class="text">Opex</div></td>
+                          <td><div class="text bold">Benefits</div></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Labour</div></td>
                           <td>
                             <div class="form-group">
                               <div class="col-sm-12">
@@ -77,11 +85,14 @@
                                 <input type="text" class="form-control">
                               </div>
                             </div>
+                          </td>
+                          <td>
+                            <div class="status green"></div>
                           </td>
                         </tr>
 
                         <tr>
-                          <td><div class="text">Capex</div></td>
+                          <td><div class="text left-indent">Labour Reviewed</div></td>
                           <td>
                             <div class="form-group">
                               <div class="col-sm-12">
@@ -102,11 +113,40 @@
                                 <input type="text" class="form-control">
                               </div>
                             </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Asset Plant</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="status red"></div>
                           </td>
                         </tr>
 
                         <tr>
-                          <td><div class="text">Benefits</div></td>
+                          <td><div class="text left-indent">Asset Plant Reviewed</div></td>
                           <td>
                             <div class="form-group">
                               <div class="col-sm-12">
@@ -128,6 +168,312 @@
                               </div>
                             </div>
                           </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Energy</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="status green"></div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Energy Reviewed</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Procurement</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="status amber"></div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Procurement Reviewed</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Overhead</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="status green"></div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Overhead Reviewed</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Total Benefits</div></td>
+                          <td>5864</td>
+                          <td>33345</td>
+                          <td>9584</td>
+                          <td>
+                            <div class="status red"></div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text left-indent">Total Benefits Reviewed</div></td>
+                          <td>5864</td>
+                          <td>33345</td>
+                          <td>9584</td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text bold">Opex</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="status green"></div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text bold">Opex Reviewed</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text bold">Capex</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="status amber"></div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text bold">Capex Reviewed</div></td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr class="underline">
+                          <td><div class="text bold left-indent">Total</div></td>
+                          <td><div class="text bold">3823</div></td>
+                          <td><div class="text bold">23134</div></td>
+                          <td><div class="text bold">4556</div></td>
+                          <td>
+                            <div class="status green"></div>
+                          </td>
+                        </tr>
+
+                        <tr class="underline">
+                          <td><div class="text bold left-indent">Total Reviewed</div></td>
+                          <td><div class="text bold">3823</div></td>
+                          <td><div class="text bold">23134</div></td>
+                          <td><div class="text bold">4556</div></td>
+                          <td></td>
                         </tr>
 
                       </table>
