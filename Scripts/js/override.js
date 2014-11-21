@@ -264,6 +264,16 @@ function insert_assess_start() {
   $('#top-bar-closeout').addClass('inactive');
 }
 
+function insert_assess_information() {
+  $('#main-page').empty();
+  $.get('assess_information.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('#left-bar-assess-idea-idea').addClass('inactive');
+  $('#left-bar-assess-idea-information').removeClass('inactive');
+  $('#left-bar-assess-idea-assess').addClass('inactive');
+}
+
 function insert_assess_assess() {
   $('#main-page').empty();
   $.get('assess_assess.html', function(data) {
@@ -271,6 +281,7 @@ function insert_assess_assess() {
   });
 
   $('#left-bar-assess-idea-idea').addClass('inactive');
+  $('#left-bar-assess-idea-information').addClass('inactive');
   $('#left-bar-assess-idea-assess').removeClass('inactive');
 }
 
