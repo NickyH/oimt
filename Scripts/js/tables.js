@@ -29,3 +29,22 @@ $('#table-projects-list').dataTable({
   ]
 });
 
+
+//rd table
+$('#table-rd-list').dataTable({
+  "columns": [
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    {
+      "class": "remove-sort",
+      "orderable": false
+    },
+    {
+      "class": "remove-sort",
+      "orderable": false
+    }
+  ]
+});
