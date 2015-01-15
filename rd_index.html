@@ -1,0 +1,245 @@
+<div>
+
+  <div class="panel panel-default panel-index-rd top">
+    <div class="btn-group">
+      <button type="button" class="btn btn-success" id="goto-new-rd">
+        New R&D Module
+      </button>
+    </div>
+  </div>
+
+  <!-- start panel-->
+  <div class="panel panel-default panel-index-rd">
+
+    <div class="panel-body">
+
+      <div class="form-horizontal container">
+
+        <!-- category table start-->
+        <div class="table-header">
+          <span>Research & Development</span>
+        </div>
+
+        <div class="show-closed">Show Closed/Archived</div>
+        <div class="show-closed">Show My Ideas Only</div>
+
+        <!-- each searchable table needs unique ID "table-filter-*" -->
+        <table id="table-ideas-list" class="table table-condensed table-striped activity-data-table">
+          <thead>
+            <tr>
+              <th class="tbl-ID">ID</th>
+              <th class="tbl-title">R&D Title</th>
+              <th class="tbl-date">Date Submitted</th>
+              <th class="tbl-status">Status</th>
+              <th class="tbl-owner">R&D Owner</th>
+              <th class="tbl-sponsor">R&D Sponsor</th>
+              <th class="tbl-comment">Comments</th>
+              <th class="tbl-edit"></th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td><div class="text">6845</div></td>
+            <td><div class="text title">Zero Harm</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text status red">Submitted</div></td>
+            <td><div class="text">Jo Wilkins</div></td>
+            <td><div class="text">Greg Jolly</div></td>
+            <td><div class="text">To be fast-tracked for safety reasons</div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-edit"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">1234</div></td>
+            <td><div class="text title">Recycling</div></td>
+            <td><div class="text flagged">12/03/2014</div></td>
+            <td><div class="text status red">Submitted</div></td>
+            <td><div class="text">Henry Park</div></td>
+            <td><div class="text">Genevieve Smith</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">4674</div></td>
+            <td><div class="text title">Accounting Software</div></td>
+            <td><div class="text">05/03/2014</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Dave Adam</div></td>
+            <td><div class="text">Genevieve Smith</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="Edit Idea" id="view-idea"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">2957</div></td>
+            <td><div class="text title">Staff BBQ</div></td>
+            <td><div class="text">20/02/2014</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Lisa Lu</div></td>
+            <td><div class="text">Grant Davey</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">2235</div></td>
+            <td><div class="text title read-only">Conference</div></td>
+            <td><div class="text">10/02/2014</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Sue Morris</div></td>
+            <td><div class="text">Dave Smith</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">8957</div></td>
+            <td><div class="text title">Research Project</div></td>
+            <td><div class="text">02/02/2014</div></td>
+            <td><div class="text status green">Closed</div></td>
+            <td><div class="text">Glenn Wozjiscky</div></td>
+            <td><div class="text">Marg Rooly</div></td>
+            <td><div class="text">Closed due to lack of interest</div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">3335</div></td>
+            <td><div class="text title">New division</div></td>
+            <td><div class="text">25/01/2014</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Will Smythe</div></td>
+            <td><div class="text">David Oliver</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">3867</div></td>
+            <td><div class="text title">Office waste</div></td>
+            <td><div class="text">23/01/2014</div></td>
+            <td><div class="text status green">Closed</div></td>
+            <td><div class="text">Susan Han</div></td>
+            <td><div class="text">Paul Lau</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">2235</div></td>
+            <td><div class="text title">Monitoring system</div></td>
+            <td><div class="text">23/12/2013</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Edgar Roth</div></td>
+            <td><div class="text">Hannah Livy</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">1225</div></td>
+            <td><div class="text title">Roadworks tracking system</div></td>
+            <td><div class="text">15/12/2013</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Roger Hodges</div></td>
+            <td><div class="text">Brett Simpson</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">3467</div></td>
+            <td><div class="text title read-only">Ergonomic chairs</div></td>
+            <td><div class="text">10/12/2013</div></td>
+            <td><div class="text status green">Closed</div></td>
+            <td><div class="text">Roger Hodges</div></td>
+            <td><div class="text">Brett Simpson</div></td>
+            <td><div class="text">Closed due to repeat idea</div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><div class="text">3345</div></td>
+            <td><div class="text title read-only">Ergonomic chairs</div></td>
+            <td><div class="text">08/12/2013</div></td>
+            <td><div class="text status orange">Approved</div></td>
+            <td><div class="text">Bradley Grape</div></td>
+            <td><div class="text">Shayani Fanzi</div></td>
+            <td><div class="text"></div></td>
+            <td>
+              <div class="text">
+                <a href="#" title="View Summary"><div class="glyphicon glyphicon-eye-open"></div></a>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+        <!-- category table end-->
+
+      </div><!--form-->
+
+    </div>
+  </div>
+  <!-- end panel-->
+
+</div>
+
+<script src="../Scripts/js/tables.js"></script>
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+$('.text.title').on('click', insert_assess_start);
+$('.activity-table-search').on('keyup', get_val_table_ID);
+
+$('#view-idea').on('click', insert_shared_idea );
+
+$('#goto-new-rd').on('click', insert_new_rd);
+</script>

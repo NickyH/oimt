@@ -31,6 +31,25 @@ function insert_reports() {
   });
 }
 
+function insert_rd() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('rd_index.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
+
+function insert_new_rd() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('rd_snapshot.html', function(data) {
+      $('#main-page').html(data);
+  });
+  insert_rd_top_bar();
+}
+
 function insert_login() {
   $('#insert-left').empty();
   remove_top_bar();
@@ -437,6 +456,12 @@ function insert_closeout() {
 
 function insert_top_bar() {
   $.get('top_bar.html', function(data) {
+      $('#insert-top').html(data);
+  });
+}
+
+function insert_rd_top_bar() {
+  $.get('rd_top_bar.html', function(data) {
       $('#insert-top').html(data);
   });
 }
