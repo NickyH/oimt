@@ -50,6 +50,56 @@ function insert_new_rd() {
   insert_rd_top_bar();
 }
 
+function insert_rd_snapshot() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_snapshot.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#rd-top-bar-snapshot').removeClass('inactive');
+}
+
+function insert_rd_documents() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_documents.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#rd-top-bar-documents').removeClass('inactive');
+}
+
+function insert_rd_expenditure() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_expenditure.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#rd-top-bar-expenditure').removeClass('inactive');
+}
+
+function insert_rd_activity() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_activity.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#rd-top-bar-activity').removeClass('inactive');
+}
+
+function insert_rd_review() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_review.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#rd-top-bar-review').removeClass('inactive');
+}
+
 function insert_login() {
   $('#insert-left').empty();
   remove_top_bar();
