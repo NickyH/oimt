@@ -1,5 +1,5 @@
 <!-- forms content container -->
-<div class="container-fluid form-container">
+<div class="container-fluid form-container rd">
 
   <!-- form row 1 -->
   <div class="row">
@@ -135,156 +135,133 @@
           <!-- start panel-->
           <div class="panel panel-default panel-rd">
             <div class="panel-heading">
-              <h3 class="panel-title">R&D Key Information
-                <div class="idea-status not-started"></div>
-              </h3>
+              <h3 class="panel-title">Expenditure Details</h3>
             </div>
 
             <div class="panel-body">
 
               <div class="form-horizontal container">
 
-                <div class="form-column col-lg-12 col-md-12 col-sm-12">
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">R&D Module ID</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true" disabled value="1234">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">R&D Module Start Date</label>
-                    <div class="col-sm-8">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" />
-                        <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Estimated Completion Date</label>
-                    <div class="col-sm-8">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control date datepicker" />
-                        <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Business Unit</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>Downer Infrastructure East and West</option>
-                        <option>Specialist Services</option>
-                        <option>Infrastructure Services</option>
-                        <option>Corporate</option>
-                        <option>Shared Services</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Module included in R&D claim previously?</label>
-                    <div class="col-sm-8">
-                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
-                        <option data-hidden="true"></option>
-                        <option>Yes</option>
-                        <option>No</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Estimated expenditure for YE 30 June ____</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Estimated expenditure for life of project</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
+                <!-- category table start-->
+                <div class="table-header">
+                  <span>Employees</span>
                 </div>
 
-              </div>
+                <!-- each searchable table needs unique ID "table-filter-*" -->
+                <table id="table-rd-exp-employees" class="table table-condensed table-striped expenditure-data-table">
+                  <thead>
+                    <tr>
+                      <th class="tbl-name">Name</th>
+                      <th class="tbl-role">Role</th>
+                      <th class="tbl-method">Calc Method</th>
+                      <th class="tbl-treat">Accounting Treatment</th>
+                      <th class="tbl-comments">Comments</th>
+                      <th class="tbl-fy">FY14 $</th>
+                      <th class="tbl-notincluded">Not Included In Claim</th>
+                      <th class="tbl-delete">Delete</th>
+                    </tr>
+                  </thead>
 
-            </div>
-          </div>
-          <!-- end panel-->
+                  <tr>
+                    <td><input type="text" class="form-control" data-required="true"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><select class="form-control" data-required="true">
+                        <option>Method 1</option>
+                        <option>Method 2</option>
+                      </select></td>
+                    <td><select class="form-control" data-required="true">
+                        <option>Treatment 1</option>
+                        <option>Treatment 2</option>
+                      </select></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" data-required="true"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td>
+                      <div class="text">
+                        <a href="#" title="Delete Row"><div class="glyphicon glyphicon-remove"></div></a>
+                      </div>
+                    </td>
+                  </tr>
 
-          <!-- start panel-->
-          <div class="panel panel-default panel-rd">
-            <div class="panel-heading">
-              <h3 class="panel-title">R&D Details
-                <!-- <div class="idea-status not-started">Status: Not Started</div> -->
-              </h3>
-            </div>
+                  <tfoot>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><div class="text">$284843</div></td>
+                      <td><div class="text">$5547</div></td>
+                      <td></td>
+                    </tr>
+                  </tfoot>
 
-            <div class="panel-body">
+                </table>
+                <!-- category table end-->
+                <button class="btn btn-success add-row-to-table">Add Row</button>
 
-              <div class="form-horizontal container">
-
-                <div class="form-column col-lg-12 col-md-12 col-sm-12">
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">R&D Title</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" data-required="true">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">R&D Description</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">What is the project objective/new knowledge being sought?</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">What are the uncertainties (technical unknowns)?</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">What can be done to test or assess the unknowns?</label>
-                    <div class="col-sm-8">
-                      <textarea type="text" class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label"></label>
-                    <div class="col-sm-8 bubble submit" id="submit-idea">
-                      Submit R&D Module For Assessment
-                    </div>
-                  </div>
-
+                <!-- contractor table -->
+                <!-- category table start-->
+                <div class="table-header spacing">
+                  <span>Contractors</span>
                 </div>
-              </div>
+
+                <!-- each searchable table needs unique ID "table-filter-*" -->
+                <table id="table-rd-exp-contractors" class="table table-condensed table-striped expenditure-data-table">
+                  <thead>
+                    <tr>
+                      <th class="tbl-name">Name</th>
+                      <th class="tbl-role">Role</th>
+                      <th class="tbl-method">Calc Method</th>
+                      <th class="tbl-treat">Accounting Treatment</th>
+                      <th class="tbl-comments">Comments</th>
+                      <th class="tbl-fy">FY14 $</th>
+                      <th class="tbl-notincluded">Not Included In Claim</th>
+                      <th class="tbl-delete">Delete</th>
+                    </tr>
+                  </thead>
+
+                  <tr>
+                    <td><input type="text" class="form-control" data-required="true"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><select class="form-control" data-required="true">
+                        <option>Method 1</option>
+                        <option>Method 2</option>
+                      </select></td>
+                    <td><select class="form-control" data-required="true">
+                        <option>Treatment 1</option>
+                        <option>Treatment 2</option>
+                      </select></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" data-required="true"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td>
+                      <div class="text">
+                        <a href="#" title="Delete Row"><div class="glyphicon glyphicon-remove"></div></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tfoot>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><div class="text">$284843</div></td>
+                      <td><div class="text">$5547</div></td>
+                      <td></td>
+                    </tr>
+                  </tfoot>
+
+                </table>
+                <!-- category table end-->
+                <button class="btn btn-success add-row-to-table">Add Row</button>
+
+              </div><!--form-->
 
             </div>
-
           </div>
           <!-- end panel-->
 
@@ -294,20 +271,29 @@
   </div>
 </div>
 
+<script src="../Scripts/js/tables.js"></script>
 <script>
 $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
-$('#submit-idea').on('click', insert_thank_you);
 
-$('.select-table').on('click', select_all_in_table);
-$('.select-row').on('click', select_all_in_row);
+$('.add-row-to-table').on('click', add_row_to_this_table);
+$('.expenditure-data-table').on('click', '.glyphicon-remove', delete_this_row_from_table);
 
-//attachment functions
-$('input[type=file]').on('change', add_document_row);
-$('.file-table').on('click', '.filename-link', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
-$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
+function add_row_to_this_table() {
+  var tableID = $(this).prev().children('table').attr('id');
+  var t = $('table#'+tableID).DataTable();
+  var counter = 1;
+  t.row.add( [ ] ).draw();
+  counter++;
+}
+
+function delete_this_row_from_table() {
+  var tableID = $(this).parent().parent().parent('td').parent('tr').parent('tbody').parent('table').attr('id');
+  var t = $('table#'+tableID).DataTable();
+  t.row( $(this).parents('tr') ).remove().draw();
+  return false;
+}
+
 </script>

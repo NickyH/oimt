@@ -79,6 +79,9 @@ body, html {
   &.login {
     margin-left: 0;
   }
+  &.rd {
+    margin-left: 0px !important;
+  }
 }
 
 .login-link {
@@ -603,8 +606,8 @@ body, html {
 .panel-rd {
   min-width: 400px;
   min-height: 200px;
-  width: 90%;
-  margin-left: 5%;
+  width: 96%;
+  margin-left: 2%;
   margin-top: 30px;
   box-shadow: 2px 2px 2px @oimt-light-grey;
   &.top {
@@ -828,7 +831,7 @@ input[type="file"] {
   }
 }
 
-label span.glyphicon-remove {
+.glyphicon-remove {
   color: red;
   cursor: pointer;
 }
@@ -1023,6 +1026,9 @@ tr.underline {
       color: @grey-medium-dark;
     }
   }
+  &.spacing {
+    margin-top: 80px;
+  }
 }
 
 // table column widths
@@ -1120,6 +1126,45 @@ tr.underline {
       background-color: #f7796f;
     }
   }
+}
+
+.expenditure-data-table {
+  .tbl-name {
+  width: 20%;
+  }
+  .tbl-role {
+    width: 10%;
+  }
+  .tbl-method {
+    width: 10%;
+  }
+  .tbl-treat {
+    width: 10%;
+  }
+  .tbl-comments {
+    //width: 10%;
+  }
+  .tbl-fy {
+    width: 12%;
+  }
+  .tbl-notincluded {
+    width: 15%;
+  }
+  .tbl-delete {
+    width: 2%;
+  }
+  tfoot {
+    tr td {
+      font-weight: bold;
+    }
+  }
+  .glyphicon-remove {
+    margin-left: 30%;
+  }
+}
+
+.add-row-to-table {
+  float: right;
 }
 
 .initiative-status {
@@ -1355,7 +1400,9 @@ tr.highlight {
 
 #table-ideas-list_filter,
 #table-rd-list_filter,
-#table-projects-list_filter {
+#table-projects-list_filter,
+#table-rd-exp-employees_filter,
+#table-rd-exp-contractors_filter {
   position: absolute;
   top: -47px;
   right: 6%;
@@ -1373,6 +1420,11 @@ tr.highlight {
 #table-rd-list_wrapper,
 #table-projects-list_wrapper {
   top: -20px;
+}
+
+#table-rd-exp-employees_wrapper,
+#table-rd-exp-contractors_wrapper {
+  top: 8px;
 }
 
 .dataTables_length {

@@ -684,3 +684,10 @@ function select_all_in_row(e) {
   var row= $(e.target).closest('tr');
   $('td input:checkbox',row).prop('checked', this.checked);
 }
+
+function add_row_to_this_table() {
+  //var table = $(this).prev().children('table');
+  //console.log(table);
+  //table.DataTable();
+  //table.row.add([1, 2, 3, 4, 5, 6, 7, 8]).draw();
+}
