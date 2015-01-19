@@ -48,6 +48,7 @@ function insert_new_rd() {
       $('#main-page').html(data);
   });
   insert_rd_top_bar();
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_rd_snapshot() {
@@ -68,6 +69,7 @@ function insert_rd_documents() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-documents').removeClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_rd_expenditure() {
@@ -78,6 +80,7 @@ function insert_rd_expenditure() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-expenditure').removeClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_rd_activity() {
@@ -88,6 +91,7 @@ function insert_rd_activity() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-activity').removeClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_rd_review() {
@@ -98,6 +102,7 @@ function insert_rd_review() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-review').removeClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
 }
 
 function insert_login() {
