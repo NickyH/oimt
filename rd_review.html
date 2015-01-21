@@ -12,6 +12,75 @@
           <!-- start panel-->
           <div class="panel panel-default panel-rd top">
             <div class="panel-heading">
+              <h3 class="panel-title">Quarterly R&D Spend Reporting
+                <div class="idea-status not-started"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
+              <h3 class="panel-title">Annual R&D Project Registration
+                <div class="idea-status not-started"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
+              <h3 class="panel-title">Annual Tax Return Inclusion
+                <div class="idea-status not-started"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
               <h3 class="panel-title">R&D Review
                 <div class="idea-status not-started"></div>
               </h3>
@@ -24,11 +93,11 @@
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Sign Off</label>
-                    <div class="col-sm-8">
-                      <div class="input-group merged">
-                        <input type="text" class="form-control" data-required="true" />
-                      </div>
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-4">
+                      <button class="btn btn-success">
+                        Submit
+                      </button>
                     </div>
                   </div>
 
@@ -51,15 +120,4 @@ $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
-$('#submit-idea').on('click', insert_thank_you);
-
-$('.select-table').on('click', select_all_in_table);
-$('.select-row').on('click', select_all_in_row);
-
-//attachment functions
-$('input[type=file]').on('change', add_document_row);
-$('.file-table').on('click', '.filename-link', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
-$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
 </script>

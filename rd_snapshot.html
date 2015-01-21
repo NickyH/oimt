@@ -499,15 +499,6 @@ $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
-$('#submit-idea').on('click', insert_thank_you);
-
 $('.select-table').on('click', select_all_in_table);
 $('.select-row').on('click', select_all_in_row);
-
-//attachment functions
-$('input[type=file]').on('change', add_document_row);
-$('.file-table').on('click', '.filename-link', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
-$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
 </script>
