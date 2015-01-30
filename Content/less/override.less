@@ -409,10 +409,14 @@ button.delete-panel {
   .bubble-container {
     position: relative;
     height: 30px;
-    width: 90%;
-    min-width: 900px;
+    //width: 50%;
+    //min-width: 500px;
     margin-left: 200px;
     margin-right: auto;
+    display: inline-block;
+    &.rd {
+        margin-left: 50px;
+      }
     .bubble {
       position: relative;
       display: inline-block;
@@ -453,6 +457,24 @@ button.delete-panel {
   }
 }
 
+.icon-container {
+  display: inline-block;
+  width: 120px;
+  margin-left: 50px;
+  padding-top: 10px;
+ .icons {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+    .glyphicon {
+      font-size: 22px;
+      color: @oimt-white;
+    }
+  }
+}
+
 //top bar bubbles after
 .top-bar .bubble:after {
   content: '';
@@ -465,6 +487,7 @@ button.delete-panel {
   border-bottom: 11px solid transparent;
   border-left: 43px solid #f7f00d;
 }
+
 .top-bar .bubble.inactive:after {
   border-left: 40px solid darken(@top-bar-colour, 5%);
 }
@@ -941,7 +964,8 @@ tr.underline {
 // table styling
 .activity-data-table,
 .project-list-table,
-.rd-update-table {
+.rd-update-table,
+.rd-index-table, {
   .form-control {
     height: 28px !important;
     margin-top: 5px;
@@ -1082,6 +1106,39 @@ tr.underline {
   }
   .tbl-edit {
     width: 5%;
+  }
+}
+
+.rd-index-table {
+  .tbl-ID {
+  width: 5%;
+  }
+  .tbl-title {
+    //width: 20%;
+  }
+  .tbl-date {
+    width: 10%;
+  }
+  .tbl-date2 {
+    width: 10%;
+  }
+  .tbl-date3 {
+    width: 10%;
+  }
+  .tbl-status {
+    width: 10%;
+  }
+  .tbl-owner {
+    width: 15%;
+  }
+  .tbl-parent {
+    width: 15%;
+  }
+  .tbl-summary {
+    width: 3%;
+  }
+  .glyphicon {
+    padding-left: 20px;
   }
 }
 

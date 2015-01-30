@@ -11,10 +11,9 @@
         </div>
       </div>
 
-      <div class="well rd-dash"><span>$11m</span>Value invested in Downer R&D projects this year</div>
+      <div class="well rd-dash"><span>94</span>Number of qualifying R&D projects this year</div>
+      <div class="well rd-dash"><span>$11m</span>Value of qualifying R&D projects this year</div>
       <div class="well rd-dash"><span>168</span>Number of R&D projects submitted this year</div>
-      <div class="well rd-dash"><span>134</span>Number of R&D projects signed-off this year</div>
-      <div class="well rd-dash"><span>78</span>Number of R&D projects currently running</div>
 
     </div>
   </div>
@@ -35,22 +34,26 @@
         <div class="show-closed">Show Mine Only</div>
 
         <!-- each searchable table needs unique ID "table-filter-*" -->
-        <table id="table-rd-list" class="table table-condensed table-striped activity-data-table">
+        <table id="table-rd-list" class="table table-condensed table-striped rd-index-table">
           <thead>
             <tr>
               <th class="tbl-ID">ID</th>
               <th class="tbl-title">R&D Title</th>
-              <th class="tbl-date">Date Submitted</th>
+              <th class="tbl-date">Submitted</th>
+              <th class="tbl-date2">Approved</th>
+              <th class="tbl-date3">Sign-Off</th>
               <th class="tbl-status">Status</th>
               <th class="tbl-owner">R&D Owner</th>
               <th class="tbl-parent">Parent Project</th>
-              <th class="tbl-summary">View Summary</th>
+              <th class="tbl-summary">Summary</th>
             </tr>
           </thead>
 
           <tr>
             <td><div class="text">5674</div></td>
             <td><div class="text title">Asphalt Plants</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text">15/03/2014</div></td>
             <td><div class="text status orange">Submitted</div></td>
             <td><div class="text">Jo Wilkins</div></td>
@@ -65,6 +68,8 @@
           <tr>
             <td><div class="text">3246</div></td>
             <td><div class="text title">Recycling Methods</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text flagged">12/04/2015</div></td>
             <td><div class="text status orange">Submitted</div></td>
             <td><div class="text">Henry Park</div></td>
@@ -79,6 +84,8 @@
           <tr>
             <td><div class="text">4674</div></td>
             <td><div class="text title">Energy Saving Technologies</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text">05/03/2014</div></td>
             <td><div class="text status green">Approved</div></td>
             <td><div class="text">David Lee</div></td>
@@ -93,6 +100,8 @@
           <tr>
             <td><div class="text">8957</div></td>
             <td><div class="text title">Research Project</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text">02/02/2014</div></td>
             <td><div class="text status blue">Closed</div></td>
             <td><div class="text">Glenn Wozjiscky</div></td>
@@ -107,6 +116,8 @@
           <tr>
             <td><div class="text">3335</div></td>
             <td><div class="text title">New division</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text">25/01/2014</div></td>
             <td><div class="text status green">Approved</div></td>
             <td><div class="text">Will Smythe</div></td>
@@ -139,19 +150,4 @@ $('.datepicker').pickadate();
 $('.text.title').on('click', insert_new_rd);
 $('#view-idea').on('click', insert_shared_idea );
 $('#goto-new-rd').on('click', insert_new_rd);
-</script>
-
-<script>
-$('.selectpicker').selectpicker({
-  size: 5
-});
-$('.selectpicker').selectpicker({
-  size: 5
-});
-$('.text.title').on('click', insert_new_rd);
-$('#view-idea').on('click', insert_shared_idea);
-$('#goto-new-rd').on('click', insert_new_rd);
-$('selectpicker').selectpicker({
-  size: 5
-});
 </script>

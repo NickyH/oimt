@@ -1,13 +1,18 @@
 <div class="top-bar">
 
-  <div class="bubble-container">
+  <div class="icon-container">
+    <div class="icons" id="rd-top-bar-documents">
+      <a class="nav-link" title="Documents" href="#"><img class="menu-icon" src="../Content/images/icons-docs.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-docs-yellow.png"></a>
+    </div>
+    <div class="icons" id="rd-top-bar-communication">
+      <a class="nav-link" title="Communications" href="#"><img class="menu-icon" src="../Content/images/icons-comms.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-comms-yellow.png"></a>
+    </div>
+  </div>
+
+  <div class="bubble-container rd">
 
     <div class="bubble" id="rd-top-bar-snapshot">
-      Snapshot
-      </div>
-
-    <div class="bubble inactive" id="rd-top-bar-documents">
-      Documents
+      Submission
     </div>
 
     <div class="bubble inactive" id="rd-top-bar-expenditure">
@@ -19,7 +24,7 @@
     </div>
 
     <div class="bubble inactive" id="rd-top-bar-review">
-      Review
+      Approval
     </div>
 
   </div>
@@ -32,8 +37,13 @@ $('.bubble.inactive').on('mouseover', bubble_hover);
 $('.bubble.inactive').on('mouseleave', bubble_leave);
 
 $('#rd-top-bar-snapshot').on('click', insert_rd_snapshot);
-$('#rd-top-bar-documents').on('click', insert_rd_documents);
 $('#rd-top-bar-expenditure').on('click', insert_rd_expenditure);
 $('#rd-top-bar-activity').on('click', insert_rd_activity);
 $('#rd-top-bar-review').on('click', insert_rd_review);
+
+$('#rd-top-bar-documents').on('click', insert_rd_documents);
+$('#rd-top-bar-communication').on('click', insert_rd_communications);
+
+$('.nav-link').on('mouseover', nav_button_hover);
+$('.nav-link').on('mouseleave', nav_button_leave);
 </script>

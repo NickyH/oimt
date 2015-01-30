@@ -72,6 +72,17 @@ function insert_rd_documents() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_rd_communications() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_communications.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  //$('#rd-top-bar-documents').removeClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function insert_rd_expenditure() {
   $('#insert-left').empty();
   $('#main-page').empty();

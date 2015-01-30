@@ -40,6 +40,8 @@ $('#table-rd-list').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
     {
       "class": "remove-sort",
       "orderable": false
