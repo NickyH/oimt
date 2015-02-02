@@ -67,6 +67,8 @@ function insert_rd_documents() {
   $.get('rd_documents.html', function(data) {
       $('#main-page').html(data);
   });
+  //$('.nav-link img.menu-icon-yellow').addClass('hidden');
+  //$('#rd-top-bar-documents .menu-icon-yellow.hidden').removeClass('hidden');
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-documents').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
@@ -79,7 +81,6 @@ function insert_rd_communications() {
       $('#main-page').html(data);
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
-  //$('#rd-top-bar-documents').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
 }
 
@@ -93,17 +94,6 @@ function insert_rd_case() {
   $('#rd-top-bar-expenditure').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
 }
-
-// function insert_rd_activity() {
-//   $('#insert-left').empty();
-//   $('#main-page').empty();
-//   $.get('rd_activity.html', function(data) {
-//       $('#main-page').html(data);
-//   });
-//   $('.top-bar .bubble-container .bubble').addClass('inactive');
-//   $('#rd-top-bar-activity').removeClass('inactive');
-//   $('html, body').animate({ scrollTop: 0 });
-// }
 
 function insert_rd_review() {
   $('#insert-left').empty();

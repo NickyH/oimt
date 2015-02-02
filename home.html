@@ -43,10 +43,10 @@
       <div class="panel panel-default panel-empty">
         <div class="panel-body">
 
-          <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="col-lg-3 col-md-3 col-sm-3 home">
             <div class="panel panel-default panel-tiny">
               <div class="panel-heading">
-                <h3 class="panel-title" id="track-my-ideas">Track My Submitted Ideas</h3>
+                <h3 class="panel-title" id="track-my-ideas">Track My Ideas</h3>
               </div>
               <div class="panel-body">
                 If you've already submitted an idea you can track the
@@ -55,19 +55,19 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="col-lg-3 col-md-3 col-sm-3 home">
             <div class="panel panel-default panel-tiny">
               <div class="panel-heading">
                 <h3 class="panel-title" id="browse-ideas">Browse All Ideas</h3>
               </div>
               <div class="panel-body">
-                If you just want to browse new ideas that have been
-                submitted you can view the<span class="home-page-links ideas"> ideas list</span>. You can see which ideas have been submitted or approved, and which ideas have become real Downer projects. If you want to search past ideas you can view all<span class="home-page-links ideas"> closed or archived</span>. if you get inspired and want to submit your own idea, you need to<span class="home-page-links login"> login</span> first, then you can<span class="home-page-links start"> tell us your idea</span>.
+                To browse new ideas that have been
+                submitted you can view the<span class="home-page-links ideas"> ideas list</span>. You can see which ideas have been submitted or approved. If you want to search past ideas you can view all<span class="home-page-links ideas"> closed or archived</span>. if you get inspired and want to submit your own idea, you need to<span class="home-page-links login"> login</span> first, then you can<span class="home-page-links start"> tell us your idea</span>.
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="col-lg-3 col-md-3 col-sm-3 home">
             <div class="panel panel-default panel-tiny">
               <div class="panel-heading">
                 <h3 class="panel-title" id="manage-my-projects">Manage My Projects</h3>
@@ -75,6 +75,18 @@
               <div class="panel-body">
                 Are you a project manager and have been assigned a project in IMT?
                 First you just need to <span class="home-page-links login"> login</span>, and then you can<span class="home-page-links projects"> manage your projects</span>.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-3 home">
+            <div class="panel panel-default panel-tiny">
+              <div class="panel-heading">
+                <h3 class="panel-title" id="manage-my-rd-projects">Submit an R&D Project</h3>
+              </div>
+              <div class="panel-body">
+                Use the <span class="home-page-links rd">Research & Development Portal </span>to submit, manage and view R&D projects.
+                You can also manage R&D projects within a Downer project during the execution phase. If you are submitting an idea and already know there may be an R&D componenet to the project, you should indicate this in your idea submission.
               </div>
             </div>
           </div>
@@ -94,6 +106,7 @@
   $('#tell-us1').on('click', insert_start );
   $('#track-my-ideas').on('click', insert_idea_list );
   $('#manage-my-projects').on('click', insert_project_list );
+  $('#manage-my-rd-projects').on('click', insert_rd );
   $('#browse-ideas').on('click', insert_idea_list );
 
   $('.home-page-links.register').on('click', insert_registration );
@@ -101,4 +114,5 @@
   $('.home-page-links.start').on('click', insert_start );
   $('.home-page-links.projects').on('click', insert_project_list );
   $('.home-page-links.ideas').on('click', insert_idea_list );
+  $('.home-page-links.rd').on('click', insert_rd );
 </script>
