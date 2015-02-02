@@ -23,15 +23,8 @@
 
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label"></label>
-                    <label class="col-sm-8 control-label label-description left">
-                      Attach key documents maintained by the business that support the work undertaken and analysis of any experimentation and testing, e.g. business case, gantt charts, capex approvals, contractual arrangements, risks and issues logs, test results etc...
-                    </label>
-                  </div>
-
                   <div class="form-group hidden">
-                    <label class="col-sm-4 control-label">Attach Documents</label>
+                    <label class="col-sm-4 control-label">Documents</label>
                     <div class="col-sm-8">
                       <input type="file" class="form-control">
                       <span class='btn btn-info file-select'>Select File</span>
@@ -41,47 +34,41 @@
                   <div class="form-group">
                     <div class="col-sm-12">
 
-                      <table class="table table-condensed add-file-table">
+                      <!-- each searchable table needs unique ID "table-filter-*" -->
+                      <table id="table-rd-documents" class="table table-condensed table-striped rd-doc-table">
                         <thead>
                           <tr>
-                            <th>Attached Documents</th>
-                            <th><span class="glyphicon glyphicon-plus" title="Add Another File"></span></th>
+                            <th class="tbl-name">Document Name</th>
+                            <th class="tbl-filename">Document</th>
+                            <th class="tbl-date">Date Added</th>
+                            <th class="tbl-delete">Delete</th>
                           </tr>
                         </thead>
-                      </table>
 
-                      <table class="table table-condensed file-table">
-                        <thead>
-                          <tr>
-                            <th class="filename-link">research_methods.pdf</th>
-                            <th><span class="glyphicon glyphicon-pencil" title="Edit Details"></span></th>
-                            <th><span class="glyphicon glyphicon-eye-open" title="Open File"></span></th>
-                            <th><span class="glyphicon glyphicon-remove" title="Delete File"></span></th>
-                          </tr>
-                        </thead>
                         <tr>
-                          <td colspan='4'>
-                            <div class="form-group">
-                              <label class="col-sm-4 control-label">Response Comments</label>
-                              <div class="col-sm-7">
-                                <textarea class="form-control" rows="3"></textarea>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label class="col-sm-4 control-label">From</label>
-                              <div class="col-sm-7">
-                                <input type="text" class="form-control" />
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label class="col-sm-4 control-label"></label>
-                              <div class="col-sm-7">
-                                <input class="btn btn-primary form-control" value="Save Details" />
-                              </div>
-                            </div>
-                          </td>
+                          <td><div class="text">Costing Outline</div></td>
+                          <td><div class="text"><a class="filename" href="#" title="Open Document">costing_outline.pdf</a></div></td>
+                          <td><div class="text">12/12//2014</div></td>
+                          <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
                         </tr>
+
+                        <tr>
+                          <td><div class="text">Timeline & Gantt Chart</div></td>
+                          <td><div class="text"><a class="filename" href="#" title="Open Document">timeline.docx</a></div></td>
+                          <td><div class="text">15/12/2014</div></td>
+                          <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Research Methods</div></td>
+                          <td><div class="text"><a class="filename" href="#" title="Open Document">research_methods.ppt</a></div></td>
+                          <td><div class="text">22/12//2014</div></td>
+                          <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
+                        </tr>
+
                       </table>
+                      <!-- category table end-->
+
                     </div>
                   </div>
 
@@ -93,11 +80,56 @@
           </div>
           <!-- end panel-->
 
+          <!-- panel start-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
+              <h3 class="panel-title">Attach Documents
+                <div class="idea-status underway"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Document Name<br><span class="label-description">Document name or short description of the document.</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Attach File</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6 bubble save-send">
+                      Save
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script src="../Scripts/js/tables.js"></script>
 
 <script>
 $('.selectpicker').selectpicker({
