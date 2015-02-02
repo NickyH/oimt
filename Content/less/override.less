@@ -750,7 +750,7 @@ button.delete-panel {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     background-color: lighten(@oimt-blue, 10%);
     min-width: 220px;
     width: 100%;
@@ -758,6 +758,7 @@ button.delete-panel {
     border-radius: 15px;
     line-height: 100px;
     text-align: center;
+    font-weight: bold;
     font-size: @font-size-very-large;
     color: @oimt-very-light-grey;
     box-shadow: 2px 2px 2px @oimt-light-grey;
@@ -809,6 +810,9 @@ button.delete-panel {
       font-size: 16px;
       background-color: #5cb85c;
       line-height: 40px;
+      width: auto !important;
+      float: right;
+      margin-right: 20px;
     }
     &.save-send:hover {
       background-color: lighten(#5cb85c, 5%);
@@ -1011,6 +1015,27 @@ tr.underline {
   }
   tr{
     height: 35px;
+  }
+}
+
+// table styling
+.rd-comms-table {
+    height: 28px !important;
+    margin-top: 5px;
+    .tbl-subject {
+      //width: 30%;
+    }
+    .tbl-date {
+      width: 20%;
+    }
+    .tbl-delete {
+      width: 10%;
+    }
+  tr{
+    height: 35px;
+  }
+  .collapsed {
+    display: none;
   }
 }
 
@@ -1599,5 +1624,28 @@ table.dataTable thead {
       margin-top: 30px;
       font-weight: bold;
     }
+  }
+}
+
+.row-summary {
+  background-color: red !important;
+  &.sent {
+    background-color: blue !important;
+  }
+  &.received {
+    background-color: green !important;
+  }
+}
+
+.textfields {
+  margin-top: 5px;
+  &.label {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    text-align: right;
+  }
+  .filename {
+    text-decoration: none;
   }
 }
