@@ -83,10 +83,10 @@ function insert_rd_communications() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
-function insert_rd_expenditure() {
+function insert_rd_case() {
   $('#insert-left').empty();
   $('#main-page').empty();
-  $.get('rd_expenditure.html', function(data) {
+  $.get('rd_case.html', function(data) {
       $('#main-page').html(data);
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
@@ -94,16 +94,16 @@ function insert_rd_expenditure() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
-function insert_rd_activity() {
-  $('#insert-left').empty();
-  $('#main-page').empty();
-  $.get('rd_activity.html', function(data) {
-      $('#main-page').html(data);
-  });
-  $('.top-bar .bubble-container .bubble').addClass('inactive');
-  $('#rd-top-bar-activity').removeClass('inactive');
-  $('html, body').animate({ scrollTop: 0 });
-}
+// function insert_rd_activity() {
+//   $('#insert-left').empty();
+//   $('#main-page').empty();
+//   $.get('rd_activity.html', function(data) {
+//       $('#main-page').html(data);
+//   });
+//   $('.top-bar .bubble-container .bubble').addClass('inactive');
+//   $('#rd-top-bar-activity').removeClass('inactive');
+//   $('html, body').animate({ scrollTop: 0 });
+// }
 
 function insert_rd_review() {
   $('#insert-left').empty();

@@ -15,12 +15,8 @@
       Submission
     </div>
 
-    <div class="bubble inactive" id="rd-top-bar-expenditure">
-      Expenditure
-    </div>
-
-    <div class="bubble inactive" id="rd-top-bar-activity">
-      Activity
+    <div class="bubble inactive" id="rd-top-bar-case">
+      R&D Case
     </div>
 
     <div class="bubble inactive" id="rd-top-bar-review">
@@ -37,8 +33,7 @@ $('.bubble.inactive').on('mouseover', bubble_hover);
 $('.bubble.inactive').on('mouseleave', bubble_leave);
 
 $('#rd-top-bar-snapshot').on('click', insert_rd_snapshot);
-$('#rd-top-bar-expenditure').on('click', insert_rd_expenditure);
-$('#rd-top-bar-activity').on('click', insert_rd_activity);
+$('#rd-top-bar-case').on('click', insert_rd_case);
 $('#rd-top-bar-review').on('click', insert_rd_review);
 
 $('#rd-top-bar-documents').on('click', insert_rd_documents);
