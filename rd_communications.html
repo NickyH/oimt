@@ -53,7 +53,7 @@
                         <tr class="collapsed">
                           <td colspan='4'>
                             <div class="form-group">
-                              <label class="col-sm-2 textfields label">Message Sent</label>
+                              <label class="col-sm-2 textfields label">Message Text</label>
                               <div class="col-sm-10 textfields">
                                 <div>This is the message body that was sent on 12/12/2014 and whose subject line is costing query. See below for who this message was sent to. This is just an example of message body text.</div>
                               </div>
@@ -200,9 +200,17 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Other Email Addresses</label>
+                    <label class="col-sm-4 control-label">Other Email Addresses<br><span class="label-description">Enter any non-Downer email addresses here</span></label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Attach File</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
                     </div>
                   </div>
 
@@ -242,7 +250,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Response Description</label>
+                    <label class="col-sm-4 control-label">Response Description<br><span class="label-description">Enter a short description of the attached email response, or simply copy and paste the response text here</span></label>
                     <div class="col-sm-8">
                       <textarea type="text" class="form-control" rows="4"></textarea>
                     </div>
@@ -268,7 +276,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Attach Email/File</label>
+                    <label class="col-sm-4 control-label">Attach File<br><span class="label-description">Attach any external responses here, e.g. email files</span></label>
                     <div class="col-sm-8">
                       <input type="file" class="form-control">
                       <span class='btn btn-info file-select'>Select File</span>
