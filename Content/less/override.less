@@ -1039,6 +1039,29 @@ tr.underline {
   }
 }
 
+//rd comms table styling
+tr.row-summary {
+  &.sent td {
+    background-color: #EDF6FC !important; //blue
+  }
+  &.received td {
+    background-color: #F5F9F1 !important; //green
+  }
+}
+
+.textfields {
+  margin-top: 5px;
+  &.label {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    text-align: right;
+  }
+  .filename {
+    text-decoration: none;
+  }
+}
+
 .table-header {
   position: relative;
   width: 100%;
@@ -1596,8 +1619,8 @@ table.dataTable thead {
 
 .well.rd-dash {
   float: right !important;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   text-align: center;
   margin-left: 20px;
   margin-bottom: 10px;
@@ -1615,7 +1638,8 @@ table.dataTable thead {
     float: left;
     margin-left: 0;
     text-align: left;
-    width: 250px;
+    min-width: 210px;
+    width: auto;
     span {
       font-weight: bold;
       font-size: 16px;
@@ -1624,28 +1648,5 @@ table.dataTable thead {
       margin-top: 30px;
       font-weight: bold;
     }
-  }
-}
-
-.row-summary {
-  background-color: red !important;
-  &.sent {
-    background-color: blue !important;
-  }
-  &.received {
-    background-color: green !important;
-  }
-}
-
-.textfields {
-  margin-top: 5px;
-  &.label {
-    font-weight: bold;
-    color: black;
-    font-size: 12px;
-    text-align: right;
-  }
-  .filename {
-    text-decoration: none;
   }
 }
