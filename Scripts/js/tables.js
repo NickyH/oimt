@@ -32,10 +32,9 @@ $('#table-projects-list').dataTable({
 });
 
 
-//rd table
+//rd index table
 $('#table-rd-list').dataTable({
   "columns": [
-    { "class": "text" },
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
