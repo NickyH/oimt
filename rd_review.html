@@ -10,7 +10,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
 
           <!-- start panel-->
-          <div class="panel panel-default panel-rd top">
+          <div class="panel panel-default panel-rd top request-signoff">
             <div class="panel-heading">
               <h3 class="panel-title">Request Sign-Off</h3>
             </div>
@@ -22,12 +22,16 @@
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Request Sign-Off<br><span class="label-description">Optional: write a comment prior to requesting sign-off, or just leave blank</span></label>
-                    <div class="col-sm-5">
+                    <label class="col-sm-4 control-label">Comments<br><span class="label-description">Write a comment for sign-off, or just leave blank</span></label>
+                    <div class="col-sm-8">
                       <textarea type="text" class="form-control" rows="4"></textarea>
                     </div>
-                    <div class="col-sm-3">
-                      <input type="button" class="btn btn-success" value="Submit For Assessment"></input>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <input type="button" class="btn btn-success unhide-review" value="Submit For Assessment"></input>
                     </div>
                   </div>
 
@@ -40,9 +44,9 @@
           <!-- end panel-->
 
           <!-- start panel-->
-          <div class="panel panel-default panel-rd">
+          <div class="panel panel-default panel-rd approve-reject top hidden">
             <div class="panel-heading">
-              <h3 class="panel-title">Submission Approved/Rejected</h3>
+              <h3 class="panel-title">Review Sign-Off Request</h3>
             </div>
 
             <div class="panel-body">
@@ -52,25 +56,169 @@
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Submission Approved</label>
-                    <div class="col-sm-5">
-                      <textarea type="text" class="form-control" rows="4" disabled>This submission is being approved because of this reason typed in here in this textbox</textarea>
+                     <label class="col-sm-4 control-label">Comments<br><span class="label-description">Write a comment for sign-off, or just leave blank</span></label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4" disabled>This submission should be approved because of this reason typed in here in this textbox</textarea>
                     </div>
-                    <div class="col-sm-3">
-                      <input type="button" class="btn btn-success" value="Approve"></input>
+                  </div>
+
+                  <div class="form-group underline">
+                    <label class="col-sm-4 control-label">Date Requested</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" disabled value="12/12/2014"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Submission Rejected</label>
-                    <div class="col-sm-5">
-                      <textarea type="text" class="form-control" rows="4" disabled>This submission is being rejected because of the reasons typed here in this textbox. hgj jksn fjdksn fjdsn fjdksn fjkdsn fjkdsn fjkdns jfkdns jkfns jkn</textarea>
+                    <div class="col-sm-4">
+                      <label class="control-label">Should Stage 3 of this R&D project be approved?</label>
                     </div>
-                    <div class="col-sm-3">
-                      <input type="button" class="btn btn-warning" value="Reject "></input>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked unhide-form-approve">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Approve Stage 3
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-4">
+                      <ul class="nav nav-pills nav-stacked unhide-form-reject">
+                        <li class="active">
+                          <a href="#" class="pill-select inactive">
+                            <span class="badge pull-right">&#10008</span>
+                            Reject Stage 3
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
+                  <!-- form approve inputs-->
+                  <div id="form-progress-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval unhide-approve'>Submit</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- end form approve inputs-->
+
+                  <!-- form reject inputs-->
+                  <div id="form-end-idea" class="hidden">
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">Comments</label>
+                      <div class="col-sm-8">
+                        <textarea type="text" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"></label>
+                      <div class="col-sm-8">
+                        <input type="button" class="form-control">
+                        <span class='btn btn-success file-select approval unhide-reject'>Submit</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- end form reject inputs-->
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-success panel-rd stage-approved top hidden">
+            <div class="panel-heading">
+              <h3 class="panel-title">Stage 3 Approved</h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Reasons For Approval</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4" disabled>This is the reason for approval written here in this textbox</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Approved</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" disabled value="15/12/2014"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-danger panel-rd stage-rejected top hidden">
+            <div class="panel-heading">
+              <h3 class="panel-title">Stage 3 Rejected</h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Reasons For Rejection</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4" disabled>This is the reason for rejection written here in this textbox</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Date Rejected</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" disabled value="15/12/2014"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
@@ -91,4 +239,11 @@ $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
+
+$('.unhide-form-approve').on('click', show_progress_idea_inputs);
+$('.unhide-form-reject').on('click', show_end_idea_inputs);
+
+$('.unhide-review').on('click', unhide_review_panel);
+$('.unhide-approve').on('click', unhide_approved_panel);
+$('.unhide-reject').on('click', unhide_rejected_panel);
 </script>

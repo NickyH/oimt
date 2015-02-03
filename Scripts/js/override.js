@@ -67,11 +67,11 @@ function insert_rd_documents() {
   $.get('rd_documents.html', function(data) {
       $('#main-page').html(data);
   });
-  //$('.nav-link img.menu-icon-yellow').addClass('hidden');
-  //$('#rd-top-bar-documents .menu-icon-yellow.hidden').removeClass('hidden');
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-documents').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
+  $(this).children('a').children('img.menu-icon-yellow').removeClass('hidden');
+  $(this).children('a').children('img.menu-icon').addClass('hidden');
 }
 
 function insert_rd_communications() {
@@ -91,7 +91,7 @@ function insert_rd_case() {
       $('#main-page').html(data);
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
-  $('#rd-top-bar-expenditure').removeClass('inactive');
+  $('#rd-top-bar-case').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
 }
 
@@ -552,6 +552,7 @@ function nav_button_hover() {
 }
 
 function nav_button_leave() {
+  console.log($(this));
   $(this).removeClass('nav-hover');
   $(this).find('.menu-icon-yellow').addClass('hidden');
   $(this).find('.menu-icon').removeClass('hidden');
@@ -701,4 +702,20 @@ function add_another_panel () {
 function delete_this_panel () {
   $(this).parents('.panel').prev('.panel').children('.panel-body').children('.form-horizontal').children('.form-column').children('.form-group:last').children().children('.repeat-panel').removeClass('disabled');
   $(this).parents('.panel').remove();
+}
+
+function unhide_review_panel() {
+  $('.panel.approve-reject').removeClass('hidden');
+  $('.panel.request-signoff').addClass('hidden');
+}
+
+function unhide_approved_panel() {
+  $('.panel.stage-approved').removeClass('hidden');
+  $('.panel.approve-reject').addClass('hidden');
+
+}
+
+function unhide_rejected_panel() {
+  $('.panel.stage-rejected').removeClass('hidden');
+  $('.panel.approve-reject').addClass('hidden');
 }

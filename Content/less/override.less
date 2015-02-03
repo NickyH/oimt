@@ -261,11 +261,26 @@ button.delete-panel {
   top: 5px;
   left: 10px;
   cursor: pointer;
+  @media @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    display: none !important;
+  }
 }
 
 .oimt-logo {
   margin-left: 50px;
   margin-top: 20px;
+  @media @widthMediumLarge,
+  @widthMedium {
+    width: 200px;
+    clear: both;
+  }
+  @media @widthMedium,
+  @widthNarrow {
+    width: 200px;
+    clear: both;
+  }
 }
 
 .tell-us {
@@ -278,9 +293,23 @@ button.delete-panel {
   border-color: @oimt-yellow;
   color: darken(@oimt-blue, 10%);
   box-shadow: 2px 2px 2px darken(@oimt-blue, 10%);
+  @media @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    margin-left: 20px;
+    width: 180px;
+    clear: both;
+    float: left;
+    height: 45px;
+  }
   span {
     font-size: 26px;
     float: right;
+    @media @widthMediumLarge,
+    @widthMedium,
+    @widthNarrow {
+      font-size: 14px !important;
+    }
   }
   span:nth-child(1) {
     padding-top: 4px;
@@ -340,6 +369,11 @@ button.delete-panel {
   cursor: pointer;
   &:hover {
     color: #ededed;
+  }
+  @media @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    display: none;
   }
 }
 
@@ -402,6 +436,7 @@ button.delete-panel {
 .top-bar {
   background : lighten(@top-bar-colour, 15%);
   width: 100%;
+  min-width: 740px;
   height: 50px;
   position: fixed;
   top: 70px;
@@ -409,13 +444,15 @@ button.delete-panel {
   .bubble-container {
     position: relative;
     height: 30px;
-    //width: 50%;
-    //min-width: 500px;
+    width: 90%;
+    min-width: 900px;
     margin-left: 200px;
     margin-right: auto;
     display: inline-block;
     &.rd {
         margin-left: 50px;
+        min-width: 500px;
+        width: 500px !important;
       }
     .bubble {
       position: relative;
@@ -511,14 +548,22 @@ button.delete-panel {
 }
 
 .panel-home {
-  min-width: 600px;
+  min-width: 850px;
   min-height: 200px;
   height: 350px;
   margin-top: 100px;
   background-color: @oimt-blue !important;
+  margin-left: 20px;
+  margin-right: 20px;
+  @media @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    min-width: 350px;
+  }
 }
 
 .panel-empty {
+  min-width: 850px;
   min-height: 400px;
   height: fit-content;
   margin-top: -21px !important;
@@ -526,10 +571,17 @@ button.delete-panel {
   border-color: lighten(@oimt-blue, 35%);
   border-color: white;
   box-shadow: 0 0 0 white !important;
+  margin-left: 20px;
+  margin-right: 20px;
+  @media @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    min-width: 350px;
+  }
 }
 
 .panel-tiny {
-  min-height: 250px;
+  min-height: 350px;
   height: fit-content;
   margin-top: 10px;
   background-color: #f7f7f7 !important;
@@ -551,6 +603,12 @@ button.delete-panel {
   .panel-body {
     font-size: 14px;
     padding-top: 3px;
+  }
+  @media @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    min-height: 150px;
+    min-width: 300px;
   }
 }
 
@@ -602,8 +660,9 @@ button.delete-panel {
     margin-top: 5px;
   }
   @media @widthMediumLarge,
-  @widthMedium {
-    width: 500px;
+  @widthMedium,
+  @widthNarrow {
+    display: none;
   }
 }
 
@@ -641,7 +700,7 @@ button.delete-panel {
 }
 
 .panel-index-rd {
-  min-width: 400px;
+  min-width: 830px;
   min-height: 200px;
   width: 90%;
   margin-left: 5%;
@@ -654,7 +713,7 @@ button.delete-panel {
 }
 
 .panel-rd {
-  min-width: 400px;
+  min-width: 850px;
   min-height: 200px;
   width: 96%;
   margin-left: 2%;
@@ -677,7 +736,7 @@ button.delete-panel {
 .panel-execution-risks,
 .panel-execution-history,
 .panel-execution-input {
-  min-width: 400px;
+  min-width: 550px;
   min-height: 200px;
   width: 95%;
   margin-left: 30px;
@@ -1649,7 +1708,7 @@ table.dataTable thead {
 }
 
 .well.rd-dash {
-  float: right !important;
+  float: left !important;
   width: 160px;
   height: 160px;
   text-align: center;
@@ -1666,11 +1725,12 @@ table.dataTable thead {
     margin-bottom: 15px;
   }
   &.left {
-    float: left;
-    margin-left: 0;
+    float: right;
+    margin-left: 20px;
     text-align: left;
     min-width: 210px;
     width: auto;
+    background-color: #EDF6FC;
     span {
       font-weight: bold;
       font-size: 16px;
