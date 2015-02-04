@@ -40,6 +40,15 @@ function insert_rd() {
   });
 }
 
+function insert_rd_summary () {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_summary.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function insert_new_rd() {
   $('#insert-left').empty();
   remove_top_bar();
