@@ -705,7 +705,7 @@ function add_another_panel () {
   var panel_copy = $(this).parents('.panel').clone();
   $(this).addClass('disabled');
   var new_panel = $(this).parents('.panel').parents('.col-lg-12').append(panel_copy);
-  $('.panel:last').children('.panel-body').children('.form-horizontal').children('.form-column').children('.form-group:last').children().children('.delete-panel').removeClass('hidden');
+  $('.row:first .panel:last').children('.panel-body').children('.form-horizontal').children('.form-column').children('.form-group:last').children().children('.delete-panel').removeClass('hidden');
 }
 
 function delete_this_panel () {
