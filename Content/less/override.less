@@ -254,20 +254,6 @@ button.delete-panel {
   right: 0;
 }
 
-// top right icons
-.icon-downer {
-  width: 360px;
-  position: fixed;
-  top: 5px;
-  left: 10px;
-  cursor: pointer;
-  @media @widthMediumLarge,
-  @widthMedium,
-  @widthNarrow {
-    display: none !important;
-  }
-}
-
 .oimt-logo {
   margin-left: 50px;
   margin-top: 20px;
@@ -384,6 +370,23 @@ button.delete-panel {
     border-color: @top-bar-colour !important;
     font-size: 16px;
     line-height: 50px;
+    &.desktop {
+      @media @widthLarge {
+
+      }
+      @media @widthMediumLargePlus,
+      @widthMediumLarge,
+      @widthMedium,
+      @widthNarrow {
+        display: none !important;
+      }
+    }
+    &.mobile {
+      @media @widthMediumLargePlus,
+      @widthLarge {
+        display: none !important;
+      }
+    }
   }
   .btn-default {
     a.nav-link, a.nav-link:active {
@@ -404,6 +407,54 @@ button.delete-panel {
       color: #EBF216;
       border-top-color: #EBF216;
     }
+  }
+}
+
+.btn-group.oimt {
+  .btn.mobile {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    @media @widthMediumLargePlus,
+    @widthMediumLarge,
+    @widthMedium,
+    @widthNarrow {
+      display: inline-block !important;
+    }
+  }
+  .dropdown-menu:after {
+    left: 100px;
+  }
+}
+
+// top right icons
+.icon-downer {
+  width: 360px;
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+  @media @widthMediumLargePlus,
+  @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    display: none !important;
+  }
+}
+
+.icon-downer-small {
+  @media @widthLarge {
+    display: none;
+  }
+  @media @widthMediumLargePlus,
+  @widthMediumLarge,
+  @widthMedium,
+  @widthNarrow {
+    width: 50px;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
   }
 }
 

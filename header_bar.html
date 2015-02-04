@@ -4,8 +4,9 @@
     <div class="btn-group oimt">
 
       <img class="icon-downer" src="../Content/images/oimt-downer-logo.png">
+      <img class="icon-downer-small" src="../Content/images/oimt-logo-small.png">
 
-      <button type="button" class="btn btn-default">
+      <button type="button" class="btn btn-default desktop">
         <div class="dropdown">
           <div class="dropdown-toggle" data-toggle="dropdown">
             <a class="nav-link" href="#">
@@ -25,34 +26,34 @@
         </div>
       </button>
 
-      <button type="button" class="btn btn-default">
+      <button type="button" class="btn btn-default desktop">
         <a class="nav-link" href="#" id="goto-reports"><img class="menu-icon" src="../Content/images/icons-manage.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-manage-yellow.png"> Reports </a>
       </button>
-      <button type="button" class="btn btn-default">
+      <button type="button desktop" class="btn btn-default desktop">
         <a class="nav-link" href="#" id="goto-ideas"><img class="menu-icon" src="../Content/images/icons-ideas.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-ideas-yellow.png"> Ideas </a>
       </button>
-      <button type="button" class="btn btn-default">
+      <button type="button desktop" class="btn btn-default desktop">
         <a class="nav-link" href="#" id="goto-projects"><img class="menu-icon" src="../Content/images/icons-project.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-project-yellow.png"> Projects </a>
       </button>
-      <button type="button" class="btn btn-default">
+      <button type="button desktop" class="btn btn-default desktop">
         <a class="nav-link" href="#" id="goto-rd"><img class="menu-icon" src="../Content/images/icons-rd.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-rd-yellow.png"> R&D </a>
       </button>
 
-     <!--  <button type="button" class="btn btn-default">
+      <button type="button" class="btn btn-default mobile">
         <div class="dropdown">
           <div class="dropdown-toggle" data-toggle="dropdown">
             <a class="nav-link" href="#">
               <img class="menu-icon" src="../Content/images/icons-menu.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-menu-yellow.png"><span class="nav-text"> Menu </span><b class="caret"></b></div>
             <ul class="dropdown-menu">
-              <li><a href="#">Reports</a></li>
+              <li><a id="mobile-goto-reports" href="#">Reports</a></li>
               <li class="divider"></li>
-              <li><a id="goto-change-password" href="#">Ideas</a></li>
+              <li><a id="mobile-goto-ideas" href="#">Ideas</a></li>
               <li class="divider"></li>
-              <li><a id="goto-admin" href="#">Projects</a></li>
+              <li><a id="mobile-goto-projects" href="#">Projects</a></li>
               <li class="divider"></li>
-              <li><a id="goto-add-pm" href="#">R&D</a></li>
+              <li><a id="mobile-goto-rd" href="#">R&D</a></li>
               <li class="divider"></li>
-              <li><a id="goto-login" href="#">Login/Logout</a></li>
+              <li><a id="mobile-goto-login" href="#">Login/Logout</a></li>
               <li class="divider"></li>
               <li><a id="goto-login" href="#">Change Password</a></li>
               <li class="divider"></li>
@@ -62,65 +63,30 @@
           </a>
         </div>
       </button>
- -->
+
     </div>
 
     </div>
 </div>
 
-
-
-
-
-
-
- <!--    <nav role="navigation" class="navbar navbar-default">
-
-    <div class="navbar-header">
-        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a href="#" class="navbar-brand">OIMT</a>
-    </div>
-
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Reports</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-cloud"></span> Ideas</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span> Projects</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-book"></span> R&D</a></li>
-            <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Admin <b class="caret"></b></a>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">Change Password</a></li>
-                    <li><a href="#">Manage Users</a></li>
-                    <li><a href="#">Logout</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
-        </ul>
-    </div>
-</nav>
- -->
-
-
-
 <script>
 $('.btn-group.oimt button').on('mouseover', nav_button_hover);
 $('.btn-group.oimt button').on('mouseleave', nav_button_leave);
 $('.icon-downer').on('click', icon_downer_click);
+$('.icon-downer-small').on('click', icon_downer_click);
+
 $('#goto-login').on('click', insert_login);
 $('#goto-reports').on('click', insert_reports);
 $('#goto-ideas').on('click', insert_idea_list);
 $('#goto-projects').on('click', insert_project_list);
 $('#goto-rd').on('click', insert_rd);
+
+$('#mobile-goto-login').on('click', insert_login);
+$('#mobile-goto-reports').on('click', insert_reports);
+$('#mobile-goto-ideas').on('click', insert_idea_list);
+$('#mobile-goto-projects').on('click', insert_project_list);
+$('#mobile-goto-rd').on('click', insert_rd);
+
 $('#goto-admin').on('click', insert_admin );
 $('#goto-add-pm').on('click', insert_add_pm );
 $('#goto-change-password').on('click', insert_change_password );
