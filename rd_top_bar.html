@@ -2,10 +2,10 @@
 
   <div class="icon-container">
     <div class="icons" id="rd-top-bar-documents">
-      <a class="nav-link" title="Documents" href="#"><img class="menu-icon" src="../Content/images/icons-docs.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-docs-yellow.png"></a>
+      <a class="nav-link enableMouseLeave" id="icon-rd-docs" title="Documents" href="#"><img class="menu-icon" src="../Content/images/icons-docs.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-docs-yellow.png"></a>
     </div>
     <div class="icons" id="rd-top-bar-communication">
-      <a class="nav-link" title="Communications" href="#"><img class="menu-icon" src="../Content/images/icons-comms.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-comms-yellow.png"></a>
+      <a class="nav-link enableMouseLeave" id="icon-rd-comms" title="Communications" href="#"><img class="menu-icon" src="../Content/images/icons-comms.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-comms-yellow.png"></a>
     </div>
   </div>
 
@@ -40,5 +40,7 @@ $('#rd-top-bar-documents').on('click', insert_rd_documents);
 $('#rd-top-bar-communication').on('click', insert_rd_communications);
 
 $('.nav-link').on('mouseover', nav_button_hover);
-$('.nav-link').on('mouseleave', nav_button_leave);
+//$('.nav-link').on('mouseleave', nav_button_leave);
+
+$('.enableMouseLeave').on('mouseleave', nav_button_leave);
 </script>

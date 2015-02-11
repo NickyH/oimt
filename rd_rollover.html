@@ -1,0 +1,153 @@
+<!-- forms content container -->
+<div class="container-fluid form-container rd">
+
+  <div class="idea-summary-back"> << Cancel Rollover. Return To R&D Project List </div>
+
+  <!-- form row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
+              <h3 class="panel-title">R&D Owner Details
+                <div class="idea-status not-started"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">R&D Project to Rollover</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>New division</option>
+                        <option>Energy Saving Technologies</option>
+                        <option>Asphalt Plants</option>
+                        <option>Research Project</option>
+                        <option>Research Project 2</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Name</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control" data-required="true" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-book"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Position</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Email</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Phone</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Business Sub-Unit</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Downer Infrastructure East and West</option>
+                        <option>Specialist Services</option>
+                        <option>Infrastructure Services</option>
+                        <option>Corporate</option>
+                        <option>Shared Services</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Business Sub-Unit</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>RINE</option>
+                        <option>RISE</option>
+                        <option>ECS</option>
+                        <option>West</option>
+                        <option>Rail</option>
+                        <option>Downer Mouchel JV</option>
+                        <option>Clough Downer JV</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Location</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Your Manager</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control" data-required="true" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-book"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <input type="button" class="btn btn-success right" id="create-rollover" value="Rollover"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+$('#create-rollover').on('click', insert_prefilled_rd)
+</script>

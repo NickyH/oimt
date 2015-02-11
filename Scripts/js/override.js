@@ -60,6 +60,29 @@ function insert_new_rd() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_rollover_rd() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('rd_rollover.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('html, body').animate({ scrollTop: 0 });
+}
+
+function insert_prefilled_rd() {
+  $('#insert-left').empty();
+  remove_top_bar();
+  $('#main-page').empty();
+  $.get('rd_prefilled.html', function(data) {
+      $('#main-page').html(data);
+  });
+  insert_rd_top_bar();
+  $('html, body').animate({ scrollTop: 0 });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#rd-top-bar-snapshot').removeClass('inactive');
+}
+
 function insert_rd_snapshot() {
   $('#insert-left').empty();
   $('#main-page').empty();
@@ -79,8 +102,8 @@ function insert_rd_documents() {
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-documents').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
-  $(this).children('a').children('img.menu-icon-yellow').removeClass('hidden');
-  $(this).children('a').children('img.menu-icon').addClass('hidden');
+  $( '#icon-rd-comms').addClass('enableMouseLeave');
+  $( '#icon-rd-docs').removeClass('enableMouseLeave');
 }
 
 function insert_rd_communications() {
@@ -91,6 +114,8 @@ function insert_rd_communications() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
+  $( '#icon-rd-docs').addClass('enableMouseLeave');
+  $( '#icon-rd-comms').removeClass('enableMouseLeave');
 }
 
 function insert_rd_case() {
@@ -192,11 +217,21 @@ function insert_add_pm_confirmation() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
-function insert_change_password() {
+// function insert_change_password() {
+//   $('#insert-left').empty();
+//   remove_top_bar();
+//   $('#main-page').empty();
+//   $.get('change_password.html', function(data) {
+//       $('#main-page').html(data);
+//   });
+//   $('html, body').animate({ scrollTop: 0 });
+// }
+
+function insert_user_profile() {
   $('#insert-left').empty();
   remove_top_bar();
   $('#main-page').empty();
-  $.get('change_password.html', function(data) {
+  $.get('user_profile.html', function(data) {
       $('#main-page').html(data);
   });
   $('html, body').animate({ scrollTop: 0 });
@@ -561,7 +596,6 @@ function nav_button_hover() {
 }
 
 function nav_button_leave() {
-  console.log($(this));
   $(this).removeClass('nav-hover');
   $(this).find('.menu-icon-yellow').addClass('hidden');
   $(this).find('.menu-icon').removeClass('hidden');

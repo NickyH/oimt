@@ -144,3 +144,21 @@ $('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details)
 $('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
 $('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
 </script>
+
+<script>
+$( document ).ready(function() {
+  $('.menu-icon').removeClass('hidden');
+  $('.menu-icon-yellow').addClass('hidden');
+  setTimeout(function() {
+      $('#icon-rd-docs .menu-icon').addClass('hidden');
+      $('#icon-rd-docs .menu-icon-yellow').removeClass('hidden');
+    }, 300);
+});
+
+// $( '#icon-rd-docs').on('mouseleave', function() {
+//   setTimeout(function() {
+//       $('#icon-rd-docs .menu-icon').addClass('hidden');
+//       $('#icon-rd-docs .menu-icon-yellow').removeClass('hidden');
+//     }, 50);
+// });
+</script>

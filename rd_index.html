@@ -14,8 +14,12 @@
       <div class="btn-group">
         <div class="well rd-dash left"><span>Research & Development Portal<span>
           <button type="button" class="btn btn-success" id="goto-new-rd">
-            New R&D Module
+            New R&D Project
           </button>
+          <!-- <button type="button" class="btn btn-primary" id="goto-rollover-rd">
+            Rollover R&D Project
+          </button> -->
+          <a href="#" class="link">Or Rollover An Existing R&D Project</a>
         </div>
       </div>
 
@@ -163,6 +167,7 @@ $('.datepicker').pickadate();
 $('.text.title').on('click', insert_new_rd);
 $('#view-idea').on('click', insert_shared_idea );
 $('#goto-new-rd').on('click', insert_new_rd);
+$('#goto-rollover-rd').on('click', insert_rollover_rd);
 
 $('#table-rd-list .glyphicon.glyphicon-eye-open').on('click', insert_rd_summary );
 

@@ -322,4 +322,22 @@ $('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click)
 $('.row-summary').on('click', function () {
   $(this).next('tr').toggleClass('collapsed');
 });
+
+$( document ).ready(function() {
+  $('.menu-icon').removeClass('hidden');
+  $('.menu-icon-yellow').addClass('hidden');
+  setTimeout(function() {
+      $('#icon-rd-comms .menu-icon').addClass('hidden');
+      $('#icon-rd-comms .menu-icon-yellow').removeClass('hidden');
+    }, 300);
+});
+
+$( '#icon-rd-docs').addClass('enableMouseLeave');
+
+// $( '#icon-rd-comms').on('mouseleave', function() {
+//   setTimeout(function() {
+//       $('#icon-rd-comms .menu-icon').addClass('hidden');
+//       $('#icon-rd-comms .menu-icon-yellow').removeClass('hidden');
+//     }, 50);
+// });
 </script>
