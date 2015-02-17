@@ -946,6 +946,11 @@ button.delete-panel {
     color: @oimt-very-light-grey;
     box-shadow: 3px 3px 3px @oimt-light-grey;
     cursor: pointer;
+    &.disabled {
+      opacity: 0.5;
+      cursor: auto;
+      pointer-events: none;
+    }
     &.submit {
       &.inactive {
         opacity: 0.5;
@@ -1036,7 +1041,6 @@ input[type="file"] {
   color: red;
   cursor: pointer;
 }
-
 
 th span.glyphicon.disabled {
   color: black !important;
@@ -1578,6 +1582,11 @@ li.active {
       background-color: @oimt-white;
       color: black;
       border: 1px solid @grey-medium;
+    }
+    &.disabled {
+      opacity: 0.75;
+      pointer-events: none;
+      cursor: auto;
     }
   }
 }

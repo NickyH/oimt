@@ -176,5 +176,35 @@
 $('.selectpicker').selectpicker({
       size: 5
   });
-$('#submit-change-password').on('click', insert_change_password_confirmation);
+
+$('#submit-change-password').on('click', confirm_change_password);
+
+function confirm_change_password() {
+  bootbox.dialog({
+    message: "This will reset your password. Please remember your new password. Do you wish to continue?",
+    title: "Change Password Confirmation",
+    buttons: {
+      success: {
+        label: "Continue",
+        className: "btn-success",
+        callback: function() {
+          change_password_confirmation();
+        }
+      },
+      danger: {
+        label: "Cancel",
+        className: "btn-danger",
+        callback: function() {
+          bootbox.hideAll();
+        }
+      }
+    }
+  });
+}
+
+function change_password_confirmation() {
+  bootbox.alert("Your password has been reset");
+}
+
 </script>
+

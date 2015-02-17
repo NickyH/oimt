@@ -18,7 +18,7 @@
             </div>
             <div class="panel-body">
 
-              <form class="form-horizontal container" role="form">
+              <form class="form-horizontal container">
 
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
 
@@ -298,8 +298,31 @@ $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
-$('#submit-completion').on('click', insert_closeout);
+$('#submit-completion').on('click', confirm_completion);
 
 $('.add-another').on('click', insert_repeat_field);
 $('.row-fluid').on('click', '.remove-field', remove_repeat_field);
+
+function confirm_completion() {
+  bootbox.dialog({
+    message: "This will complete the project. You won't be able to make any changes to the project once it is complete. Do you wish to continue",
+    title: "Project Completion Confirmation",
+    buttons: {
+      success: {
+        label: "Continue",
+        className: "btn-success",
+        callback: function() {
+          insert_closeout();
+        }
+      },
+      danger: {
+        label: "Cancel",
+        className: "btn-danger",
+        callback: function() {
+          bootbox.hideAll();
+        }
+      }
+    }
+  });
+}
 </script>

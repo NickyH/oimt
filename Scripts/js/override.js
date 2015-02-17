@@ -217,31 +217,11 @@ function insert_add_pm_confirmation() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
-// function insert_change_password() {
-//   $('#insert-left').empty();
-//   remove_top_bar();
-//   $('#main-page').empty();
-//   $.get('change_password.html', function(data) {
-//       $('#main-page').html(data);
-//   });
-//   $('html, body').animate({ scrollTop: 0 });
-// }
-
 function insert_user_profile() {
   $('#insert-left').empty();
   remove_top_bar();
   $('#main-page').empty();
   $.get('user_profile.html', function(data) {
-      $('#main-page').html(data);
-  });
-  $('html, body').animate({ scrollTop: 0 });
-}
-
-function insert_change_password_confirmation() {
-  $('#insert-left').empty();
-  remove_top_bar();
-  $('#main-page').empty();
-  $.get('change_password_confirmation.html', function(data) {
       $('#main-page').html(data);
   });
   $('html, body').animate({ scrollTop: 0 });
