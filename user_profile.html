@@ -97,8 +97,13 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"></label>
                     <div class="col-sm-8">
-                      <span class="btn btn-success form-control">Update</span>
+                      <span id="btn-update-profile" class="btn btn-success form-control">Update</span>
                     </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <label id="profile-confirm-text" class="col-sm-8 control-label confirmation invisible">Your profile has been updated</label>
                   </div>
 
                 </div>
@@ -158,6 +163,11 @@
                     </div>
                   </div>
 
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <label id="pass-confirm-text" class="col-sm-8 control-label confirmation invisible">Your password has been reset</label>
+                  </div>
+
                 </div>
 
               </div><!--form-->
@@ -178,6 +188,10 @@ $('.selectpicker').selectpicker({
   });
 
 $('#submit-change-password').on('click', confirm_change_password);
+
+$('#btn-update-profile').on('click', function () {
+  $('#profile-confirm-text').removeClass('invisible');
+})
 
 function confirm_change_password() {
   bootbox.dialog({
@@ -203,7 +217,7 @@ function confirm_change_password() {
 }
 
 function change_password_confirmation() {
-  bootbox.alert("Your password has been reset");
+  $('#pass-confirm-text').removeClass('invisible');
 }
 
 </script>
