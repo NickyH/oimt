@@ -4,22 +4,18 @@
     <div class="panel-body">
 
       <div class="well rd-dash"><span>168</span>Number of R&D Projects Submitted This Financial Year</div>
-      <div class="well rd-dash"><span>$11m</span>Assessed Value of Projects Qualifying Spend Submitted This Financial Year</div>
+      <div class="well rd-dash"><span>$11m</span>Assessed Aggregate Value of Qualifying Spend For Projects Submitted This Financial Year</div>
       <div class="well rd-dash"><span>94</span>No. of Projects Approved This Financial Year</div>
-      <div class="well rd-dash"><span>$9m</span>Assessed Value of Projects Qualifying Spend Approved this Financial Year</div>
-      <div class="well rd-dash"><span>$8.6m</span>Assessed Value of Projects R&D Claim Approved this Financial Year</div>
-      <div class="well rd-dash"><span>$4.4m</span>Value of Approved Projects Qualifying Spend Carried to Next Financial Year</div>
-      <div class="well rd-dash"><span>$3.8m</span>Value of Approved Projects R&D Claim Carried to Next Financial Year</div>
+      <div class="well rd-dash"><span>$9m</span>Assessed Aggregate Value of Qualifying Spend For Projects Approved This Financial Year</div>
+      <div class="well rd-dash"><span>$8.6m</span>Value of R&D Claims Approved this Financial Year</div>
+      <div class="well rd-dash"><span>$4.4m</span>Aggregate Value of Qualifying Spend For Projects Carried Through To Next Financial Year</div>
+      <div class="well rd-dash"><span>$3.8m</span>Value of Approved R&D Claims Carried to Next Financial Year</div>
 
       <div class="btn-group">
         <div class="well rd-dash left"><span>Research & Development Portal<span>
           <button type="button" class="btn btn-success" id="goto-new-rd">
             New R&D Project
           </button>
-          <!-- <button type="button" class="btn btn-primary" id="goto-rollover-rd">
-            Rollover R&D Project
-          </button> -->
-          <a href="#" class="link">Or Rollover An Existing R&D Project</a>
         </div>
       </div>
 
@@ -47,10 +43,11 @@
             <tr>
               <th class="tbl-ID">ID</th>
               <th class="tbl-title">R&D Title</th>
+              <th class="tbl-status">Status</th>
+              <th class="tbl-fy">FY</th>
+              <th class="tbl-owner">Project Manager</th>
               <th class="tbl-date">Submitted</th>
               <th class="tbl-date2">Approved</th>
-              <th class="tbl-status">Status</th>
-              <th class="tbl-owner">R&D Owner</th>
               <th class="tbl-parent">Parent Project</th>
               <th class="tbl-summary">Summary</th>
             </tr>
@@ -59,10 +56,11 @@
           <tr>
             <td><div class="text">5674</div></td>
             <td><div class="text title">Asphalt Plants</div></td>
-            <td><div class="text">15/03/2014</div></td>
-            <td><div class="text">15/03/2014</div></td>
             <td><div class="text status orange">Stage 1</div></td>
+            <td><div class="text">FY14/15</div></td>
             <td><div class="text">Jo Wilkins</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text title">Upgrade Plants</div></td>
             <td>
               <div class="text">
@@ -74,10 +72,11 @@
           <tr>
             <td><div class="text">3246</div></td>
             <td><div class="text title">Recycling Methods</div></td>
+            <td><div class="text status red">Rejected</div></td>
+            <td><div class="text">FY14/15</div></td>
+            <td><div class="text">Henry Park</div></td>
             <td><div class="text">15/03/2014</div></td>
             <td><div class="text"></div></td>
-            <td><div class="text status red">Rejected</div></td>
-            <td><div class="text">Henry Park</div></td>
             <td><div class="text"></div></td>
             <td>
               <div class="text">
@@ -89,10 +88,11 @@
           <tr>
             <td><div class="text">4674</div></td>
             <td><div class="text title">Energy Saving Technologies</div></td>
-            <td><div class="text">15/03/2014</div></td>
-            <td><div class="text">15/03/2014</div></td>
             <td><div class="text status green">Approved</div></td>
+            <td><div class="text">FY14/15</div></td>
             <td><div class="text">David Lee</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text title">Sustainability 2015</div></td>
             <td>
               <div class="text">
@@ -104,10 +104,11 @@
           <tr>
             <td><div class="text">8957</div></td>
             <td><div class="text title">Research Project</div></td>
-            <td><div class="text">15/03/2014</div></td>
-            <td><div class="text">15/03/2014</div></td>
             <td><div class="text status blue">Complete</div></td>
+            <td><div class="text">FY15/16</div></td>
             <td><div class="text">Glenn Wozjiscky</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text title"></div></td>
             <td>
               <div class="text">
@@ -119,10 +120,11 @@
           <tr>
             <td><div class="text">8957</div></td>
             <td><div class="text title">Research Project 2</div></td>
-            <td><div class="text">15/03/2015</div></td>
-            <td><div class="text">15/03/2015</div></td>
             <td><div class="text status orange">Stage 2</div></td>
+            <td><div class="text">FY13/14</div></td>
             <td><div class="text">Glenn Wozjiscky</div></td>
+            <td><div class="text">15/03/2015</div></td>
+            <td><div class="text">15/03/2015</div></td>
             <td><div class="text title"></div></td>
             <td>
               <div class="text">
@@ -134,10 +136,11 @@
           <tr>
             <td><div class="text">3335</div></td>
             <td><div class="text title">New division</div></td>
-            <td><div class="text">15/03/2014</div></td>
-            <td><div class="text">15/03/2014</div></td>
             <td><div class="text status orange">Stage 3</div></td>
+            <td><div class="text">FY14/15</div></td>
             <td><div class="text">Will Smythe</div></td>
+            <td><div class="text">15/03/2014</div></td>
+            <td><div class="text">15/03/2014</div></td>
             <td><div class="text"></div></td>
             <td>
               <div class="text">
@@ -167,7 +170,6 @@ $('.datepicker').pickadate();
 $('.text.title').on('click', insert_new_rd);
 $('#view-idea').on('click', insert_shared_idea );
 $('#goto-new-rd').on('click', insert_new_rd);
-$('#goto-rollover-rd').on('click', insert_rollover_rd);
 
 $('#table-rd-list .glyphicon.glyphicon-eye-open').on('click', insert_rd_summary );
 </script>

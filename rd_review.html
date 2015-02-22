@@ -231,6 +231,88 @@
           <!-- start panel-->
           <div class="panel panel-default panel-rd rd-closeout hidden">
             <div class="panel-heading">
+              <h3 class="panel-title">Rollover This Project to Next Financial Year</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">R&D Project ID</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true" value="4757">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">R&D Project Title</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true" value="Research Project 2">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">R&D Project Description</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4">This project will seek to determine the ways in which hj j ndj dnjk njfk njk n jk nk and this will help us understand better ways to do this</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Estimated Start Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" value="01/07/2014" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Estimated Finish Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control date datepicker" value="30/06/2015" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Project Manager</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control" data-required="true" value="Chris Hall" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-book"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <input type="button" class="btn btn-success" id="goto-rollover-rd" value="Rollover Project"></input>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd rd-closeout hidden">
+            <div class="panel-heading">
               <h3 class="panel-title">Close-Out</h3>
             </div>
             <div class="panel-body">
@@ -285,4 +367,6 @@ $('#stage3-approve').on('click', unhide_rd_closeout);
 function unhide_rd_closeout () {
   $('.rd-closeout').removeClass('hidden');
 }
+$('#goto-rollover-rd').on('click', insert_rollover_rd);
+
 </script>
