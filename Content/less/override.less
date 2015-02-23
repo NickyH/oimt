@@ -507,9 +507,10 @@ button.delete-panel {
   .bubble-container {
     position: relative;
     height: 30px;
-    width: 90%;
-    min-width: 900px;
-    margin-left: 200px;
+    // width: 90%;
+    width: 800px !important;
+    min-width: 700px;
+    margin-left: 50px;
     margin-right: auto;
     display: inline-block;
     &.rd {
@@ -1436,6 +1437,19 @@ tr.row-summary {
   .tbl-name {
     width: 25%;
   }
+  .year {
+    text-align: center;
+    span {
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      text-align: middle;
+      font-weight: bold;
+    }
+    div {
+      font-weight: normal;
+    }
+  }
   .tbl-year1 {
     width: 25%;
   }
@@ -1450,6 +1464,65 @@ tr.row-summary {
 .benefits-matrix-table2 {
   .tbl-name {
     width: 25%;
+  }
+  .year {
+    text-align: center;
+    span {
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      text-align: middle;
+      font-weight: bold;
+    }
+    div {
+      font-weight: normal;
+    }
+  }
+  .tbl-year1 {
+    width: 20%;
+  }
+  .tbl-year2 {
+    width: 20%;
+  }
+  .tbl-year3 {
+    width: 20%;
+  }
+  .tbl-status {
+    width: 15%;
+  }
+  tr td .status {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      margin-left: 20px;
+    &.green {
+      background-color: #c4ea98;
+    }
+    &.amber {
+      background-color: #f2bf40;
+    }
+    &.red {
+      background-color: #f7796f;
+    }
+  }
+}
+
+.benefits-matrix-table3 {
+  .tbl-name {
+    width: 25%;
+  }
+  .year {
+    text-align: center;
+    span {
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      text-align: middle;
+      font-weight: bold;
+    }
+    div {
+      font-weight: normal;
+    }
   }
   .tbl-year1 {
     width: 20%;

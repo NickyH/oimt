@@ -2,11 +2,7 @@
 
   <div class="bubble-container">
 
-    <div class="bubble" id="left-bar-itp-comm">
-      Information
-    </div>
-
-    <div class="bubble inactive" id="left-bar-itp-business">
+    <div class="bubble" id="left-bar-itp-business">
       Details
     </div>
 
@@ -24,8 +20,7 @@
 
 
 <script>
-$('#left-bar-itp-comm').on('click', insert_project_setup_communication);
-$('#left-bar-itp-business').on('click', insert_project_setup_businesscase);
+$('#left-bar-itp-business').on('click', insert_project_setup_details);
 $('#left-bar-itp-review').on('click', insert_project_setup_review);
 $('#left-bar-itp-plan').on('click', insert_project_setup_plan);
 </script>

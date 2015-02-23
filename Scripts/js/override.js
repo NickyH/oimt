@@ -118,6 +118,31 @@ function insert_rd_communications() {
   $( '#icon-rd-comms').removeClass('enableMouseLeave');
 }
 
+function insert_project_documents() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('project_documents.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('#project-top-bar-documents').removeClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
+  $( '#icon-project-comms').addClass('enableMouseLeave');
+  $( '#icon-project-docs').removeClass('enableMouseLeave');
+}
+
+function insert_project_communications() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('project_communications.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
+  $( '#icon-project-docs').addClass('enableMouseLeave');
+  $( '#icon-project-comms').removeClass('enableMouseLeave');
+}
+
 function insert_rd_case() {
   $('#insert-left').empty();
   $('#main-page').empty();
@@ -406,9 +431,9 @@ function insert_project_list() {
 }
 
 //project setup pages insert
-function insert_project_setup_communication() {
+function insert_project_setup_details() {
   $('#main-page').empty();
-  $.get('idea_to_project_communication.html', function(data) {
+  $.get('idea_to_project.html', function(data) {
       $('#main-page').html(data);
   });
   insert_left_idea_project();
@@ -416,19 +441,6 @@ function insert_project_setup_communication() {
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#top-bar-project-setup').removeClass('inactive');
 
-  $('#left-bar-itp-comm').removeClass('inactive');
-  $('#left-bar-itp-business').addClass('inactive');
-  $('#left-bar-itp-review').addClass('inactive');
-  $('#left-bar-itp-plan').addClass('inactive');
-}
-
-function insert_project_setup_businesscase() {
-  $('#main-page').empty();
-  $.get('idea_to_project.html', function(data) {
-      $('#main-page').html(data);
-  });
-
-  $('#left-bar-itp-comm').addClass('inactive');
   $('#left-bar-itp-business').removeClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
   $('#left-bar-itp-plan').addClass('inactive');
@@ -440,7 +452,6 @@ function insert_project_setup_review() {
       $('#main-page').html(data);
   });
 
-  $('#left-bar-itp-comm').addClass('inactive');
   $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').removeClass('inactive');
   $('#left-bar-itp-plan').addClass('inactive');
@@ -451,8 +462,6 @@ function insert_project_setup_plan() {
   $.get('project_setup.html', function(data) {
       $('#main-page').html(data);
   });
-
-  $('#left-bar-itp-comm').addClass('inactive');
   $('#left-bar-itp-business').addClass('inactive');
   $('#left-bar-itp-review').addClass('inactive');
   $('#left-bar-itp-plan').removeClass('inactive');

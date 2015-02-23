@@ -1,0 +1,164 @@
+<!-- forms content container -->
+<div class="container-fluid form-container rd">
+
+  <!-- form row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd top">
+            <div class="panel-heading">
+              <h3 class="panel-title">Documents
+                <div class="idea-status not-started"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group hidden">
+                    <label class="col-sm-4 control-label">Documents</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-12">
+
+                      <!-- each searchable table needs unique ID "table-filter-*" -->
+                      <table id="table-rd-documents" class="table table-condensed table-striped rd-doc-table">
+                        <thead>
+                          <tr>
+                            <th class="tbl-name">Document Name</th>
+                            <th class="tbl-filename">Document</th>
+                            <th class="tbl-date">Date Added</th>
+                            <th class="tbl-delete">Delete</th>
+                          </tr>
+                        </thead>
+
+                        <tr>
+                          <td><div class="text">Costing Outline</div></td>
+                          <td><div class="text"><a class="filename" href="#" title="Open Document">costing_outline.pdf</a></div></td>
+                          <td><div class="text">12/12//2014</div></td>
+                          <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Timeline & Gantt Chart</div></td>
+                          <td><div class="text"><a class="filename" href="#" title="Open Document">timeline.docx</a></div></td>
+                          <td><div class="text">15/12/2014</div></td>
+                          <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
+                        </tr>
+
+                        <tr>
+                          <td><div class="text">Research Methods</div></td>
+                          <td><div class="text"><a class="filename" href="#" title="Open Document">research_methods.ppt</a></div></td>
+                          <td><div class="text">22/12//2014</div></td>
+                          <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
+                        </tr>
+
+                      </table>
+                      <!-- category table end-->
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- panel start-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
+              <h3 class="panel-title">Attach Documents
+                <div class="idea-status underway"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Document Name<br><span class="label-description">Document name or short description of the document.</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Attach File</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6 bubble save-send">
+                      Save
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../Scripts/js/tables.js"></script>
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+
+//attachment functions
+$('input[type=file]').on('change', add_document_row);
+$('.file-table').on('click', '.filename-link', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
+$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
+</script>
+
+<script>
+$( document ).ready(function() {
+  $('.menu-icon').removeClass('hidden');
+  $('.menu-icon-yellow').addClass('hidden');
+  setTimeout(function() {
+      $('#icon-rd-docs .menu-icon').addClass('hidden');
+      $('#icon-rd-docs .menu-icon-yellow').removeClass('hidden');
+    }, 300);
+});
+
+// $( '#icon-rd-docs').on('mouseleave', function() {
+//   setTimeout(function() {
+//       $('#icon-rd-docs .menu-icon').addClass('hidden');
+//       $('#icon-rd-docs .menu-icon-yellow').removeClass('hidden');
+//     }, 50);
+// });
+</script>

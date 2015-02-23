@@ -1,5 +1,14 @@
 <div class="top-bar">
 
+  <div class="icon-container">
+    <div class="icons" id="project-top-bar-documents">
+      <a class="nav-link enableMouseLeave" id="icon-project-docs" title="Documents" href="#"><img class="menu-icon" src="../Content/images/icons-docs.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-docs-yellow.png"></a>
+    </div>
+    <div class="icons" id="project-top-bar-communication">
+      <a class="nav-link enableMouseLeave" id="icon-project-comms" title="Communications" href="#"><img class="menu-icon" src="../Content/images/icons-comms.png"><img class="menu-icon-yellow hidden" src="../Content/images/icons-comms-yellow.png"></a>
+    </div>
+  </div>
+
   <div class="bubble-container">
 
     <div class="bubble" id="top-bar-assess">
@@ -31,8 +40,11 @@
 $('.bubble.inactive').on('mouseover', bubble_hover);
 $('.bubble.inactive').on('mouseleave', bubble_leave);
 
+$('#project-top-bar-documents').on('click', insert_project_documents);
+$('#project-top-bar-communication').on('click', insert_project_communications);
+
 $('#top-bar-assess').on('click', insert_assess_start);
-$('#top-bar-project-setup').on('click', insert_project_setup_communication);
+$('#top-bar-project-setup').on('click', insert_project_setup_details);
 $('#top-bar-execution').on('click', insert_execution_phase);
 $('#top-bar-completion').on('click', insert_completion);
 $('#top-bar-closeout').on('click', insert_closeout);
