@@ -751,3 +751,9 @@ function unhide_rejected_panel() {
   $('.panel.stage-rejected').removeClass('hidden');
   $('.panel.approve-reject').addClass('hidden');
 }
+
+function insert_rego_active () {
+  $.get('registration_active.html', function(data) {
+      $('#main-page').html(data);
+  });
+}
