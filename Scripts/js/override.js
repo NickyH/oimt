@@ -268,7 +268,7 @@ function insert_shared_idea() {
   $('#insert-left').empty();
   remove_top_bar();
   $('#main-page').empty();
-  $.get('shared_idea.html', function(data) {
+  $.get('idea_summary.html', function(data) {
       $('#main-page').html(data);
   });
   $('html, body').animate({ scrollTop: 0 });
