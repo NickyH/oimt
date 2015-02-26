@@ -49,6 +49,8 @@
         </div>
         <!-- end panel-->
 
+        <a href="#" id="dummy-forgot-password-link">dummy link</a>
+
       </div>
     </div>
   </div>
@@ -56,4 +58,10 @@
 
 <script>
 $('#reactivation-sent').on('click', insert_forgot_confirmation);
+
+$('#dummy-forgot-password-link').on('click', function() {
+  $.get('password_reset.html', function(data) {
+      $('#main-page').html(data);
+  });
+})
 </script>
