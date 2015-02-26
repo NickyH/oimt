@@ -782,6 +782,8 @@
           </div>
           <!-- end panel-->
 
+          <span class="cancel-rd">Cancel this R&D submission</span>
+
         </div>
       </div>
     </div>
@@ -805,6 +807,8 @@ $('.unhide-form-reject').on('click', show_end_idea_inputs);
 $('.unhide-review').on('click', unhide_review_panel);
 $('.unhide-approve').on('click', unhide_approved_panel);
 $('.unhide-reject').on('click', unhide_rejected_panel);
+
+$('.cancel-rd').on('click', show_cancel_rd_dialog);
 
 function add_row_to_this_table() {
   var tableID = $(this).prev().children('table').attr('id');

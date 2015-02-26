@@ -1,4 +1,4 @@
-<!-- forms content container -->
+rds<!-- forms content container -->
 <div class="container-fluid form-container rd">
 
   <!-- form row 1 -->
@@ -713,6 +713,8 @@
           </div>
           <!-- end panel-->
 
+          <span class="cancel-rd">Cancel this R&D submission</span>
+
         </div>
       </div>
     </div>
@@ -732,6 +734,8 @@ $('.unhide-form-reject').on('click', show_end_idea_inputs);
 $('.unhide-review').on('click', unhide_review_panel);
 $('.unhide-approve').on('click', unhide_approved_panel);
 $('.unhide-reject').on('click', unhide_rejected_panel);
+
+$('.cancel-rd').on('click', show_cancel_rd_dialog);
 </script>
 
 

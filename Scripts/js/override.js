@@ -757,3 +757,27 @@ function insert_rego_active () {
       $('#main-page').html(data);
   });
 }
+
+function show_cancel_rd_dialog () {
+  console.log('box');
+  bootbox.dialog({
+    message: "Are you sure you want to cancel this R&D submission?",
+    title: 'Cancel Submission',
+    buttons: {
+      danger: {
+        label: "No, keep this submission",
+        className: 'btn-primary',
+        callback: function() {
+          bootbox.hideAll();
+        }
+      },
+      success: {
+        label: "Yes, cancel the submission",
+        className: 'btn-success',
+        callback: function() {
+          insert_rd();
+        }
+      }
+    }
+  });
+}
