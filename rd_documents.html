@@ -40,6 +40,7 @@
                           <tr>
                             <th class="tbl-name">Document Name</th>
                             <th class="tbl-filename">Document</th>
+                            <th class="tbl-by">Added By</th>
                             <th class="tbl-date">Date Added</th>
                             <th class="tbl-delete">Delete</th>
                           </tr>
@@ -48,6 +49,7 @@
                         <tr>
                           <td><div class="text">Costing Outline</div></td>
                           <td><div class="text"><a class="filename" href="#" title="Open Document">costing_outline.pdf</a></div></td>
+                          <td><div class="text">Michelle Chu</div></td>
                           <td><div class="text">12/12//2014</div></td>
                           <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
                         </tr>
@@ -55,6 +57,7 @@
                         <tr>
                           <td><div class="text">Timeline & Gantt Chart</div></td>
                           <td><div class="text"><a class="filename" href="#" title="Open Document">timeline.docx</a></div></td>
+                          <td><div class="text">Dan Kimini</div></td>
                           <td><div class="text">15/12/2014</div></td>
                           <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
                         </tr>
@@ -62,6 +65,7 @@
                         <tr>
                           <td><div class="text">Research Methods</div></td>
                           <td><div class="text"><a class="filename" href="#" title="Open Document">research_methods.ppt</a></div></td>
+                          <td><div class="text">David White</div></td>
                           <td><div class="text">22/12//2014</div></td>
                           <td><span class="glyphicon glyphicon-remove" title="Delete Document"></span></td>
                         </tr>
@@ -143,22 +147,9 @@ $('.file-table').on('click', '.filename-link', slide_filename_details);
 $('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
 $('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
 $('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
-</script>
 
-<script>
 $( document ).ready(function() {
-  $('.menu-icon').removeClass('hidden');
-  $('.menu-icon-yellow').addClass('hidden');
-  setTimeout(function() {
-      $('#icon-rd-docs .menu-icon').addClass('hidden');
-      $('#icon-rd-docs .menu-icon-yellow').removeClass('hidden');
-    }, 300);
+  $('.icons').removeClass('active');
+  $('.icons.documents').addClass('active');
 });
-
-// $( '#icon-rd-docs').on('mouseleave', function() {
-//   setTimeout(function() {
-//       $('#icon-rd-docs .menu-icon').addClass('hidden');
-//       $('#icon-rd-docs .menu-icon-yellow').removeClass('hidden');
-//     }, 50);
-// });
 </script>

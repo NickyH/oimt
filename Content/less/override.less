@@ -572,9 +572,22 @@ button.delete-panel {
     display: inline-block;
     margin-left: 20px;
     cursor: pointer;
+    &.active {
+      a {
+        color: @oimt-yellow;
+      }
+    }
     .glyphicon {
-      font-size: 22px;
+      font-size: 20px;
+      &.glyphicon-comment {
+        font-size: 22px;
+      }
+    }
+    a {
       color: @oimt-white;
+    }
+    a:hover {
+      color: @oimt-yellow;
     }
   }
 }
@@ -1229,6 +1242,9 @@ tr.underline {
 }
 
 .rd-doc-table {
+  th {
+    padding-left: 10px !important;
+  }
     height: 28px !important;
     margin-top: 5px;
     .tbl-name {
@@ -1237,8 +1253,11 @@ tr.underline {
     .tbl-filename {
       //width: 30%;
     }
+    .tbl-by {
+      width: 15%;
+    }
     .tbl-date {
-      width: 20%;
+      width: 15%;
     }
     .tbl-delete {
       width: 10%;

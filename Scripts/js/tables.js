@@ -62,6 +62,24 @@ $('#table-rd-documents').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
+    { "class": "text" },
+    {
+      "class": "remove-sort",
+      "orderable": false
+    }
+  ]
+});
+
+//rd table documents
+$('#table-project-documents').dataTable({
+  "bLengthChange": false,
+  "bInfo" : false,
+  "bPaginate" : false,
+  "columns": [
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
     {
       "class": "remove-sort",
       "orderable": false

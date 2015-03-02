@@ -102,8 +102,6 @@ function insert_rd_documents() {
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#rd-top-bar-documents').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
-  $( '#icon-rd-comms').addClass('enableMouseLeave');
-  $( '#icon-rd-docs').removeClass('enableMouseLeave');
 }
 
 function insert_rd_communications() {
@@ -114,8 +112,6 @@ function insert_rd_communications() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
-  $( '#icon-rd-docs').addClass('enableMouseLeave');
-  $( '#icon-rd-comms').removeClass('enableMouseLeave');
 }
 
 function insert_project_documents() {
@@ -127,8 +123,6 @@ function insert_project_documents() {
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('#project-top-bar-documents').removeClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
-  $( '#icon-project-comms').addClass('enableMouseLeave');
-  $( '#icon-project-docs').removeClass('enableMouseLeave');
 }
 
 function insert_project_communications() {
@@ -139,8 +133,6 @@ function insert_project_communications() {
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
   $('html, body').animate({ scrollTop: 0 });
-  $( '#icon-project-docs').addClass('enableMouseLeave');
-  $( '#icon-project-comms').removeClass('enableMouseLeave');
 }
 
 function insert_rd_case() {
