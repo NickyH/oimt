@@ -87,6 +87,26 @@ $('#table-project-documents').dataTable({
   ]
 });
 
+//rd table documents
+$('#table-rd-members').dataTable({
+  "bLengthChange": false,
+  "bInfo" : true,
+  "bPaginate" : false,
+  "columns": [
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    {
+      "class": "remove-sort",
+      "orderable": false
+    }
+  ]
+});
+
 //rd expenditure tables
 //employees
 $('#table-rd-exp-employees').dataTable({

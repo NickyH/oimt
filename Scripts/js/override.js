@@ -114,6 +114,16 @@ function insert_rd_communications() {
   $('html, body').animate({ scrollTop: 0 });
 }
 
+function insert_rd_members() {
+  $('#insert-left').empty();
+  $('#main-page').empty();
+  $.get('rd_members.html', function(data) {
+      $('#main-page').html(data);
+  });
+  $('.top-bar .bubble-container .bubble').addClass('inactive');
+  $('html, body').animate({ scrollTop: 0 });
+}
+
 function insert_project_documents() {
   $('#insert-left').empty();
   $('#main-page').empty();
