@@ -1277,11 +1277,9 @@ tr.underline {
 
 //rd comms table styling
 tr.row-summary {
-  &.sent td {
+  td {
     background-color: #EDF6FC !important; //blue
-  }
-  &.received td {
-    background-color: #F5F9F1 !important; //green
+    cursor: pointer;
   }
 }
 
@@ -1301,6 +1299,12 @@ tr.row-summary {
     font-size: 11px;
     color: @oimt-light-grey;
     font-weight: normal;
+  }
+}
+
+tr td {
+  .form-group {
+    display: block !important;
   }
 }
 
@@ -1936,6 +1940,18 @@ table.dataTable thead {
   }
   .sorting {
     background: url("../images/sort_both.png") no-repeat center left !important;
+  }
+}
+
+#table-rd-message-details.dataTable thead {
+  .sorting_asc {
+    background: url("") no-repeat center left !important;
+  }
+  .sorting_desc {
+    background: url("") no-repeat center left !important;
+  }
+  .sorting {
+    background: url("") no-repeat center left !important;
   }
 }
 

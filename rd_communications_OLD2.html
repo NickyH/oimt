@@ -1,0 +1,339 @@
+<!-- forms content container -->
+<div class="container-fluid form-container rd">
+
+  <!-- form row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <!-- start panel-->
+          <div class="panel panel-default panel-rd top">
+            <div class="panel-heading">
+              <h3 class="panel-title">Communications History
+                <div class="idea-status not-started"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group hidden">
+                    <label class="col-sm-4 control-label">Communications History</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-12">
+
+                      <!-- each searchable table needs unique ID "table-filter-*" -->
+                      <table id="table-rd-communications" class="table table-condensed table-striped rd-comms-table">
+                        <thead>
+                          <tr>
+                            <th class="tbl-subject">Subject</th>
+                            <th class="tbl-categ">Category</th>
+                            <th class="tbl-from">From</th>
+                            <th class="tbl-date">Date</th>
+                          </tr>
+                        </thead>
+
+                        <tr class="row-summary sent">
+                          <td><div class="text">Costing query</div></td>
+                          <td><div class="text">General</div></td>
+                          <td><div class="text">Michelle Chu</div></td>
+                          <td><div class="text">12/12//2014 8:41am</div></td>
+                        </tr>
+
+                        <tr class="collapsed">
+                          <td colspan='4'>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Message Text</label>
+                              <div class="col-sm-10 textfields">
+                                <div>This is the message body that was sent on 12/12/2014 and whose subject line is costing query. See below for who this message was sent to. This is just an example of message body text.</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Notified</label>
+                              <div class="col-sm-10 textfields">
+                                <div>Joan Rees, Fiona Ryko, Paul Xu, Chloe Wills, Daniel Ong, Angela Hemmings</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Attached File</label>
+                              <div class="col-sm-10 textfields">
+                                <div><a class="filename" href="#">filename.pdf</a></div>
+                              </div>
+                            </div>
+                            <div class="form-group underline">
+                              <label class="col-sm-2 textfields label">Reply</label>
+                              <div class="col-sm-9">
+                                <textarea type="text" class="form-control" rows="2"></textarea>
+                              </div>
+                              <div class="col-sm-1">
+                                <input type="button" class="btn btn-primary" value="Reply">
+                              </div>
+                            </div>
+                            <!-- responses -->
+                            <div class="form-group underline">
+                              <label class="col-sm-2 textfields label">Daniel Ong</label>
+                              <div class="col-sm-10 textfields">
+                                <div>This is the response from Daniel Ong fhjdkfjd nfjkdn fjkd njdksnf jdkn fjkdn fjdk nfjdksn fjdkn sjfkn sjfkndsjkf  jk hj vjk djsk vj jvk vjk nj njn n fnfi dhiu i nuig nuin gu ingui gnignriegnuei gnundjsk njks njk<span class="response-date">Friday 12/03/2014 9:36am</span></div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Chloe Wills</label>
+                              <div class="col-sm-10 textfields">
+                                <div>This is the response from Chloe Wills fhjdkfjd nfjkdn fjkd njdksnf jdkn fjkdn fjdk nfjdksn fjdkn sjfkn sjfkndsjkf  jk hj vjk djsk vj jvk vjk nj njn n fnfi dhiu i nuig nuin gu ingui gnignriegnuei gnundjsk njks njk<span class="response-date">Friday 12/03/2014 10:38am</span></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr class="row-summary sent">
+                          <td><div class="text">Team members discussion</div></td>
+                          <td><div class="text">Resources</div></td>
+                          <td><div class="text">Dan Kimini</div></td>
+                          <td><div class="text">12/12//2014 2:58pm</div></td>
+                        </tr>
+
+                        <tr class="collapsed">
+                          <td colspan='4'>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Message Text</label>
+                              <div class="col-sm-10 textfields">
+                                <div>We need to dicsuss who the appropriate team members on this project will be. Ron has some people who worked on a similar project previously. Does anyone else have expertise in this area that we're not aware of?</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Notified</label>
+                              <div class="col-sm-10 textfields">
+                                <div>Trish Tang, Sue Olly, Chloe Wills, Daniel Ong, Angela Hemmings</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Attached File</label>
+                              <div class="col-sm-10 textfields">
+                                <div><a class="filename" href="#">filename.pdf</a></div>
+                              </div>
+                            </div>
+                            <div class="form-group underline">
+                              <label class="col-sm-2 textfields label">Reply</label>
+                              <div class="col-sm-9">
+                                <textarea type="text" class="form-control" rows="2"></textarea>
+                              </div>
+                              <div class="col-sm-1">
+                                <input type="button" class="btn btn-primary" value="Reply">
+                              </div>
+                            </div>
+                            <!-- responses -->
+                            <div class="form-group underline">
+                              <label class="col-sm-2 textfields label">Sue Olly</label>
+                              <div class="col-sm-10 textfields">
+                                <div>This is the response from Sally Olly fhjdkfjd nfjkdn fjkd njdksnf jdkn fjkdn fjdk nfjdksn fjdkn sjfkn sjfkndsjkf  jk hj vjk djsk vj jvk vjk nj njn n fnfi dhiu i nuig nuin gu ingui gnignriegnuei gnundjsk njks njk<span class="response-date">Friday 12/03/2014 3:12pm</span></div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Trish Tang</label>
+                              <div class="col-sm-10 textfields">
+                                <div>This is the response from Trish Tang fhjdkfjd nfjkdn fjkd njdksnf jdkn fjkdn fjdk nfjdksn fjdkn sjfkn sjfkndsjkf  jk hj vjk djsk vj jvk vjk nj njn n fnfi dhiu i nuig nuin gu ingui gnignriegnuei gnundjsk njks njk<span class="response-date">Friday 12/03/2014 4:56pm</span></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr class="row-summary sent">
+                          <td><div class="text">Timeframe for project</div></td>
+                          <td><div class="text">Planning</div></td>
+                          <td><div class="text">David White</div></td>
+                          <td><div class="text">15/12//2014 7:28am</div></td>
+                        </tr>
+
+                        <tr class="collapsed">
+                          <td colspan='4'>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Message Text</label>
+                              <div class="col-sm-10 textfields">
+                                <div>We need to discuss the timeframe for this project. It makes sense to begin this month, but do we have an estimate of how many weeks we will need for the first research phase? Trish, I know you were thinking 6 weeks. Does anyone else have a comment on this?</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Notified</label>
+                              <div class="col-sm-10 textfields">
+                                <div>Trish Tang, Victor Hart, Kevin Seah, Liz Day</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Attached File</label>
+                              <div class="col-sm-10 textfields">
+                                <div><a class="filename" href="#">filename.pdf</a></div>
+                              </div>
+                            </div>
+                            <div class="form-group underline">
+                              <label class="col-sm-2 textfields label">Reply</label>
+                              <div class="col-sm-9">
+                                <textarea type="text" class="form-control" rows="2"></textarea>
+                              </div>
+                              <div class="col-sm-1">
+                                <input type="button" class="btn btn-primary" value="Reply">
+                              </div>
+                            </div>
+                            <!-- responses -->
+                            <div class="form-group underline">
+                              <label class="col-sm-2 textfields label">Trish Tang</label>
+                              <div class="col-sm-10 textfields">
+                                <div>Hi all, yes I was thinking 6 weeks originally, but based on our last discussion with Kevin I'm actually thinking we would need closer to eight weeks to really do a thorough job of this.<span class="response-date">Monday 15/03/2014 8:21am</span></div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-2 textfields label">Victor Hart</label>
+                              <div class="col-sm-10 textfields">
+                                <div>I'm inclined to agree with you Trish. My only suggestion would be that we get David and Kevin together for a meeeting on this and really pinpoint their exact requirements. It may help us to finalise timing for this.<span class="response-date">Monday 16/03/2014 11:46am</span></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </table>
+                      <!-- category table end-->
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+          <!-- panel start-->
+          <div class="panel panel-default panel-rd">
+            <div class="panel-heading">
+              <h3 class="panel-title">New Message
+                <div class="idea-status underway"></div>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+
+              <div class="form-horizontal container">
+
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Subject</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Message</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Category</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Request For Information</option>
+                        <option>Review/Approvals</option>
+                        <option>Planning</option>
+                        <option>Costing</option>
+                        <option>Resources</option>
+                        <option>General</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Notify</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-live-search="true" multiple data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Roger Allen</option>
+                        <option>Sue Ambry</option>
+                        <option>Dominic Bailey</option>
+                        <option>Connor Baker</option>
+                        <option>Victor Hart</option>
+                        <option>Angela Hemmings</option>
+                        <option>John Henji</option>
+                        <option>Robert Hodges</option>
+                        <option>Jake Hughes</option>
+                        <option>Nicholas Jones</option>
+                        <option>Leah Rampling</option>
+                        <option>Joan Rees</option>
+                        <option>Fiona Ryko</option>
+                        <option>Mary Rutherford</option>
+                        <option>May Seah</option>
+                        <option>Julian Smith</option>
+                        <option>Zoe Vance</option>
+                        <option>Jan Walker</option>
+                        <option>Paul Xu</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Attach File</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                      <input type="button" class="btn btn-success right" value="Send Message"></input>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- end panel-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$('.selectpicker').selectpicker({
+      size: 5
+  });
+$('.datepicker').pickadate();
+
+//attachment functions
+$('input[type=file]').on('change', add_document_row);
+$('.file-table').on('click', '.filename-link', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
+$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
+$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
+
+$('.row-summary').on('click', function () {
+  $(this).next('tr').toggleClass('collapsed');
+});
+
+$( document ).ready(function() {
+  $('.icons').removeClass('active');
+  $('.icons.communications').addClass('active');
+});
+</script>

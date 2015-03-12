@@ -7,7 +7,10 @@ $('#table-ideas-list').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
-    { "class": "text" },
+    {
+      "class": "remove-sort",
+      "orderable": false
+    },
     {
       "class": "remove-sort",
       "orderable": false
@@ -63,6 +66,26 @@ $('#table-rd-documents').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
+    {
+      "class": "remove-sort",
+      "orderable": false
+    }
+  ]
+});
+
+//rd table communications
+$('#table-rd-communications').dataTable({
+  "columns": [
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" },
+    { "class": "text" }
+  ]
+});
+
+//rd table message details
+$('#table-rd-message-details').dataTable({
+  "columns": [
     {
       "class": "remove-sort",
       "orderable": false

@@ -10,7 +10,7 @@
         <div class="col-lg-8 col-md-8 col-sm-8">
 
           <!-- panel start-->
-          <div class="panel panel-default panel-idea-to-project top">
+      <!--     <div class="panel panel-default panel-idea-to-project top">
             <div class="panel-heading">
               <h3 class="panel-title">Send For Approval
                 <div class="idea-status underway"></div>
@@ -55,11 +55,11 @@
               </form>
 
             </div>
-          </div>
+          </div> -->
           <!-- end panel-->
 
           <!-- panel start-->
-          <div class="panel panel-default panel-idea-to-project">
+          <div class="panel panel-default panel-idea-to-project top">
             <div class="panel-heading">
               <h3 class="panel-title">Review Business Case
                 <div class="idea-status underway"></div>
@@ -130,13 +130,16 @@
                     </div>
 
                     <div class="form-group">
-                      <label class="col-sm-4 control-label">Mandate</label>
-                      <div class="col-sm-8">
+                      <label class="col-sm-4 control-label">Attach Mandate</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-sm-2">
                         <input type="file" class="form-control">
-                        <span class='btn btn-info file-select'>Attach Mandate</span>
-                       <!--  <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
-                        <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
-                        <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span> -->
+                        <btn class='btn btn-info file-select'>Select</span>
+                      </div>
+                      <div class="col-sm-2">
+                        <btn class='btn btn-warning file-clear'>Clear</span>
                       </div>
                     </div>
 
