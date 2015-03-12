@@ -106,10 +106,32 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Attach File</label>
-                    <div class="col-sm-8">
+                    <label class="col-sm-4 control-label">Attach Document</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
                       <input type="file" class="form-control">
-                      <span class='btn btn-info file-select'>Select File</span>
+                      <btn class='btn btn-info file-select'>Select</span>
+                    </div>
+                    <div class="col-sm-2">
+                      <btn class='btn btn-warning file-clear'>Clear</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Category</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Request For Information</option>
+                        <option>Review/Approvals</option>
+                        <option>Planning</option>
+                        <option>Costing</option>
+                        <option>Resources</option>
+                        <option>General</option>
+                        <option>Other</option>
+                      </select>
                     </div>
                   </div>
 

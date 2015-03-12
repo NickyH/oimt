@@ -1050,7 +1050,8 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.file-select {
+.file-select,
+.file-clear {
   width: auto;
   height: 30px;
   position: absolute;
@@ -1060,6 +1061,7 @@ input[type="file"] {
   margin-left: 15px;
   margin-right: 15px;
   font-weight: bold;
+  cursor: pointer;
   &.approval {
     height: 33px;
   }
@@ -1227,11 +1229,14 @@ tr.underline {
     .tbl-subject {
       //width: 30%;
     }
-    .tbl-date {
+    .tbl-categ {
       width: 20%;
     }
-    .tbl-delete {
-      width: 10%;
+    .tbl-from {
+      width: 20%;
+    }
+    .tbl-date {
+      width: 20%;
     }
   tr{
     height: 35px;
