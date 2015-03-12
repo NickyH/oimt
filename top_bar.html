@@ -11,6 +11,11 @@
         <span class="glyphicon glyphicon-comment"></span>
       </a>
     </div>
+    <div class="icons members">
+      <a title="Members" href="#">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </div>
   </div>
 
   <div class="bubble-container">
@@ -46,6 +51,7 @@ $('.bubble.inactive').on('mouseleave', bubble_leave);
 
 $('.icons.documents').on('click', insert_project_documents);
 $('.icons.communications').on('click', insert_project_communications);
+$('.icons.members').on('click', insert_project_members);
 
 $('#top-bar-assess').on('click', insert_assess_start);
 $('#top-bar-project-setup').on('click', insert_project_setup_details);

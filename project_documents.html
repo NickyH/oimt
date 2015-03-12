@@ -35,7 +35,7 @@
                     <div class="col-sm-12">
 
                       <!-- each searchable table needs unique ID "table-filter-*" -->
-                      <table id="table-project-documents" class="table table-condensed table-striped rd-doc-table">
+                      <table id="table-rd-documents" class="table table-condensed table-striped rd-doc-table">
                         <thead>
                           <tr>
                             <th class="tbl-name">Document Name</th>
@@ -106,10 +106,60 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Attach File</label>
-                    <div class="col-sm-8">
+                    <label class="col-sm-4 control-label">Attach Document</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
                       <input type="file" class="form-control">
-                      <span class='btn btn-info file-select'>Select File</span>
+                      <btn class='btn btn-info file-select'>Select</span>
+                    </div>
+                    <div class="col-sm-2">
+                      <btn class='btn btn-warning file-clear'>Clear</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Category</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-required="true" title=''>
+                        <option data-hidden="true"></option>
+                        <option>Request For Information</option>
+                        <option>Review/Approvals</option>
+                        <option>Planning</option>
+                        <option>Costing</option>
+                        <option>Resources</option>
+                        <option>General</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Notify</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" data-live-search="true" multiple title=''>
+                        <option data-hidden="true"></option>
+                        <option>Roger Allen</option>
+                        <option>Sue Ambry</option>
+                        <option>Dominic Bailey</option>
+                        <option>Connor Baker</option>
+                        <option>Victor Hart</option>
+                        <option>Angela Hemmings</option>
+                        <option>John Henji</option>
+                        <option>Robert Hodges</option>
+                        <option>Jake Hughes</option>
+                        <option>Nicholas Jones</option>
+                        <option>Leah Rampling</option>
+                        <option>Joan Rees</option>
+                        <option>Fiona Ryko</option>
+                        <option>Mary Rutherford</option>
+                        <option>May Seah</option>
+                        <option>Julian Smith</option>
+                        <option>Zoe Vance</option>
+                        <option>Jan Walker</option>
+                        <option>Paul Xu</option>
+                      </select>
                     </div>
                   </div>
 
@@ -140,13 +190,6 @@ $('.selectpicker').selectpicker({
       size: 5
   });
 $('.datepicker').pickadate();
-
-//attachment functions
-$('input[type=file]').on('change', add_document_row);
-$('.file-table').on('click', '.filename-link', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
-$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
 
 $( document ).ready(function() {
   $('.icons').removeClass('active');
