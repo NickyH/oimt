@@ -1304,6 +1304,17 @@ tr.row-summary {
     background-color: #EDF6FC !important; //blue
     cursor: pointer;
   }
+  &:hover {
+  }
+}
+
+tr.row-summary:hover {
+  td {
+    background-color: darken(#EDF6FC, 12%) !important; //darker blue
+  }
+  td~td {
+    background-color: darken(#EDF6FC, 12%) !important; //darker blue
+  }
 }
 
 .textfields {
