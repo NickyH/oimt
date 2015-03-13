@@ -66,6 +66,7 @@ $('#table-rd-documents').dataTable({
     { "class": "text" },
     { "class": "text" },
     { "class": "text" },
+    { "class": "text" },
     {
       "class": "remove-sort",
       "orderable": false
