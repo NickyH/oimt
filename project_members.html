@@ -35,7 +35,7 @@
                     <div class="col-sm-12">
 
                       <!-- each searchable table needs unique ID "table-filter-*" -->
-                      <table id="table-rd-members" class="table table-condensed table-striped rd-member-table">
+                      <table id="table-project-members" class="table table-condensed table-striped rd-member-table">
                         <thead>
                           <tr>
                             <th class="tbl-firstname">First Name</th>
@@ -286,7 +286,7 @@ $('.selectpicker').selectpicker({
   });
 $('.datepicker').pickadate();
 
-$('#table-rd-members .glyphicon-remove').on('click', confirm_member_delete);
+$('#table-project-members .glyphicon-remove').on('click', confirm_member_delete);
 
 function confirm_member_delete () {
   bootbox.dialog({
