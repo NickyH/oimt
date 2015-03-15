@@ -286,12 +286,30 @@ $('.selectpicker').selectpicker({
   });
 $('.datepicker').pickadate();
 
-//attachment functions
-$('input[type=file]').on('change', add_document_row);
-$('.file-table').on('click', '.filename-link', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-pencil', slide_filename_details);
-$('.file-table').on('click', 'th span.glyphicon-remove', delete_document_row);
-$('.add-file-table').on('click', 'th span.glyphicon-plus', mimic_add_file_click);
+$('#table-rd-members .glyphicon-remove').on('click', confirm_member_delete);
+
+function confirm_member_delete () {
+  bootbox.dialog({
+    message: "Are you sure you want to delete team member?",
+    title: "Delete Member Confirmation",
+    buttons: {
+      success: {
+        label: "Continue",
+        className: "btn-success",
+        callback: function() {
+          //insert function here to delete team member;
+        }
+      },
+      danger: {
+        label: "Cancel",
+        className: "btn-danger",
+        callback: function() {
+          bootbox.hideAll();
+        }
+      }
+    }
+  });
+}
 
 $('.row-summary').on('click', function () {
   $(this).next('tr').toggleClass('collapsed');
