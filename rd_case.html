@@ -42,7 +42,7 @@
                   <tr>
                     <td><input type="text" class="form-control" data-required="true"></td>
                     <td><input type="text" class="form-control"></td>
-                    <td><select class="form-control" data-required="true">
+                    <td><select class="form-control selectpicker" data-required="true">
                         <option>Method 1</option>
                         <option>Method 2</option>
                       </select></td>
@@ -815,6 +815,7 @@ function add_row_to_this_table() {
   var t = $('table#'+tableID).DataTable();
   var counter = 1;
   t.row.add( [ ] ).draw();
+  console.log(t);
   counter++;
 }
 function delete_this_row_from_table() {

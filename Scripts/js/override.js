@@ -107,7 +107,7 @@ function insert_rd_documents() {
 function insert_rd_communications() {
   $('#insert-left').empty();
   $('#main-page').empty();
-  $.get('rd_communications.html', function(data) {
+  $.get('rd_communications_OLD2.html', function(data) {
       $('#main-page').html(data);
   });
   $('.top-bar .bubble-container .bubble').addClass('inactive');
